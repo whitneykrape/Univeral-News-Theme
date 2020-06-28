@@ -1,0 +1,14 @@
+{
+  "cms": {
+    "js": "cms.js"
+  },
+  "main": {
+    "css": "main.css",
+    "css": "style.css",
+    "js": "main.js",
+  },
+  "": {
+    "html": "admin/index.html",
+    "": "fonts/.keep"
+  }
+}

@@ -1,0 +1,16 @@
+<div class="">
+
+	<div class="">
+
+		<h2 class="">{{.heading}}</h2>
+		<p class="">{{.description}}</p>
+
+		<div class="">
+			{{ range .plans }}
+			<div class="">{{ partial "table-column" . }}</div>
+			{{ end }}
+		</div>
+
+	</div>
+
+</div>

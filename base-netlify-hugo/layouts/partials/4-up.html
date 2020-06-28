@@ -1,0 +1,15 @@
+<div class="">
+	<div class="">
+		<h2 class="">{{.heading}}</h2>
+		<p class="">{{.description}}</p>
+
+		<div class="">
+			{{ range .blurbs }}
+				<div class="">
+					<img src="{{ .image }}" alt="" class="" style="width: 240px">
+					<p>{{ .text }}</p>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</div>
