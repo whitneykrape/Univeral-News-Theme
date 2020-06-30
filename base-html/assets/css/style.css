@@ -986,6 +986,11 @@ body {
 
 .article-allbar {
   margin: 0 0 1.5em 0;
+  line-height: 40px;
+}
+
+.allbar-author {
+  vertical-align: middle;
 }
 
 
