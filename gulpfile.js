@@ -19,7 +19,7 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('sass', function() {
-  return gulp.src('assets/scss/**/*.scss') 
+  return gulp.src('assets/scss/*.scss') 
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('assets/css')) 
     .pipe(browserSync.reload({ 
@@ -29,7 +29,7 @@ gulp.task('sass', function() {
 
 // Watchers
 gulp.task('watch', function() {
-  gulp.watch('assets/scss/**/*.scss', ['sass']);
+  gulp.watch('assets/scss/*.scss', gulp.series('sass'));
   gulp.watch('base-html/*.html', browserSync.reload);
   // gulp.watch('app/js/**/*.js', browserSync.reload);
 })
