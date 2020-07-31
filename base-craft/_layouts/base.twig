@@ -26,5 +26,8 @@
 
 	{% include '_components/footer' %}
 
+	{% if craft.app.request.getServerName() == 'domain' %}
+		{% include '_components/analytics' %}
+	{% endif %}
 </body>
 </html>
