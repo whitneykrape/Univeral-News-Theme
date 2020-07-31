@@ -21,5 +21,9 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+
+    {{ if not .Site.IsServer }}
+      {{ partial "analytics" . }}
+    {{ end }}
   </body>
 </html>
