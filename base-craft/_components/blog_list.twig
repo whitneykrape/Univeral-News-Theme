@@ -1,0 +1,35 @@
+{# Create an entry query with the 'section' and 'limit' parameters #}
+{% set myEntryQuery = craft.entries()
+    .section('blog')
+    .limit(3) %}
+
+{# Fetch the entries #}
+{% set entries = myEntryQuery.all() %}
+
+<div class="bg-off-white pv4">
+	<div class="ph3 mw7 center">
+
+		<h2 class="f2 b lh-title mb3">Latest stories</h2>
+
+		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
+		  <ul class="w-100 flex-ns flex-wrap mhn1-ns pa3">
+		  		{% for entry in entries %}
+				<li class="ph1-ns w-33-ns flex">
+					<a href="{{ entry.url }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+						<h2 class="f3 b lh-title mb1 primary">{{ entry.blogTitle }}</h2>
+						<p class="mid-gray lh-title mb2">{{ entry.postDate|datetime('D, M j, Y') }}</p>
+						
+						<p class="link b dib black mb0">Read more →</p>
+					</a>
+
+				</li>
+				{% endfor %}
+		  </ul>
+		</div>
+
+		<div class="tc">
+			<a href="/blog" class="btn raise">Read more</a>
+		</div>
+
+	</div>
+</div>
