@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="{{ currentSite.language }}" dir="{{craft.app.i18n.getLocaleById(currentSite.id).getOrientation()}}">
+<head>
+
+{% include '_system/seo' %}
+{% include '_system/meta' %}
+{% include '_system/favicons' %}
+{% include '_system/fonts' %}
+{% include '_system/static' %}
+{% include '_system/tag_manager' %}
+{% block head %}{% endblock %}
+
+</head>
+
+<body class="{{body_class ?? null}} {{craft.app.request.isMobileBrowser() ? 'is-mobile' : 'is-desktop'}}">
+
+	{% include "_components/header" %}
+
+	<div class="mw6 center ph3 pv4">
+		<h1 class="f2 lh-title b mb3">{{ entry.blogTitle }}</h1>
+		<div class="flex justify-between grey-3">
+		  <p>{{ entry.postDate|datetime('D, M j, Y') }}</p>
+		</div>
+		<div class="cms mw6">
+		  {{ entry.introductionContent }}
+		</div>
+	</div>
+
+	{% include '_components/footer' %}
+
+</body>
+</html>
