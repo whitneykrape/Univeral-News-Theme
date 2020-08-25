@@ -1,41 +1,31 @@
-<footer class="bg-black ph3 pv4 white">
-	<div class="mw7 center pt3">
+<footer class="site-footer align-center layout-background">
+	<div class="newsletter-signup">
 
-		<div class="measure-narrow center mb4">
+		<div class="">
 
-			<p class="db w6 center mb4 br0">$$title$$</p>
-			
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>$$newsletter-reason$$</p>
 
-			<form action="" class="flex-ns mb3">
+			<form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/shapesandscreens" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/shapesandscreens', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+				<p class="">Transformative Information Deliveries.
+					<label for="tlemail"></label></p><p><input type="text" style="width:240px" name="email" id="tlemail" placeholder="Enter your email address" />
 
-				  <fieldset class="flex-auto mb2 mb0-ns mr2-ns" name="newsletter" action="newsletter-subscribe">
-				    <input type="text" id="email" placeholder="Your email" class="w-100">
-				    <label for="email">Your email</label>
-				  </fieldset>
+					<input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
 
-				  <button class="btn mb3 w-100 w-auto-ns mb0-ns raise" type="submit">Submit</button>
+					<br/>
 
+					<small><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></small>
+				</p>
 			</form>
 
-
 		</div>
 
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">$$title$$</h3>
-				<ul class="mb3">
-					<li><a href="/post" class="link">Blog</a></li>
-				</ul>
-			</div>
-
-		</div>
+		<section class="copyright">
+		</section>
 
 	</div>
 </footer>
 
+	{% if craft.app.request.getServerName() == 'shapesandscreens.com' %}
 		{% include '_components/analytics' %}
+	{% endif %}
 </body>
 </html>
