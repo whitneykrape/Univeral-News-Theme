@@ -1,7 +1,7 @@
 /************************ LAYOUT ***************************/
 .top-navbar {
   /*background: green;*/
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);*/ 
   background: #fff;
   height: 55px;
 }
@@ -14,26 +14,4 @@
   display: block;
   /*background: repeat url(../img/placeholder.jpg);*/
   background-size: 10% !important;
-}
-
-.layout-background { 
-  /*background: pink;*/
-}
-
-.latest-stories {
-  margin: 0 0 2em;
-
-  li {
-    background: #fafafa;
-    padding: 1em;
-
-    h2 {
-      font-size: 2.25em;
-    }
-
-    a {
-      color: #000;
-      text-decoration: none;
-    }
-  }
 }
