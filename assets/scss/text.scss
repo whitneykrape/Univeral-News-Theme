@@ -1,0 +1,26 @@
+/*
+Index
+Background colors
+Font colors
+*/
+
+.text .top-navbar,
+.text .entrance-image,
+.text .short-info {
+	background: #222;
+}
+
+.text .logo a,
+.text .entrance-image h1,
+.text .entrance-image p,
+.text .short-info {
+	color: #fff;
+}
+
+.text .entrance-image h1 {
+	font-weight: bold;
+}
+
+.text .main-content {
+	margin: 1em 0;
+}

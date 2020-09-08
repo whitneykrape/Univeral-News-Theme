@@ -1,13 +1,20 @@
-.media .site-header a,
-.media .logo a {
-	color: #5D5D5D;
-}
+/*
+Index
+Background colors
+Font colors
+*/
 
 body.media,
-.media .top-navbar {
+.media .top-navbar,
+.media .short-info {
 	background: #eee;
 }
 
+.media .site-header a,
+.media .logo a,
+.media .short-info {
+	color: #5D5D5D;
+}
 
 .media .latest-stories li {
 
