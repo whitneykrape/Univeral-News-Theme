@@ -20,10 +20,20 @@
 
   li {
     background: #fafafa;
-    padding: 1em;
+    padding: 0em;
+
+    img {
+      // margin: -1em 0 0 -1em;
+      width: 100%;
+    }
 
     h2 {
       font-size: 2.25em;
+      padding: 0 15px;
+    }
+
+    p {
+      padding: 0 15px;
     }
 
     a {
