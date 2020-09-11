@@ -14,7 +14,12 @@ Craft Template Use:
 Coming soon.
 
 Ghost Template Use:
-Coming soon.
+1. At the moment, copying over the original Casper theme. 
+2. Commit, have a post-receive hook that reboots Ghost. 
+```
+cd /var/www/ghostbasediretory/html/;ghost restart
+```
+
 
 Netlify Hugo Template Use:
 1. Copy /site and /src into the base /netlify install.
