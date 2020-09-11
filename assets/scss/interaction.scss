@@ -4,10 +4,23 @@ Background colors
 Font colors
 */
 
+.top-navbar {
+	background: #eee;
+}
+
+.entrance-image {
+	background: #fafafa;
+	padding: 1em 0 0;
+}
+
 .interaction .latest-stories li {
   background: none;
-  padding: 1em 1em 1em;
+  padding: 0 0 1em;
   border: 10px solid #fafafa;
+
+  img {
+  	max-height: 300px;
+  }
 }
 
 .interaction .site-header a {
