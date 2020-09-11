@@ -19,6 +19,8 @@ Coming soon.
 Netlify Hugo Template Use:
 1. Copy /site and /src into the base /netlify install.
 2. Modify CSS by copying over the /src/css/style.css (and map) files.
+3. Yarn Build, have a GIT in your DIST that doesn't get wiped out. 
+4. Push to live.
 
 WordPress Template Use:
 Coming soon.
