@@ -14,8 +14,20 @@
 		<div class="latest-stories">
 		  <ul class="navigation-list">
 		  		{% for entry in entries %}
-				<li class="six columns">
+
+				{% set myAssetQuery = craft.assets()
+				    .volume('defaultvolume')
+				    .kind('image') %}
+
+				{# Fetch the assets #}
+				{% set images = myAssetQuery.all() %}
+
+				<li class="twelve columns">
 					<a href="{{ entry.url }}" class="">
+				    {% for image in images %}
+				        <img src="{{ image.url }}" alt="{{ image.title }}">
+				    {% endfor %}
+
 						<h2 class="">{{ entry.blogTitle }}</h2>
 						<p class="">{{ entry.postDate|datetime('D, M j, Y') }}</p>
 						
