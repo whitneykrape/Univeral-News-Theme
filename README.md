@@ -11,7 +11,8 @@ Need to update Gulp. Been running Sass right from the scss folder with:
 sass style.scss:../css/style.css --watch --style compressed
 
 Craft Template Use:
-Coming soon.
+1. Copy everything in /base-craft into the install (note to self research multiple templates in craft)
+2. Repo the overall Craft install directory but ignore the unneeded directories.  
 
 Ghost Template Use:
 1. At the moment, copying over the original Casper theme. 
