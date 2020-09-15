@@ -12,15 +12,15 @@ sass style.scss:../css/style.css --watch --style compressed
 
 Craft Template Use:
 1. Copy everything in /base-craft into the install (note to self research multiple templates in craft)
-2. Repo the overall Craft install directory but ignore the unneeded directories.  
+2. Modify CSS by copying over the /web/static/styles/style.css (and map) files.
+3. Repo the overall Craft install directory but ignore the unneeded directories.  
 
 Ghost Template Use:
-1. At the moment, copying over the original Casper theme. 
+1. At the moment, copying over the original Casper theme. (More details incoming.)
 2. Commit, have a post-receive hook that reboots Ghost. 
 ```
 cd /var/www/ghostbasediretory/html/;ghost restart
 ```
-
 
 Netlify Hugo Template Use:
 1. Copy /site and /src into the base /netlify install.
