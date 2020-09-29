@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactEntry = ({heading, text}) =>
   <div>
-    <h4 className="f4 b lh-title mb2 primary">{ heading }</h4>
+    <h4 className=" ">{ heading }</h4>
     <p>{ text }</p>
   </div>;
 
