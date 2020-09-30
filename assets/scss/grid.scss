@@ -423,6 +423,10 @@ there.
 @media (min-width: 1200px) {}
 
 
+fieldset, button {
+  display: inline;
+}
+
 
 .container {
   clear: both;

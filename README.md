@@ -10,6 +10,8 @@ Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms
 Need to update Gulp. Been running Sass right from the scss folder with: 
 sass style.scss:../css/style.css --watch --style compressed
 
+The style.css and style.css.map in /base-html/assets/css/ (and more places in the future) don't carry simlinks into Git. Will manually shoehorn some sort of fix in.
+
 Craft Template Use:
 1. Copy everything in /base-craft into the install (note to self research multiple templates in craft)
 2. Modify CSS by copying over the /web/static/styles/style.css (and map) files.
