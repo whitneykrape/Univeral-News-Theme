@@ -63,6 +63,18 @@ Font colors
   z-index: 0;
 }
 
+.elementshowingmotion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
 @keyframes box {
   0%   {background-color: #fafafa; left:0px;  top:-5%; transform: rotate(00deg)  }
   10%  {background-color: #a9a9a9; left:25%;  top:15%; transform: rotate(-45deg)  }
