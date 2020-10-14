@@ -54,3 +54,24 @@
     color: #fff;
   }
 }
+
+
+footer {
+  form {
+    display: flex;
+    max-width: 25%;
+    margin: 0 auto;
+
+    fieldset {
+      flex: 0 1 66%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    button {
+      flex: 0 1 33%;
+    }
+  }
+}
