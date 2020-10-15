@@ -1,3 +1,45 @@
 .left-right-image-text {
 	background: #fafafa;
 }
+
+.block-latest-posts.block-latest-posts__list.latest-project-updates {
+	margin: 0;
+	padding: 1%;
+	box-shadow: 0 0 10px;
+
+	li {
+		display: flex;
+		flex-direction: row;
+  		flex-wrap: wrap;
+  		background: #FBFBFB;
+  		padding: 0;
+
+
+
+		.block-latest-posts__featured-image.alignright {
+			order: 1;
+			flex: 0 1 30%;
+			margin-left: 0;
+
+			img {
+				float: left;
+			}
+		}
+
+		a {
+			box-shadow: none;
+			order: 0;
+			flex: 0 1 70%;
+			font-size: 1.85em;
+			padding: 0.5em 2%;
+		}
+
+		time {
+			order: 1;
+			flex: 0 1 70%;
+			margin: -9% 0 0 0;
+			font-size: 1em;
+			padding: 0.5em 2%;
+		}
+	}
+}
