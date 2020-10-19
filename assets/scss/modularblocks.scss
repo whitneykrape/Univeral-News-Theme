@@ -4,8 +4,8 @@
 
 .block-latest-posts {
 	margin: 0;
-	padding: 1%;
-	box-shadow: 0 0 10px;
+
+
 
 	li,
 	article {
@@ -13,11 +13,12 @@
 		flex-direction: row;
   		flex-wrap: wrap;
   		background: #FBFBFB;
-  		padding: 0;
+		padding: 1%;
+		margin: 1% 0 5%;
+	    box-shadow: 0 0 10px 5px #eee;
 
 
-
-		.block-latest-posts__featured-image.alignright {
+		.featured-image.alignright {
 			order: 1;
 			flex: 0 1 30%;
 			margin-left: 0;
@@ -27,12 +28,18 @@
 			}
 		}
 
-		a {
+		// a,
+		.article-text-block {
 			box-shadow: none;
 			order: 0;
-			flex: 0 1 70%;
+			margin: 0 -26% 0 0;
+    		padding: .5em 12% .5em 20px;
+    		flex: 0 1 75%;
 			font-size: 1.85em;
-			padding: 0.5em 2%;
+
+			.article-title {
+				margin: 0;
+			}
 		}
 
 		time {
