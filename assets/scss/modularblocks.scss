@@ -5,8 +5,6 @@
 .block-latest-posts {
 	margin: 0;
 
-
-
 	li,
 	article {
 		display: flex;
@@ -38,6 +36,56 @@
     		flex: 0 1 75%;
 			font-size: 1.85em;
 			background: #fbfbfb;
+
+			.article-title {
+				margin: 0;
+			}
+		}
+
+		time {
+			order: 1;
+			flex: 0 1 70%;
+			margin: -6% 0 0 0;
+			font-size: 1em;
+			padding: 0.5em 2% 0.5em 20px;
+		}
+	}
+}
+
+.block-feature-posts {
+	margin: 0;
+
+	article {
+		display: flex;
+	    padding: 20px;
+	    align-items: stretch;
+	    max-height: 340px;
+	    background: #efefef;
+
+	    .article-image.imagelink {
+			order: 2;
+		    box-shadow: none;
+		    margin: -20px -20px -20px 5em;
+		    z-index: 2000;
+		    position: relative;
+		    height: auto;
+		    // width: 250%;
+		    align-content: stretch;
+		    border: 0px;
+
+		    img {
+		    	height: 100%;
+    			box-shadow: none;
+		    }
+	    }
+
+		// a,
+		.article-text-block {
+			background: #fff;
+		    position: relative;
+		    z-index: 9000;
+		    padding: 20px;
+		    margin-right: -10em;
 
 			.article-title {
 				margin: 0;
