@@ -56,17 +56,20 @@
 	margin: 0;
 
 	article {
-		display: flex;
-	    padding: 20px;
+		padding: 20px;
 	    align-items: stretch;
-	    max-height: 340px;
+	    @media (min-width: 768px) {
+	    	display: flex;
+	    	max-height: 340px;
+	    	padding: 20px 0 20px 20px;
+	    }
 	    background: #aaa;
 	    margin: 1% 0 5%;
 
 	    .article-image.imagelink {
 			order: 2;
 		    box-shadow: none;
-		    margin: -20px -20px -20px 86px;
+		    margin: -20px -20px -20px 0;
 		    z-index: 2000;
 		    position: relative;
 		    height: auto;
@@ -86,7 +89,10 @@
 		    position: relative;
 		    z-index: 9000;
 		    padding: 20px;
-		    margin-right: -10em;
+
+		    @media (min-width: 768px) {
+		    	margin-right: -64px;
+		    }
 
 			.article-title {
 				margin: 0;
@@ -95,7 +101,9 @@
 
 		time {
 			order: 1;
-			flex: 0 1 70%;
+			@media (min-width: 768px) {
+				flex: 0 1 70%;
+			}
 			margin: -6% 0 0 0;
 			font-size: 1em;
 			padding: 0.5em 2% 0.5em 20px;
