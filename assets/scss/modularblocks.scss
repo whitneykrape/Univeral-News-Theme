@@ -80,6 +80,11 @@
 		    img {
 		    	height: 100%;
     			box-shadow: none;
+    			width: 100%;
+
+    			@media (min-width: 768px) {
+    				width: initial;
+    			}
 		    }
 	    }
 
