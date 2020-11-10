@@ -15,11 +15,20 @@ Font colors
 
 .interaction .latest-stories li {
   background: none;
-  padding: 0 0 1em;
-  border: 10px solid #fafafa;
+  padding: 0;
+
+  a {
+    overflow: hidden;
+    display: block;
+    border: 10px solid #fafafa;
+    position: relative;
+    z-index: 8000;
+    min-height: 600px;
+    color: #fff;
+  }
 
   img {
-  	max-height: 300px;
+  	// max-height: 300px;
   }
 }
 
@@ -45,9 +54,22 @@ Font colors
 
   .showthrough {
     .window {
-      min-height: 425px;
+      // min-height: 425px;
       display: block;
     }
+
+    h2 {
+      padding: 400px 12px 0;
+    }
+  }
+}
+
+.main-content {
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    position: static;
   }
 }
 
