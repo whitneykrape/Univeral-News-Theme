@@ -1,8 +1,8 @@
 /* ALL THE STYLES */
 
-@import "./reset";
-@import "./grid";
-@import "./header";
+@import "reset";
+@import "grid";
+@import "header";
 
 /* Note */
 
@@ -46,7 +46,7 @@ body {
   background: #fefefe;
 }
 
-@import "./layout";
+@import "layout"; 
 
 
 /************************ SITE ***************************/
@@ -58,11 +58,11 @@ body {
   bottom: 0px;*/
 }
 
-@import "./article";
-@import "./elements";
+@import "article";
+@import "elements";
 
-@import "./modularblocks";
+@import "modularblocks";
 
-@import "./interaction";
-@import "./media";
-@import "./text";
+@import "interaction";
+@import "media";
+@import "text"; 
