@@ -20,6 +20,7 @@
 			order: 1;
 			flex: 0 1 30%; 
 			margin: 0;
+			z-index: 9000;
 
 			img {
 				float: left;
@@ -94,6 +95,7 @@
 		    position: relative;
 		    z-index: 9000;
 		    padding: 20px;
+		    border-radius: 4px;
 
 		    @media (min-width: 768px) {
 		    	margin-right: -64px;
