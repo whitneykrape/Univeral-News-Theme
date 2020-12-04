@@ -68,9 +68,9 @@
 	    margin: 1% 0 5%;
 
 	    .article-image.imagelink {
-			order: 2;
+			order: 0;
 		    box-shadow: none;
-		    margin: -20px -20px -20px 0;
+		    margin: -20px 0px -20px -20px;
 		    z-index: 2000;
 		    position: relative;
 		    height: auto;
@@ -98,7 +98,7 @@
 		    border-radius: 4px;
 
 		    @media (min-width: 768px) {
-		    	margin-right: -64px;
+		    	margin-left: -64px;
 		    }
 
 			.article-title {
