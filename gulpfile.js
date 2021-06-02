@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
+// var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
@@ -25,7 +25,13 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
   return gulp.src('assets/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-    .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
+    .pipe(sass({
+      outputStyle: 'compressed',
+      compass: true,
+      bundleExec: true,
+      sourcemap: true,
+      sourcemapPath: './'
+    }).on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(gulp.dest('assets/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
@@ -34,7 +40,7 @@ gulp.task('sass', function() {
 
 // Watchers
 gulp.task('watch', function() {
-  gulp.watch('assets/scss/**/*.scss', ['sass']);
+  gulp.watch('assets/scss/**/*.scss', { usePolling: true }, gulp.series('sass'));
   gulp.watch('base-html/*.html', browserSync.reload);
   // gulp.watch('app/js/**/*.js', browserSync.reload);
 })
