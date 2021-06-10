@@ -7,7 +7,7 @@ Craft base template.
 Ghost base template.
 Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms
 
-Need to update Gulp. Been running Sass right from the scss folder with: 
+Need to update Gulp. Been running Sass right from the scss folder with: (Almost fixed.)
 sass style.scss:../css/style.css --watch --style compressed
 
 The style.css and style.css.map in /base-html/assets/css/ (and more places in the future) don't carry simlinks into Git. Will manually shoehorn some sort of fix in.
@@ -32,3 +32,8 @@ Netlify Hugo Template Use:
 
 WordPress Template Use:
 Coming soon.
+
+Next 3 commits:
+1. Usable WordPress template (basic container for blocks.)
+2. webpack for proper mod management.
+3. Gulp? that that eliminates above. Deals templates with "ease." 

@@ -1,0 +1,30 @@
+<?php
+/**
+ * 
+ * Starting afresh pulling largely from 
+ * 
+ * @package WordPress
+ * @subpackage Form Function IO Base
+ * @since FFIOBase 1.0
+ */
+
+get_header();
+
+if ( have_posts() ) :
+
+	// Posts loop.
+	while ( have_posts() ) :
+		the_post();
+
+		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+	endwhile;
+
+	// Using the basic nav for a start.
+	the_posts_navigation();
+
+else :
+
+	// Not found, recreate this.
+	// get_template_part( 'template-parts/content/content-none' );
+
+endif;
