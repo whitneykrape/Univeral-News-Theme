@@ -33,9 +33,11 @@ Netlify Hugo Template Use:
 WordPress Template Use:
 Coming soon.
 
+
 Next 3 commits:
 1. Usable WordPress template (basic container for blocks.)
 2. webpack for proper mod management.
-3. Gulp? that that eliminates above. Deals templates with "ease." 
+3. Gulp? that that eliminates above. Deals templates with "ease."
+4. Have the ability to choose a theme and it refactor for the particular CMS. 
 
 X. Have a dependency for theme updates from Craft, Ghost, Hugo? and WordPress. Very open ended, but as the templates evolve, have a way of pulling in those iterated pieces.

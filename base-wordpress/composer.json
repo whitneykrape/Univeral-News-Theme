@@ -1,0 +1,23 @@
+{
+    "name": "formfunctionio/wordpress-blocks-only",
+    "autoload": {
+        "psr-4": {
+            "Formfunctionio\\WordpressBlocksOnly\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Whitney Krape",
+            "email": "whitney@formfunction.io"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^5.7",
+        "drupal-composer/preserve-paths": "^0.1.6"
+    },
+    "extra": {
+        "preserve-paths": [
+          "wordpress/wp-content/themes/blocks-only-theme"
+        ]
+    }
+}
