@@ -27,3 +27,4 @@ base-wordpress/wordpress/wp-signup.php
 base-wordpress/wordpress/wp-trackback.php
 base-wordpress/wordpress/xmlrpc.php
 base-wordpress/wordpress/.htaccess
+base-wordpress/wordpress/wp-config.php
