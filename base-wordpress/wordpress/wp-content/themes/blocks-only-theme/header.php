@@ -23,8 +23,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ffiobase' ); ?></a>
 
 	<?php 
-		// Need to build the nav/overall header
-		// get_template_part( 'template-parts/header/site-header' ); 
+		// Need to build the nav/overall header, using pieces from original theme is fine for now.
+		get_template_part( 'template-parts/header/site-header' ); 
 	?>
 
 	<div id="content" class="site-content">
