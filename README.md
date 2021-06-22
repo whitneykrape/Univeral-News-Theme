@@ -2,14 +2,12 @@
 Starting from a simple HTML theme to be a universal theme for multiple platforms.
 
 Started from:
-Craft base template.
-Ghost base template.
-Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms
+1. Craft base template.
+2. Ghost base template.
+3. Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms
+4. WordPress Twenty Twenty-One
 
-Need to update Gulp. Been running Sass right from the scss folder with: (Almost fixed.)
-sass style.scss:../css/style.css --watch --style compressed
-
-The style.css and style.css.map in /base-html/assets/css/ (and more places in the future) don't carry simlinks into Git. Will manually shoehorn some sort of fix in.
+Gulp is workable but overall foundations still being rebuilt.
 
 Craft Template Use:
 1. Copy everything in /base-craft into the install (note to self research multiple templates in craft)
