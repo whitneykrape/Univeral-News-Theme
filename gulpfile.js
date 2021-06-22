@@ -1,5 +1,10 @@
 var gulp = require('gulp');
+
 var sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const postcssNormalize = require('postcss-normalize');
+var cssimport = require("gulp-cssimport");
+
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -58,7 +63,10 @@ gulp.task('php', () => {
 
 
 gulp.task('sass', function() {
-  return gulp.src('assets/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('src/assets/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+    .pipe(cssimport({
+      matchPattern: "*.css"
+    }))
     .pipe(sass({
       outputStyle: 'compressed',
       compass: true,
@@ -66,7 +74,7 @@ gulp.task('sass', function() {
       sourcemap: true,
       sourcemapPath: './'
     }).on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-    .pipe(gulp.dest('assets/css')) // Outputs it in the css folder
+    .pipe(gulp.dest('dist/assets/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
