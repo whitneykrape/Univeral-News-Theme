@@ -13,7 +13,7 @@ Craft Template Use:
 1. Copy everything in /base-craft into the install (note to self research multiple templates in craft)
 2. Modify CSS by copying over the /web/static/styles/style.css (and map) files.
 3. Repo the overall Craft install directory but ignore the unneeded directories.  
-# (Upcoming commit will have Gulp moving and packing files. Composer install craft.)
+### (Upcoming commit will have Gulp moving and packing files. Composer install craft.)
 
 Ghost Template Use:
 1. At the moment, copying over the original Casper theme. (More details incoming.)
@@ -21,14 +21,14 @@ Ghost Template Use:
 ```
 cd /var/www/ghostbasediretory/html/;ghost restart
 ```
-# (Upcoming commit will have Gulp moving and packing files. Yarn install Ghost without needing global?)
+### (Upcoming commit will have Gulp moving and packing files. Yarn install Ghost without needing global?)
 
 Netlify Hugo Template Use:
 1. Copy /site and /src into the base /netlify install.
 2. Modify CSS by copying over the /src/css/style.css (and map) files.
 3. Yarn Build, have a GIT in your DIST that doesn't get wiped out. 
 4. Push to live.
-# (Upcoming commit will have Gulp moving and packing files. Standardize to Hugo One-Click, that gets regular updates.)
+### (Upcoming commit will have Gulp moving and packing files. Standardize to Hugo One-Click, that gets regular updates.)
 
 WordPress Template Use:
 1. WordPress template is now started in standard WordPress folder structure, so composer can build an example WordPress for smoke test, initial integration.
@@ -38,7 +38,7 @@ Next 3 commits:
 1. Usable WordPress template (basic container for blocks.)
 2. webpack for proper mod management.
 3. Gulp? that that eliminates above. Deals templates with "ease." 
-# All of these are in but need refining, strongly, so:
+### All of these are in but need refining, strongly, so:
 3.5. Refine webpack, gulp, split templates, develop WordPress template.
 4. Have the ability to choose a theme and it refactor for the particular CMS. 
 
