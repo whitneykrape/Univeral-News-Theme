@@ -32,14 +32,14 @@ Netlify Hugo Template Use:
 
 WordPress Template Use:
 1. WordPress template is now started in standard WordPress folder structure, so composer can build an example WordPress for smoke test, initial integration.
-# (Upcoming commit will have Gulp moving and packing files.)
+### (Upcoming commit will have Gulp moving and packing files.)
 
 Next 3 commits:
 1. Usable WordPress template (basic container for blocks.)
 2. webpack for proper mod management.
 3. Gulp? that that eliminates above. Deals templates with "ease." 
-### All of these are in but need refining, strongly, so:
-3.5. Refine webpack, gulp, split templates, develop WordPress template.
+3. All of these are in but need refining, strongly, so:
+3. Refine webpack, gulp, split templates, develop WordPress template.
 4. Have the ability to choose a theme and it refactor for the particular CMS. 
 
 X. Have a dependency for theme updates from Craft, Ghost, Hugo? and WordPress. Very open ended, but as the templates evolve, have a way of pulling in those iterated pieces.
