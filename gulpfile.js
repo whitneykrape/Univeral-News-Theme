@@ -11,6 +11,7 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var del = require('del');
 var runSequence = require('gulp4-run-sequence');
+var stripCode = require('gulp-strip-code');
 
 // Development Tasks 
 // -----------------
@@ -32,6 +33,10 @@ gulp.task('html', () => {
     .pipe(handlebars({}, {
       ignorePartials: true,
       batch: ['./src/partials']
+    }))
+    .pipe(stripCode({
+      start_comment: "php-code",
+      end_comment: "end-php-code"
     }))
     .pipe(rename({
       extname: '.html'

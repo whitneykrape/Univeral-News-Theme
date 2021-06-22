@@ -37,6 +37,8 @@
 	      Large Introduction Title
 	    </h1>
 
+	    <?php the_content(); ?>
+
 	  
 	    <p class="">
 	      More overview about the site and the point of it.
