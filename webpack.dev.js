@@ -27,10 +27,15 @@ module.exports = merge(common, {
 });
 */
 module.exports = {
-  //...
+  mode: "development",
+
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: process.env.PORT || 9000,
+    open: true,
+    historyApiFallback: {
+      rewrites: [{from: /./, to: "404.html"}]
+    }
   },
 };
