@@ -7,13 +7,15 @@ var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
 var del = require('del');
 var runSequence = require('gulp4-run-sequence');
 
 // Development Tasks 
 // -----------------
 
-// Start browserSync server
+/* Start browserSync server
 gulp.task('browserSync', function() {
   browserSync({
     server: {
@@ -21,6 +23,33 @@ gulp.task('browserSync', function() {
     }
   })
 })
+*/
+
+
+
+gulp.task('html', () => {
+  return gulp.src('./src/pages/*.hbs')
+    .pipe(handlebars({}, {
+      ignorePartials: true,
+      batch: ['./src/partials']
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('php', () => {
+  return gulp.src('./src/pages/*.hbs')
+    .pipe(handlebars({}, {
+      ignorePartials: true,
+      batch: ['./src/partials']
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist'));
+});
 
 
 gulp.task('sass', function() {
