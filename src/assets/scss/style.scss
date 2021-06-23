@@ -1,69 +1,34 @@
 /* ALL THE STYLES */
 
+/* Variables Common */
+$eye-rest-color: #fefefe;
+
+/* Variables Interaction */
+
+/* Variables Media */
+
+/* Variables Text */
+
+
+
 // @import "normalize";
 @import "../../../node_modules/@csstools/normalize.css/normalize.css";
 @import "renormalize";
 @import "grid";
+
+@import "fonts";
+@import "common";
+@import "colors";
+
 @import "header";
-
-/* Note */
-
-/************************ FONTS **************************
-body {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-*/
-
-.latest-stories li h2,
-h1, h2, h3, h4, h5, h6 {
-  // font-family: 'M PLUS 1p', sans-serif;
-}
-
-
-/************************ TEXT ***************************/
-
-
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-left { 
-  text-align: left;
-}
-
-.link {
-  margin: 0;
-}
-
-.flex {
-  display: flex;
-}
-
-/************************ COLORS ***************************/
-body {
-  background: #fefefe;
-}
-
 @import "layout"; 
+@import "footer";
 
-
-/************************ SITE ***************************/
-.site-footer {
-  width: 100%;
-  background: #efefef;
-  padding: 1em 0;
-  /*position: fixed;
-  bottom: 0px;*/
-}
-
+/* Include blocks individually? */
 @import "article";
-@import "elements";
-
 @import "modularblocks";
+
+@import "elements";
 
 @import "interaction";
 @import "media";
