@@ -33,3 +33,6 @@ base-craft/craft/.env.example
 base-craft/craft/config/
 base-craft/craft/modules/
 base-craft/craft/storage/
+base-craft/craft/craft
+base-craft/vendor/
+base-ghost/ghost/versions/

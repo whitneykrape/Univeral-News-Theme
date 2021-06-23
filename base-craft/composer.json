@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "post-update-cmd": [
+            "echo \"No packages here. Head into 'craft' (one level further) and install there.\""
+        ],
+        "post-install-cmd": [
+            "echo \"No packages here. Head into 'craft' (one level further) and install there.\""
+        ]
+    }
+}
