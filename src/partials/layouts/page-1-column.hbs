@@ -1,38 +1,28 @@
+{{!-- layouts/homepage-2-column.hbs --}}
 <!doctype html>
 <html>
   <head>
     <title>
-        Simple Page Template
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
     </title>
 
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    {{#> head-block}}
+      {{!-- Custom <head> content per page could be added. --}}
+    {{/head-block}}
   </head>
   <body>
-	  	<!-- Top Bar -->
-	  	<header class="site-header">
-	  		<nav class="top-navbar row">
-	  		  <ul  class="menu breakout column col-4 navigation-list">
-	  		    <li><!-- Breakout --></li> 
-	  		  </ul>
-	  
-	  		  <div  class="logo column col-4 align-center layout-background">
-	  		    <a class="" title="Main Link and Logo" href="../homepage-simple/"><strong>Text</strong>Text
-	  		      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
-	  		    </a>
-	  		  </div> 
-	  
-	  		  <ul  class="menu individual column col-4 align-left navigation-list">
-	  		    <li>
-	       			<a href="../single-page-simple/">Example Link</a>
-	  		    </li>
-	  		  </ul>
-	  
-	  		  <br class="clear" />
-	  		</nav>
-	  	</header>
+    {{#> header-block}}
+	  {{> includes/header }}
+	{{/header-block}}
+
 	<article class="container">
 		<header class="article-header article-width">
 			<h1  class="article-title">Title</h1>
@@ -155,33 +145,17 @@
 	</article>
 
     <footer>
-        	<footer class="site-footer align-center layout-background">
-        	    <p class="logo">
-        		    <a class="" title="Main Link and Logo" href="./"><strong>Text</strong>Text
-        		      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
-        		    </a>
-        	    </p>
-        			
-        	    <p class="">Newsletter subscribe</p>
-        		
-        		<form action="" class="">
-        
-        		  <fieldset class="" name="newsletter" action="newsletter-subscribe">
-        		  	<label for="email">
-        		    	<input type="text" id="email" placeholder="Your email" class="">
-        		    </label>
-        		  </fieldset>
-        
-        		  <button class="" type="submit">Submit</button>
-        
-        		</form>
-        
-        		<section class="copyright">
-            		<a class="logo" href="https://domain.com">Domain</a> &copy; 2021 <a href="Current 4 CMSs Link">Current 4 CMSs Link</a>
-          		</section>
-        	</footer>
-        </body>
-        </html>    </footer>
+      {{#> footer-block}}
+        {{!--
+          The `includes/footer` partial is the default content,
+          but can be overridden.
+        --}}
+        {{> includes/footer }}
+      {{/footer-block}}
+    </footer>
 
+    {{#> scripts-block}}
+      {{!-- Custom scripts per page can be added. --}}
+    {{/scripts-block}}
   </body>
 </html>

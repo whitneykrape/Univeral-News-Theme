@@ -1,4 +1,4 @@
-{{!-- layouts/homepage-2-column.hbs --}}
+{{!-- layouts/homepage-1-column-wide.hbs --}}
 <!doctype html>
 <html>
   <head>
@@ -18,7 +18,7 @@
       {{!-- Custom <head> content per page could be added. --}}
     {{/head-block}}
   </head>
-  <body>
+  <body class="interaction">
     {{#> header-block}}
 	  {{> includes/header }}
 	{{/header-block}}
@@ -40,7 +40,7 @@
 	  </div>
 	</div>
 
-	<div class="">
+	<div class="dark main-content">
 	  <div class="container">
 
 	    <h2 class="">Latest stories</h2>
@@ -49,54 +49,99 @@
 	        <ul class="navigation-list row">
 	        
 				<li class="column col-12">
-					<a href="single-post-simple/" class="">
-						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+					<div class="elementshowingmotion">
+						<video autoplay muted loop>
 
+						    <source src="assets/vid/placeholder.mp4"
+						            type="video/mp4">
+
+						    Sorry, your browser doesn't support embedded videos.
+						</video>
+					</div>
+					
+					<a href="../single-post-media/" class="showthrough">
+						<span class="window"></span>
+						<!-- <img src="assets/img/placeholder.jpg" alt="Placeholder"/> -->
+						
 						<h2 class="">New Post</h2>
 						<p class="">Fri, May 29, 2020</p>
-
-						<p class="formattingtextbody">
+						
+						<p>
 							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
 						</p>
 						
-						<p class="">Read more &#8594;</p>
+						<p class="link">Read more →</p>
+					</a>
+				</li>
+			
+
+	  			
+	        </ul>
+	    </div>
+
+	    {{!--
+	    <div class="further-stories">
+	        <ul class="navigation-list row">
+	        
+				<li class="column col-6">
+					<!--
+					<div class="elementshowingmotion">
+						<video autoplay muted loop>
+
+						    <source src="assets/vid/placeholder.mp4"
+						            type="video/mp4">
+
+						    Sorry, your browser doesn't support embedded videos.
+						</video>
+					</div>
+					-->
+					
+					<a href="../single-post-media/" class="">
+						<span class="window"></span>
+						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+						
+						<h2 class="">New Post</h2>
+						<p class="">Fri, May 29, 2020</p>
+						
+						<p>
+							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+						</p>
+						
+						<p class="link">Read more →</p>
 					</a>
 				</li>
 			
 				<li class="column col-6">
-					<a href="single-post-simple/" class="">
+					<!--
+					<div class="elementshowingmotion">
+						<video autoplay muted loop>
+
+						    <source src="assets/vid/placeholder.mp4"
+						            type="video/mp4">
+
+						    Sorry, your browser doesn't support embedded videos.
+						</video>
+					</div>
+					-->
+					
+					<a href="../single-post-media/" class="">
+						<span class="window"></span>
 						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
 						
 						<h2 class="">New Post</h2>
 						<p class="">Fri, May 29, 2020</p>
 						
-						<p class="formattingtextbody">
+						<p>
 							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
 						</p>
-
-						<p class="">Read more &#8594;</p>
-					</a>
-				</li>
-
-				<li class="column col-6">
-					<a href="single-post-simple/" class="">
-						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
 						
-						<h2 class="">New Post</h2>
-						<p class="">Fri, May 29, 2020</p>
-						
-						<p class="formattingtextbody">
-							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
-						</p>
-
-						<p class="">Read more &#8594;</p>
+						<p class="link">Read more →</p>
 					</a>
 				</li>
 	  			
 	        </ul>
-
-	        <br class="clear">
 	      </div>
+	      --}}
 	  </div>
 	</div>
 
