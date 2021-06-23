@@ -35,9 +35,9 @@ WordPress Template Use:
 ### (Upcoming commit will have Gulp moving and packing files.)
 
 Next 3 commits:
-1. Usable WordPress template (basic container for blocks.)
-2. webpack for proper mod management.
-3. Gulp? that that eliminates above. Deals templates with "ease." 
+~~1. Usable WordPress template (basic container for blocks.)~~
+~~2. webpack for proper mod management.~~
+~~3. Gulp? that that eliminates above. Deals templates with "ease."~~
 3. All of these are in but need refining, strongly, so:
 3. Refine webpack, gulp, split templates, develop WordPress template.
 4. Have the ability to choose a theme and it refactor for the particular CMS. 
