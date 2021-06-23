@@ -1,0 +1,109 @@
+{{!-- layouts/homepage-2-column.hbs --}}
+<!doctype html>
+<html>
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
+    </title>
+
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    {{#> head-block}}
+      {{!-- Custom <head> content per page could be added. --}}
+    {{/head-block}}
+  </head>
+  <body>
+    {{#> header-block}}
+	  {{> includes/header }}
+	{{/header-block}}
+
+	<div class="entrance-image">
+	  <div class="container">
+	    <h1 class="">
+	      Large Introduction Title
+	    </h1>
+
+	    /* php-code */
+	    <?php the_content(); ?>
+	    /* end-php-code */
+
+	  
+	    <p class="">
+	      More overview about the site and the point of it.
+	    </p>
+	  </div>
+	</div>
+
+	<div class="">
+	  <div class="container">
+
+	    <h2 class="">Latest stories</h2>
+
+	    <div class="latest-stories">
+	        <ul class="navigation-list row">
+	        
+				<li class="column col-6">
+					<a href="single-post-simple/" class="">
+						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+
+						<h2 class="">New Post</h2>
+						<p class="">Fri, May 29, 2020</p>
+
+						<p class="formattingtextbody">
+							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+						</p>
+						
+						<p class="">Read more &#8594;</p>
+					</a>
+				</li>
+			
+				<li class="column col-6">
+					<a href="single-post-simple/" class="">
+						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+						
+						<h2 class="">New Post</h2>
+						<p class="">Fri, May 29, 2020</p>
+						
+						<p class="formattingtextbody">
+							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+						</p>
+
+						<p class="">Read more &#8594;</p>
+					</a>
+				</li>
+	  			
+	        </ul>
+
+	        <br class="clear">
+	      </div>
+	  </div>
+	</div>
+
+	<div class="short-info">
+	  <div class="container row">
+	    <h4 class="column col-5">A declaration of what is being discussed here, punchy, immediate.</h4>
+	    <p class="column col-7">A more thorough breakdown of the left-hand declaration that may include links to categories, about, or contact pages, detail that focuses user attention.</p>
+	  </div>
+	</div>
+
+    <footer>
+      {{#> footer-block}}
+        {{!--
+          The `includes/footer` partial is the default content,
+          but can be overridden.
+        --}}
+        {{> includes/footer }}
+      {{/footer-block}}
+    </footer>
+
+    {{#> scripts-block}}
+      {{!-- Custom scripts per page can be added. --}}
+    {{/scripts-block}}
+  </body>
+</html>

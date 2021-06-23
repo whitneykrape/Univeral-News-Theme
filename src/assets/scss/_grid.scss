@@ -10,28 +10,42 @@
 }
 
 .column {
-  text-align: center;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 1;
-  
+  margin-left: 4%;
+}
+
+.column:first-child {
+  margin-left: 0;
 }
 
 .col-1 {
   max-width: calc(100% / 12);
+  margin-left: calc(8% / 12);
 }
 .col-2 {
   max-width: calc(100% / 12 * 2);
+  margin-left: calc(8% / 12 * 2);
 }
 .col-3 {
   max-width: calc(100% / 12 * 3);
+  margin-left: calc(8% / 12 * 3);
 }
 .col-4 {
   max-width: calc(100% / 12 * 4);
+  margin-left: calc(8% / 12 * 4);
 }
 .col-5 {
   max-width: calc(100% / 12 * 5);
+  margin-left: calc(8% / 12 * 5);
 }
 .col-6 {
-  max-width: calc(100% / 2);
+  max-width: calc(96% / 2);
+  margin-left: calc(8% / 2);
+}
+
+.col-7 {
+  max-width: calc(92% / 12 * 7);
+  margin-left: calc(8% / 12 * 7);
 }
