@@ -29,3 +29,7 @@ base-wordpress/wordpress/xmlrpc.php
 base-wordpress/wordpress/.htaccess
 base-wordpress/wordpress/wp-config.php
 yarn-error.log
+base-craft/craft/.env.example
+base-craft/craft/config/
+base-craft/craft/modules/
+base-craft/craft/storage/
