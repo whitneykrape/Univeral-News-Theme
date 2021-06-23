@@ -1,28 +1,10 @@
-{{!-- layouts/homepage-2-column.hbs --}}
-<!doctype html>
-<html>
-  <head>
-    <title>
-      {{#if title}}
-        {{title}}
-      {{else}}
-        Base Page Title
-      {{/if}}
-    </title>
+{{!-- layouts/post-1-column.hbs --}}
 
-	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    {{#> head-block}}
-      {{!-- Custom <head> content per page could be added. --}}
-    {{/head-block}}
-  </head>
-  <body>
-    {{#> header-block}}
-	  {{> includes/header }}
-	{{/header-block}}
+{{#> layouts/headerfooter-common }}
 
+
+{{#*inline "body"}}
 	<article class="container">
 		<header class="article-header article-width">
 			<h1  class="article-title">Title</h1>
@@ -89,19 +71,7 @@
 			</div>
 		</footer>
 	</article>
+{{/inline}}
 
-    <footer>
-      {{#> footer-block}}
-        {{!--
-          The `includes/footer` partial is the default content,
-          but can be overridden.
-        --}}
-        {{> includes/footer }}
-      {{/footer-block}}
-    </footer>
 
-    {{#> scripts-block}}
-      {{!-- Custom scripts per page can be added. --}}
-    {{/scripts-block}}
-  </body>
-</html>
+{{/layouts/headerfooter-common}}
