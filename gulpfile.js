@@ -19,6 +19,8 @@ var rename = require('gulp-rename');
 var del = require('del');
 var runSequence = require('gulp4-run-sequence');
 var stripCode = require('gulp-strip-code');
+var fs = require('fs')
+var templateData = JSON.parse(fs.readFileSync('./src/content.json'))
 
 // Development Tasks 
 // -----------------
@@ -36,8 +38,10 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('html', () => {
+  var templateData = JSON.parse(fs.readFileSync('./src/content.json'))
+
   return gulp.src('./src/pages/*.hbs')
-    .pipe(handlebars({}, {
+    .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/partials']
     }))

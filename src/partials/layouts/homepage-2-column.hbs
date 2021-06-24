@@ -1,7 +1,6 @@
 {{!-- layouts/homepage-2-column.hbs --}}
 {{#> layouts/headerfooter-common }}
 
-
 {{#*inline "body"}}
 
 
@@ -29,37 +28,11 @@
 
 	    <div class="latest-stories">
 	        <ul class="navigation-list row">
-	        
-				<li class="column col-6">
-					<a href="single-post-simple/" class="">
-						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
 
-						<h2 class="">New Post</h2>
-						<p class="">Fri, May 29, 2020</p>
-
-						<p class="formattingtextbody">
-							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
-						</p>
-						
-						<p class="">Read more &#8594;</p>
-					</a>
-				</li>
-			
-				<li class="column col-6">
-					<a href="single-post-simple/" class="">
-						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
-						
-						<h2 class="">New Post</h2>
-						<p class="">Fri, May 29, 2020</p>
-						
-						<p class="formattingtextbody">
-							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
-						</p>
-
-						<p class="">Read more &#8594;</p>
-					</a>
-				</li>
-	  			
+			{{#each posts}}
+				{{>blocks/block-simple-postpreview post=.}}
+			{{/each}}
+	        	
 	        </ul>
 
 	        <br class="clear">
