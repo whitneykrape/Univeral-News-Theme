@@ -3,20 +3,14 @@
 
 {{#*inline "body"}}
 
-
 	<div class="entrance-image">
 	  <div class="container">
 	    <h1 class="">
-	      Large Introduction Title
+	    	{{select_content templateTypes bodyClass 'title'}}
 	    </h1>
-
-	    /* php-code */
-	    <?php the_content(); ?>
-	    /* end-php-code */
-
 	  
 	    <p class="">
-	      More overview about the site and the point of it.
+	    	{{select_content templateTypes bodyClass 'subtitle'}}
 	    </p>
 	  </div>
 	</div>
@@ -30,7 +24,7 @@
 	        <ul class="navigation-list row">
 
 			{{#each posts}}
-				{{>blocks/block-simple-postpreview post=.}}
+				{{>blocks/block-postpreview-simple post=.}}
 			{{/each}}
 	        	
 	        </ul>
@@ -42,8 +36,12 @@
 
 	<div class="short-info">
 	  <div class="container row">
-	    <h4 class="column col-5">A declaration of what is being discussed here, punchy, immediate.</h4>
-	    <p class="column col-7">A more thorough breakdown of the left-hand declaration that may include links to categories, about, or contact pages, detail that focuses user attention.</p>
+	    <h4 class="column col-5">
+	      {{templateTypes.simple.declaration}}
+	    </h4>
+	    <p class="column col-7">
+	      {{templateTypes.simple.breakdown}}
+	    </p>
 	  </div>
 	</div>
 

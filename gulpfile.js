@@ -21,6 +21,7 @@ var runSequence = require('gulp4-run-sequence');
 var stripCode = require('gulp-strip-code');
 var fs = require('fs')
 var templateData = JSON.parse(fs.readFileSync('./src/content.json'))
+var handlebars_helpers = require('./src/js/handlebars.helpers.js');
 
 // Development Tasks 
 // -----------------
@@ -43,7 +44,8 @@ gulp.task('html', () => {
   return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
-      batch: ['./src/partials']
+      batch: ['./src/partials'],
+      handlebars_helpers
     }))
     .pipe(stripCode({
       start_comment: "php-code",
