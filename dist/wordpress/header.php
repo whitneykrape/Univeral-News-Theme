@@ -1,23 +1,15 @@
-{{!-- layouts/headerfooter-common.hbs --}}
 <!doctype html>
 <html>
   <head>
     <title>
-      {{#if title}}
-        {{title}}
-      {{else}}
         Base Page Title
-      {{/if}}
     </title>
 
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    {{#> head-block}}
-      {{!-- Custom <head> content per page could be added. --}}
-    {{/head-block}}
   </head>
-  <body class="{{template}}">
+  <body class="">
 
   	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
