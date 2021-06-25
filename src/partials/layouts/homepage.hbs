@@ -1,0 +1,30 @@
+{{!-- layouts/homepage-2-column.hbs --}}
+
+{{#> layouts/headerfooter-common }}
+
+{{#*inline "body"}}
+	{{#> blocks/block-entrance }}
+	{{/blocks/block-entrance}}
+
+	<div class="main-content">
+	  <div class="container">
+	    <h2 class="">Latest stories</h2>
+
+	    <div class="latest-stories">
+	        <ul class="navigation-list row">
+
+			{{#each posts}}
+				{{>blocks/block-postpreview-simple columnwidth=6 post=.}}
+			{{/each}}
+	        
+	        </ul>
+	    </div>
+	  </div>
+	</div>
+
+	{{#> blocks/block-shortinfo }}
+	{{/blocks/block-shortinfo}}
+{{/inline}}
+
+{{/layouts/headerfooter-common}}
+

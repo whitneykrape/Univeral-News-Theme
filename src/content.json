@@ -30,9 +30,11 @@
       "title":    "First Sample Post",
       "subtitle": "Sample Post Subtitle",
       "image":    "placeholder",
+      "caption":  "Aligned Image with Caption.",
       "video":    "placeholder.mp4",
       "date":     "Fri, July 10, 2021",
-      "body": "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing."
+      "excerpt":  "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.",
+      "body":     "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing."
     },
     { 
       "title":    "Second Sample Post",
@@ -40,7 +42,8 @@
       "image":    "placeholder",
       "video":    "",
       "date":     "Fri, July 17, 2021",
-      "body": "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing."
+      "excerpt":  "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.",
+      "body":     "Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing."
     }
   ]
 }

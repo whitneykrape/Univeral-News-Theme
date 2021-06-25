@@ -1,5 +1,5 @@
 {{#if post.video}}
-<li class="column col-12">
+<li class="column col-{{columnwidth}}">
 	<div class="elementshowingmotion">
 		<video autoplay muted loop>
 
@@ -17,7 +17,7 @@
 		<p class="">{{post.date}}</p>
 		
 		<p>
-			{{post.body}}
+			{{post.excerpt}}
 		</p>
 		
 		<p class="link">Read more →</p>

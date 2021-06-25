@@ -1,0 +1,78 @@
+{{!-- layouts/post-1-column.hbs --}}
+
+
+{{#> layouts/headerfooter-common }}
+
+
+{{#*inline "body"}}
+
+	<article class="container">
+		<header class="article-header article-width">
+			<h1  class="article-title">Title</h1>
+			<p   class="article-subtitle">Subtitle</p>
+			<div class="article-allbar">
+				<img class="allbar-author" src="assets/img/placeholder.jpg" alt="Author Image" width="40px">
+				Author  |  Mon, Aug 30, 2021  |  Read in 5 minutes
+			</div>
+
+      		<div class="article-main-image layout-background" style="background-image: url('assets/img/placeholder.jpg')">
+				<!-- <img src="assets/img/placeholder.jpg" alt="Main Article Image"> -->
+			</div>
+		</header>
+
+		<div class="article-body article-width">
+			<figure class="alignright">
+				<img src="assets/img/placeholder.jpg" alt="Alternative Text"/>
+
+				<figcaption>Right Aligned Image with Caption.</figcaption>
+			</figure>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<figure class="alignleft">
+				<img src="assets/img/placeholder.jpg" alt="Alternative Text"/>
+
+				<figcaption>Left Aligned Image with Caption.</figcaption>
+			</figure>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}}
+			</p>
+
+			<p>
+				{{select_content posts 0 'body'}} 
+			</p>
+		</div>
+
+		<footer class="article-footer">
+			<div class="article-meta">
+				<!-- Share Links -->
+			</div>
+		</footer>
+	</article>
+{{/inline}}
+
+
+{{/layouts/headerfooter-common}}

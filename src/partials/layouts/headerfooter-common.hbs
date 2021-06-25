@@ -18,7 +18,7 @@
       {{!-- Custom <head> content per page could be added. --}}
     {{/head-block}}
   </head>
-  <body class="{{bodyClass}}">
+  <body class="{{template}}">
     {{#> header-block}}
       {{> includes/header }}
     {{/header-block}}
@@ -27,10 +27,7 @@
 
     <footer>
       {{#> footer-block}}
-        {{!--
-          The `includes/footer` partial is the default content,
-          but can be overridden.
-        --}}
+        
         {{> includes/footer }}
       {{/footer-block}}
     </footer>
