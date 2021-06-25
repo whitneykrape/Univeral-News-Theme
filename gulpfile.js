@@ -57,16 +57,17 @@ gulp.task('html', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('php', () => {
-  return gulp.src('./src/pages/*.hbs')
-    .pipe(handlebars({}, {
+gulp.task('wordpress', () => {
+  return gulp.src('./src/pages/wordpress/*.hbs')
+    .pipe(handlebars(templateData, {
       ignorePartials: true,
-      batch: ['./src/partials']
+      batch: ['./src/partials'],
+      handlebars_helpers
     }))
     .pipe(rename({
       extname: '.php'
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/wordpress'));
 });
 
 
@@ -89,9 +90,8 @@ gulp.task('sass', function() {
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('src/assets/scss/**/*.scss', { usePolling: true }, gulp.series('sass'));
-  gulp.watch('./src/partials/blocks/*.hbs', { usePolling: true }, gulp.series('html'));
-  gulp.watch('./src/partials/includes/*.hbs', { usePolling: true }, gulp.series('html'));
-  gulp.watch('./src/partials/layouts/*.hbs', { usePolling: true }, gulp.series('html'));
+  gulp.watch(['./src/partials/blocks/*.hbs', './src/partials/includes/*.hbs', './src/partials/layouts/*.hbs'], { usePolling: true }, gulp.series('html'));
+  gulp.watch(['./src/pages/wordpress/*.hbs'], { usePolling: true }, gulp.series('wordpress'));
 
   // gulp.watch('app/js/**/*.js', browserSync.reload);
 })
