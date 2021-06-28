@@ -1,27 +1,25 @@
-<?php
-/**
- * 
- * Closing out, completely simple, for now.
- *
- * @package WordPress
- * @subpackage Form Function IO Base
- * @since FFIOBase 1.0
- */
+	<footer class="site-footer align-center layout-background">
+	    <p class="logo">
+		    <a class="" title="Main Link and Logo" href="./"><strong>Text</strong>Text
+		    </a>
+	    </p>
 
-?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
+				<p class="">Newsletter subscribe</p>
 
-	<?php // get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+	<form action="" class="">
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<!-- Ripping out the whole of the footer for the moment. -->
-	</footer><!-- #colophon -->
+	  <fieldset class="" name="newsletter" action="newsletter-subscribe">
+	  	<label for="email">
+	    	<input type="text" id="email" placeholder="Your email" class="">
+	    </label>
+	  </fieldset>
 
-</div><!-- #page -->
+	  <button class="" type="submit">Submit</button>
 
-<?php wp_footer(); ?>
-
+	</form>
+		<section class="copyright">
+    		<a class="logo" href="https://domain.com">Domain</a> &copy; 2021 <a href="Current 4 CMSs Link">Current 4 CMSs Link</a>
+  		</section>
+	</footer>
 </body>
 </html>

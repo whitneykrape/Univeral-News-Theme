@@ -8,7 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+    <?php wp_head(); ?>
   </head>
   <body class="">
 

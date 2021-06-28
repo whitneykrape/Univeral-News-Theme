@@ -13,10 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap" rel="stylesheet">
 
+    /* only-html-code */
     <link rel="stylesheet" href="assets/css/style.css">
+    /* end-only-html-code */
+
     {{#> head-block}}
       {{!-- Custom <head> content per page could be added. --}}
     {{/head-block}}
+
+    <!-- /* php-code */ -->
+    <?php wp_head(); ?>
+    <!-- /* end-php-code */ -->
   </head>
   <body class="{{template}}">
 

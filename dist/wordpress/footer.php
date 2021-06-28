@@ -1,11 +1,10 @@
 	<footer class="site-footer align-center layout-background">
 	    <p class="logo">
 		    <a class="" title="Main Link and Logo" href="./"><strong>Text</strong>Text
-		      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
 		    </a>
 	    </p>
-			
-	<p class="">Newsletter subscribe</p>
+
+				<p class="">Newsletter subscribe</p>
 
 	<form action="" class="">
 
