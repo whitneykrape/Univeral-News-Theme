@@ -9,12 +9,13 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var decomment = require('gulp-decomment');
+const babel = require('gulp-babel');
 
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
@@ -101,7 +102,7 @@ gulp.task('wordpress-blocks-php', () => {
 
 gulp.task('wordpress-blocks-js', () => {
   return gulp.src('./src/pages/wordpress/blocks/*.js')
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.js', babel()))
     .pipe(gulp.dest('./dist/wordpress/blocks'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'));
 });
@@ -142,7 +143,7 @@ gulp.task('useref', function() {
 
   return gulp.src('./base-html/homepage/*.html')
     .pipe(useref())
-    // .pipe(gulpIf('*.js', uglify()))
+    // .pipe(gulpIf('*.js', terser()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
