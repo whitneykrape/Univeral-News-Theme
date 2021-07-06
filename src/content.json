@@ -115,6 +115,13 @@
       "installed-solar-mw":           "356.1",
       "population-rough-thousands":   "6800"
     }
-    
+  ],
+  "models": [
+    {
+      "name":                     "iPhone Motherboard Comparisons",
+      "filename":                 "202107_motherboards_scene",
+      "filetype":                 "glb",
+      "cameras":                  "1"
+    },
   ]
 }
