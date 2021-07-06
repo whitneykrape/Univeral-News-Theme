@@ -1,11 +1,11 @@
 	<header class="article-header article-width">
-		<h1  class="article-title">{{select_content posts number 'title'}}</h1>
-		<p   class="article-subtitle">{{select_content posts number 'subtitle'}}</p>
+		<h1  class="article-title">{{selectContent posts number 'title'}}</h1>
+		<p   class="article-subtitle">{{selectContent posts number 'subtitle'}}</p>
 		<div class="article-allbar">
 			<img class="allbar-author" src="assets/img/placeholder.jpg" alt="Author Image" width="40px">
-			Author  |  {{select_content posts number 'date'}}  |  Read in 5 minutes
+			Author  |  {{selectContent posts number 'date'}}  |  Read in 5 minutes
 		</div>
 
-  		<div class="article-main-image layout-background" style="background-image: url('assets/img/{{select_content posts number 'image'}}.jpg')">
+  		<div class="article-main-image layout-background" style="background-image: url('assets/img/{{selectContent posts number 'image'}}.jpg')">
 		</div>
 	</header>

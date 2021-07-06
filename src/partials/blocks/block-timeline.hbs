@@ -1,0 +1,62 @@
+		{{!--
+			If there's an object with is just events, 
+				thing01 {
+					startDate
+					endDate
+					title
+					image
+					content (Another block?)
+				}
+				thing02 {
+					startDate
+					endDate
+					title
+					image
+					content (Another block?)
+				}
+				thing03 {
+					startDate
+					endDate
+					title
+					image
+					content (Another block?)
+				}
+			The JS can pull the first and lasts 0 and count() to set the spans in 1, 10, 100
+			That are just evenly spaced.
+			It might be odd, but have the JS modify the HTML rather than pulling JSON and laying something out as one might expect.
+		--}}
+
+<div id="tob-timeline_number" class="{{classConcat name classNames=''}}">
+	<div class="{{classConcat name classNames='stage'}}">
+		{{!--
+			Does the stage pull anything? May be the first slide?
+		--}}
+		<div class="arrow-left"></div>
+
+		<div class="slide"></div>
+
+		<div class="arrow-right"></div>
+	</div>
+	<ul class="{{classConcat name classNames='events'}}">
+		{{!--
+			These get filled out like anything else.
+		--}}
+		{{#each posts}}
+			<li class="{{classConcat name classNames='event'}}">
+				{{title}}
+			</li>
+		{{/each}}
+	</ul>
+	<ul class="{{classConcat name classNames='background'}}">
+		{{!--
+			Math here is important. Each Tick should be at a regular % interval
+			Regardless of scale. But the container is made here with the broad ticks, that 
+			get evenly spaced. 
+		--}}
+		{{#each posts}}
+			<li class="{{classConcat name classNames='tick'}}">
+				{{title}}
+			</li>
+		{{/each}}
+	</ul>
+</div>
