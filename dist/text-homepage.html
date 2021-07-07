@@ -4,6 +4,16 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8"/>
+    <html lang="en">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assests/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assests/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assests/ico/favicon-16x16.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>
         Text Homepage Template
     </title>
@@ -57,18 +67,40 @@
     	</div>
     
     
-    <section id="tob3d__threedee__number" class="tob3d__threedee__main sceneContainer">
+    <section id="tob3d__threedee__number" class="tob3d__main">
     
-    	<canvas></canvas>
-    	<div class="gizmo-orbit"></div>
+    	<div id="tob3d__threedee__canvas" class="tob3d__canvas"></div>
+    	<div id="tob3d__threedee__gizmo" class="tob3d__gizmo__orbit"></div>
     
     </section>
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
+    <script type="module">
+    	import * as THREE 			from './assets/js/tob3d-three-three.module.js';
+    	import { APP }				from './assets/js/tob3d-three-app.js';
+    	import { VRButton }			from './assets/js/tob3d-three-VRButton.js';
     
+    	window.THREE = THREE; // Used by APP Scripts.
+    	window.VRButton = VRButton; // Used by APP Scripts.
     
+    	var loader = new THREE.FileLoader();
+    	loader.load( './tob3d-three-app.json', function ( text ) {
     
+    		var player = new APP.Player();
+    		player.load( JSON.parse( text ) );
+    		player.setSize( window.innerWidth, window.innerHeight );
+    		player.play();
+    
+    		document.getElementById('tob3d__threedee__number').appendChild( player.dom );
+    
+    		window.addEventListener( 'resize', function () {
+    
+    			player.setSize( window.innerWidth, window.innerHeight );
+    
+    		} );
+    
+    	} );
+    </script>
     	<div class="main-content">
     	  <div class="container">
     	    <h2 class="">Latest stories</h2>

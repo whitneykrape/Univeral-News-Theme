@@ -23,7 +23,6 @@ var del = require('del');
 var runSequence = require('gulp4-run-sequence');
 var stripCode = require('gulp-strip-code');
 var fs = require('fs')
-var templateData = JSON.parse(fs.readFileSync('./src/content.json'))
 var handlebars_helpers = require('./src/js/handlebars.helpers.js');
 
 // Development Tasks 
@@ -42,7 +41,7 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('html', () => {
-  var templateData = JSON.parse(fs.readFileSync('./src/content.json'))
+  var templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars(templateData, {

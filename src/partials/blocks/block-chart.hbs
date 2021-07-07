@@ -2,12 +2,12 @@
 	Similar to the 3D block, have options where the JS is either a default load right in place, not ideal, or build some pieces to be used later, or don't load anything.
 --}}
 
-<div class="tob3d__chart__main">
+<div class="{{classConcat name classNames='main'}}">
 	{{!-- Add wrapper and title --}}
 
-	<canvas id="chartIdentifier"></canvas>
+	<canvas id="chartIdentifier"  class="{{classConcat name classNames='canvas'}}"></canvas>
 
-	<div class="tob3d__chart__description">
+	<div  class="{{classConcat name classNames='description'}}">
 		<p>
 			Chart explanation, usually short, 2-ish sentences, that introduces the chart and points to the longer text. That said, could have more detail as there is a fair amount of space available here that is not definitely needed for links, or legends.
 		</p>

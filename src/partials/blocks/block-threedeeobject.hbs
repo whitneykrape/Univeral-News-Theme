@@ -4,11 +4,11 @@
 	create a partial JS that could be loaded? (That might take quite a bit of time...)
 	Or do nothing and expect the user to add the app and json pieces themselves. Most likely to be used really. Not everything can be perfectly built from the template right away.
 --}}
-<section id="tob3d__threedee__number" class="tob3d__threedee__main sceneContainer">
+<section id="tob3d__threedee__number" class="{{classConcat name classNames='main'}}">
 
 	{{!-- Add wrapper and title --}}
-	<canvas></canvas>
-	<div class="gizmo-orbit"></div>
+	<div id="tob3d__threedee__canvas" class="{{classConcat name classNames='canvas'}}"></div>
+	<div id="tob3d__threedee__gizmo" class="{{classConcat name classNames='gizmo__orbit'}}"></div>
 
 	{{!-- Add link to post a the bottom. (Backend of this will take more time.) --}}
 </section>
@@ -18,17 +18,30 @@
 	Pretty sure the module one is preferred at this point.
 --}}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
+{{!-- Create for later. --}}
+<script type="module">
+	import * as THREE 			from './assets/js/tob3d-three-three.module.js';
+	import { APP }				from './assets/js/tob3d-three-app.js';
+	import { VRButton }			from './assets/js/tob3d-three-VRButton.js';
 
-{{!-- Create for later.
-	const scene = new THREE.Scene();
-	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	window.THREE = THREE; // Used by APP Scripts.
+	window.VRButton = VRButton; // Used by APP Scripts.
 
-	const renderer = new THREE.WebGLRenderer();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild( renderer.domElement );
---}}
+	var loader = new THREE.FileLoader();
+	loader.load( './tob3d-three-app.json', function ( text ) {
 
-{{!--
-	Do nothing. 
---}}
+		var player = new APP.Player();
+		player.load( JSON.parse( text ) );
+		player.setSize( window.innerWidth, window.innerHeight );
+		player.play();
+
+		document.getElementById('tob3d__threedee__number').appendChild( player.dom );
+
+		window.addEventListener( 'resize', function () {
+
+			player.setSize( window.innerWidth, window.innerHeight );
+
+		} );
+
+	} );
+</script>
