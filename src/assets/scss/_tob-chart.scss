@@ -1,0 +1,19 @@
+.tob3d__chart__main {
+	max-width: 1020px;
+	background-color: pink;
+	margin: 0 auto;
+	display: flex;
+
+	canvas {
+		background-color: red;
+		width: 60%;
+		min-height: 10vh;
+	}
+
+	.tob3d__chart__description {
+		background-color: green;
+		width: 40%;
+		min-height: 10vh;
+	}
+}
+

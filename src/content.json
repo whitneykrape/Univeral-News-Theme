@@ -56,7 +56,7 @@
       "dateEnd":      "1700 CE",
       "title":        "Early Mechanization",
       "slideType":    "image",
-      "media":        "image.jpg",  
+      "media":        "assets/img/placeholder.jpg",
       "description":  "Water wheels, along with wheels and early gears, assisted and replaced the labor of many humans and animals but didn't completely revolutionize work."
     },
     {
@@ -64,23 +64,23 @@
       "dateEnd":      "1950 CE",
       "title":        "Steam Engine",
       "slideType":    "image",
-      "media":        "image.jpg",  
+      "media":        "assets/img/placeholder.jpg",
       "description":  "The invention of the steam engine kickstarted the industrial revoltion greatly augmenting and expanding the potential of physical effort."
     },
     {
       "dateStart":    "1950 CE",
       "dateEnd":      "2000 CE",
-      "title":        "Start of trueAutomation",
+      "title":        "Start of True Automation",
       "slideType":    "image",
-      "media":        "image.jpg",  
-      "description":  "Ford Montors began fully automating tasks, with machines not only augmenting physical effort but also taking over tasks, taking in feedback, and self adjusting to feedback."
+      "media":        "assets/img/placeholder.jpg",
+      "description":  "Ford Motors began fully automating tasks, with machines not only augmenting physical effort but also taking over tasks, taking in feedback, and self adjusting to feedback."
     },
     {
-      "dateStart":    "1950 CE",
-      "dateEnd":      "2000 CE",
+      "dateStart":    "2000 CE",
+      "dateEnd":      "2020 CE",
       "title":        "Beginning of Information and Robotics ",
       "slideType":    "image",
-      "media":        "image.jpg",  
+      "media":        "assets/img/placeholder.jpg",
       "description":  "With the foundations of machinery and large scale computing, entire systems c"
     }
   ],
@@ -122,6 +122,6 @@
       "filename":                 "202107_motherboards_scene",
       "filetype":                 "glb",
       "cameras":                  "1"
-    },
+    }
   ]
 }

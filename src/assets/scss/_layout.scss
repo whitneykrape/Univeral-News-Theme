@@ -18,7 +18,7 @@
 .latest-stories {
   margin: 0 0 2em;
 
-  li {
+  .column {
     background: #fafafa;
     padding: 0em;
 
@@ -85,9 +85,10 @@ footer {
 
 figure {
   figcaption {
-    background: #efefef;
-    padding: 5px; 
-    margin: -7px 0 0;
+    // Not sure why there's overall figcap styling.
+    // background: #efefef;
+    // padding: 5px; 
+    // margin: -7px 0 0;
   }
 }
 

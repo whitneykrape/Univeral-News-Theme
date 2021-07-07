@@ -1,0 +1,19 @@
+.tob3d__threedee__main {
+	max-width: 1020px;
+	background-color: pink;
+	margin: 0 auto;
+	display: flex;
+
+	canvas {
+		background-color: red;
+		width: 60%;
+		min-height: 10vh;
+	}
+
+	.gizmo-orbit {
+		background-color: green;
+		width: 40%;
+		min-height: 10vh;
+	}
+}
+

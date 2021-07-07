@@ -1,8 +1,7 @@
-// Change to sections
-
-<li class="column col-{{columnwidth}}">
+<div class="column col-{{columnwidth}}">
 	<a href="single-post-simple/" class="">
 		<img src="assets/img/{{post.image}}.jpg" alt="Placeholder"/>
+	</a>
 
 		<h2 class="">{{post.title}}</h2>
 		<p class="">{{post.date}}</p>
@@ -11,6 +10,9 @@
 			{{post.excerpt}}
 		</p>
 		
-		<p class="">Read more &#8594;</p>
-	</a>
-</li>
+		<p class="">
+			<a href="single-post-simple/" class="">
+				Read more &#8594;
+			</a>
+		</p>
+</div>

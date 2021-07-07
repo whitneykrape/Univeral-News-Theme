@@ -6,19 +6,30 @@
 	{{#> blocks/block-entrance }}
 	{{/blocks/block-entrance}}
 
+	{{#if interaction}}
+		{{#> blocks/block-timeline name="tobt" }}
+		{{/blocks/block-timeline}}
+	{{/if}}
+
+	{{#if media}}
+		{{#> blocks/block-chart name="tobt" }}
+		{{/blocks/block-chart}}
+	{{/if}}
+
+	{{#if text}}
+		{{#> blocks/block-threedeeobject name="tobt" }}
+		{{/blocks/block-threedeeobject}}
+	{{/if}}
+
 	<div class="main-content">
 	  <div class="container">
 	    <h2 class="">Latest stories</h2>
 
-	    <div class="latest-stories">
-	        <ul class="navigation-list row">
-
+	    <section class="latest-stories navigation-list row">
 			{{#each posts}}
 				{{>blocks/block-postpreview-simple columnwidth=6 post=.}}
 			{{/each}}
-
-	        </ul>
-	    </div>
+	    </section>
 	  </div>
 	</div>
 

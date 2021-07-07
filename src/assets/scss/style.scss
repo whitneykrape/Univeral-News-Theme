@@ -24,9 +24,12 @@ $eye-rest-color: #fefefe;
 @import "layout"; 
 @import "footer";
 
-/* Include blocks individually? */
+/* Include blocks individually? YES */
 @import "article";
 @import "modularblocks";
+@import "tob-timeline";
+@import "tob-threedee";
+@import "tob-chart";
 
 @import "elements";
 

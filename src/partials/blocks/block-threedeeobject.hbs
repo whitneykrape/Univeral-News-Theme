@@ -4,15 +4,21 @@
 	create a partial JS that could be loaded? (That might take quite a bit of time...)
 	Or do nothing and expect the user to add the app and json pieces themselves. Most likely to be used really. Not everything can be perfectly built from the template right away.
 --}}
-<div class="sceneContainer">
+<section id="tob3d__threedee__number" class="tob3d__threedee__main sceneContainer">
+
+	{{!-- Add wrapper and title --}}
 	<canvas></canvas>
-	<div id="gizmo-orbit"></div>
-</div>
+	<div class="gizmo-orbit"></div>
+
+	{{!-- Add link to post a the bottom. (Backend of this will take more time.) --}}
+</section>
 
 {{!-- Load in place.
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
 	Pretty sure the module one is preferred at this point.
 --}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
 
 {{!-- Create for later.
 	const scene = new THREE.Scene();

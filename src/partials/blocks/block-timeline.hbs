@@ -26,37 +26,78 @@
 			It might be odd, but have the JS modify the HTML rather than pulling JSON and laying something out as one might expect.
 		--}}
 
-<div id="tob-timeline_number" class="{{classConcat name classNames=''}}">
+<section id="tobt__timeline_number" class="{{classConcat name classNames='main'}}">
+
+	{{!-- Add wrapper and title --}}
 	<div class="{{classConcat name classNames='stage'}}">
 		{{!--
 			Does the stage pull anything? May be the first slide?
 		--}}
-		<div class="arrow-left"></div>
+		<div class="{{classConcat name classNames='arrow-left'}}"></div>
 
-		<div class="slide"></div>
+		<div class="{{classConcat name classNames='slide'}}">
+			{{!--
+				Thinking no, nothing pulled at first but everything is in the slides at the bottom and the JS just pulls the first slide in.
+			--}}
+		</div>
 
-		<div class="arrow-right"></div>
+		<div class="{{classConcat name classNames='arrow-right'}}"></div>
 	</div>
-	<ul class="{{classConcat name classNames='events'}}">
+	<ul class="tobt__events">
 		{{!--
 			These get filled out like anything else.
 		--}}
-		{{#each posts}}
-			<li class="{{classConcat name classNames='event'}}">
-				{{title}}
+		{{#each timeline}}
+			<li class="tobt__event slideType--{{slideType}}" data-dateStart="{{dateStart}}"  data-dateEnd="{{dateEnd}}">
+				<figure class="tobt__event-media">
+					<img src="{{media}}" alt="{{title}}"/>
+					<figcaption></figcaption>
+				</figure>
+				<div class="tobt__event-content">
+					<span class="tobt__event-content-title">
+						{{title}}
+					</span>
+
+					<p class="tobt__event-content-body">
+						{{description}}
+					</p>
+				</div>
 			</li>
 		{{/each}}
 	</ul>
-	<ul class="{{classConcat name classNames='background'}}">
-		{{!--
+	{{!-- Not sure this is needed.
+		<ul class="{{classConcat name classNames='background'}}">
+		
 			Math here is important. Each Tick should be at a regular % interval
 			Regardless of scale. But the container is made here with the broad ticks, that 
 			get evenly spaced. 
-		--}}
-		{{#each posts}}
-			<li class="{{classConcat name classNames='tick'}}">
+
+			HBS isn't going to have a ton of logic available. Could make a helper that builds some better HTML but that wouldn't make sense for PHP. Thinking there will be a low backend versus and a high backend version. 
+		
+		{{#each timeline}}
+			<li class="{{tobt-tick}}">
 				{{title}}
 			</li>
 		{{/each}}
-	</ul>
-</div>
+	</ul>--}}
+
+	{{!-- Add link to post a the bottom. (Backend of this will take more time.) --}}
+</section>
+
+<script>
+	// Each! 
+	$eventsDebug = {}
+
+	$timeline = document.getElementById("tob-timeline_number")
+
+	$timelineStage = $timeline.querySelector('.tobt__stage')
+	$timelineEvents = $timeline.querySelector('.tobt__events')
+	$timelineEventFirst = $timelineEvents.firstElementChild
+
+	$timelineStage.querySelector('.tobt__slide').innerHTML = $timelineEvents.firstElementChild.innerHTML
+
+	$eventsDebug.firstEvent = $timelineEventFirst
+
+	console.log('EventsDebug')
+	console.log($eventsDebug)
+</script>
