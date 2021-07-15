@@ -7,10 +7,24 @@
 <section id="tob3d__threedee__number" class="{{classConcat name classNames='main'}}">
 
 	{{!-- Add wrapper and title --}}
-	<div id="tob3d__threedee__canvas" class="{{classConcat name classNames='canvas'}}"></div>
-	<div id="tob3d__threedee__gizmo" class="{{classConcat name classNames='gizmo__orbit'}}"></div>
+	<div id="tob3d__threedee__canvas" class="{{classConcat name classNames='canvas'}}">
+		<div id="tob3d__threedee__gizmo" class="{{classConcat name classNames='gizmo__orbit'}}"></div>
+	</div>
 
 	{{!-- Add link to post a the bottom. (Backend of this will take more time.) --}}
+
+	<div class="tob3d__explaination">
+		<p>
+			{{selectContent models 0 'explainationTitle'}}
+		</p>
+
+		<p>
+			{{selectContent models 0 'explainationBody'}}
+		</p>
+
+		{{#> blocks/block-postpreview-onpage }}
+		{{/blocks/block-postpreview-onpage}}
+	</div>
 </section>
 
 {{!-- Load in place.

@@ -10,6 +10,7 @@
 		min-height: 10vh;
 		order: 0;
 		overflow: hidden;
+		position: relative;
 
 		canvas {
 			width: 100% !important;
@@ -18,10 +19,40 @@
 	}
 
 	.tob3d__gizmo__orbit {
+		width: 100px;
+		height: 40px;
+		display: block;
+		background: pink;
+		position: absolute;
+		right: 3%;
+		bottom: 4%;
+	}
+
+	.tob3d__explaination {
 		background-color: green;
 		width: 40%;
 		min-height: 10vh;
 		order: 1;
+		padding: 20px;
+		display: flex;
+		flex-flow: column;
+
+		.post__preview {
+			margin: -20px;
+			padding: 20px;
+			color: #777;
+			background: #ccc;
+		}
+
+		p {
+			flex-grow: 1;
+		}
+
+		// Temporary
+		strong, a {
+			display: block;
+			// margin-bottom: 20px;
+		}
 	}
 }
 
