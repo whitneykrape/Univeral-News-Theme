@@ -1,29 +1,29 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
-var sass = require('gulp-sass');
+const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const postcssNormalize = require('postcss-normalize');
-var cssimport = require("gulp-cssimport");
-var gulpAutoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
+const cssimport = require("gulp-cssimport");
+const gulpAutoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
-var browserSync = require('browser-sync');
-var useref = require('gulp-useref');
+const browserSync = require('browser-sync');
+const useref = require('gulp-useref');
 const terser = require('gulp-terser');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var decomment = require('gulp-decomment');
+const gulpIf = require('gulp-if');
+const cssnano = require('gulp-cssnano');
+const imagemin = require('gulp-imagemin');
+const cache = require('gulp-cache');
+const decomment = require('gulp-decomment');
 const babel = require('gulp-babel');
 
-var handlebars = require('gulp-compile-handlebars');
-var rename = require('gulp-rename');
-var del = require('del');
-var runSequence = require('gulp4-run-sequence');
-var stripCode = require('gulp-strip-code');
-var fs = require('fs')
-var handlebars_helpers = require('./src/js/handlebars.helpers.js');
+const handlebars = require('gulp-compile-handlebars');
+const rename = require('gulp-rename');
+const del = require('del');
+const runSequence = require('gulp4-run-sequence');
+const stripCode = require('gulp-strip-code');
+const fs = require('fs')
+const handlebars_helpers = require('./src/js/handlebars.helpers.js');
 
 // Development Tasks 
 // -----------------
@@ -96,14 +96,14 @@ gulp.task('wordpress-blocks-php', () => {
       extname: '.php'
     }))
     .pipe(gulp.dest('./dist/wordpress/blocks'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'));
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
 
 gulp.task('wordpress-blocks-js', () => {
   return gulp.src('./src/pages/wordpress/blocks/*.js')
     .pipe(gulpIf('*.js', babel()))
     .pipe(gulp.dest('./dist/wordpress/blocks'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'));
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
 
 
@@ -124,9 +124,18 @@ gulp.task('sass', function() {
     }));
 })
 
+
+gulp.task('js', function() {
+  return gulp.src('./src/assets/js/*.js')
+    .pipe(gulpIf('*.js', babel()))
+    .pipe(gulp.dest('./dist/assets/js'))
+})
+
+
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('./src/assets/scss/**/*.scss', { usePolling: true }, gulp.series('sass'));
+  gulp.watch('./src/assets/js/*.js', { usePolling: true }, gulp.series('js'));
   gulp.watch(['./src/partials/blocks/*.hbs', './src/partials/includes/*.hbs', './src/partials/layouts/*.hbs'], { usePolling: true }, gulp.series('html'));
   gulp.watch(['./src/pages/wordpress/*.hbs'], { usePolling: true }, gulp.series('wordpress'));
   gulp.watch(['./src/pages/wordpress/blocks/*.hbs','./src/pages/wordpress/blocks/*.js'], { usePolling: true }, gulp.series(['wordpress-blocks-php','wordpress-blocks-js']));

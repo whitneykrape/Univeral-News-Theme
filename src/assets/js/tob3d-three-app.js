@@ -1,10 +1,12 @@
-var APP = {
+var APP = { 
 
 	Player: function () {
 
 		var renderer = new THREE.WebGLRenderer( { antialias: true } );
 		renderer.setPixelRatio( window.devicePixelRatio ); // TODO: Use player.setPixelRatio()
 		renderer.outputEncoding = THREE.sRGBEncoding;
+
+		console.log(window.devicePixelRatio)
 
 		var loader = new THREE.ObjectLoader();
 		var camera, scene;
@@ -18,10 +20,10 @@ var APP = {
 
 		this.dom = dom;
 
-		this.width = 500;
+		this.width = 1000;
 		this.height = 500;
 
-		this.load = function ( json ) {
+		this.load = function ( json ) { 
 
 			var project = json.project;
 
