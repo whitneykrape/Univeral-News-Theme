@@ -1,3 +1,4 @@
+import { OrbitControls } from './tob3d-three-OrbitControls.js';
 var APP = {
   Player: function () {
     var renderer = new THREE.WebGLRenderer({
@@ -6,7 +7,6 @@ var APP = {
     renderer.setPixelRatio(window.devicePixelRatio); // TODO: Use player.setPixelRatio()
 
     renderer.outputEncoding = THREE.sRGBEncoding;
-    console.log(window.devicePixelRatio);
     var loader = new THREE.ObjectLoader();
     var camera, scene;
     var vrButton = VRButton.createButton(renderer); // eslint-disable-line no-undef
@@ -15,7 +15,7 @@ var APP = {
     var dom = document.getElementById('tob3d__threedee__canvas');
     dom.appendChild(renderer.domElement);
     this.dom = dom;
-    this.width = 1000;
+    this.width = 500;
     this.height = 500;
 
     this.load = function (json) {
@@ -83,6 +83,8 @@ var APP = {
       camera = value;
       camera.aspect = this.width / this.height;
       camera.updateProjectionMatrix();
+      var controls = new OrbitControls(camera, renderer.domElement);
+      controls.update();
     };
 
     this.setScene = function (value) {

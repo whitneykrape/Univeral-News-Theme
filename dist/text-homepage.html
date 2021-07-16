@@ -101,19 +101,23 @@
     	window.THREE = THREE; // Used by APP Scripts.
     	window.VRButton = VRButton; // Used by APP Scripts.
     
-    	var loader = new THREE.FileLoader();
+    	const loader = new THREE.FileLoader();
     	loader.load( './tob3d-three-app.json', function ( text ) {
     
-    		var player = new APP.Player();
+    		const $threedeeContainer = document.getElementById('tob3d__threedee__canvas')
+    
+    		console.log($threedeeContainer.innerWidth)
+    
+    		const player = new APP.Player();
     		player.load( JSON.parse( text ) );
-    		player.setSize( window.innerWidth, window.innerHeight );
+    		player.setSize( $threedeeContainer.offsetWidth, $threedeeContainer.offsetHeight )
     		player.play();
     
-    		document.getElementById('tob3d__threedee__number').appendChild( player.dom );
+    		document.getElementById('tob3d__threedee__number').appendChild( player.dom )
     
     		window.addEventListener( 'resize', function () {
     
-    			player.setSize( window.innerWidth, window.innerHeight );
+    			player.setSize( $threedeeContainer.offsetWidth, $threedeeContainer.offsetHeight )
     
     		} );
     
