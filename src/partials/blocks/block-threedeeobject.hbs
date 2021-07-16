@@ -1,8 +1,9 @@
 {{!--
 	Static block that creates a canvas for a 3D element to be loaded.
-	It will include an if that either, loads a default APP and JSON to just display the block,
-	create a partial JS that could be loaded? (That might take quite a bit of time...)
-	Or do nothing and expect the user to add the app and json pieces themselves. Most likely to be used really. Not everything can be perfectly built from the template right away.
+	
+	Right now, pulling everything in here, will adjust per-CMS as dev continues.
+
+	Height issue. The text vs 3D need some "manual" balance but that's not unusual for media.
 --}}
 <section id="tob3d__threedee__number" class="{{classConcat name classNames='main'}}">
 
@@ -26,11 +27,6 @@
 		{{/blocks/block-postpreview-onpage}}
 	</div>
 </section>
-
-{{!-- Load in place.
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
-	Pretty sure the module one is preferred at this point.
---}}
 
 {{!-- Create for later. --}}
 <script type="module">

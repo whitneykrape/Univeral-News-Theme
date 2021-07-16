@@ -5,7 +5,7 @@
 	display: flex;
 
 	.tob3d__canvas {
-		background-color: red;
+		background-color: #000;
 		width: 60%;
 		min-height: 10vh;
 		order: 0;
@@ -29,7 +29,7 @@
 	}
 
 	.tob3d__explaination {
-		background-color: green;
+		background-color: #fafafa;
 		width: 40%;
 		min-height: 10vh;
 		order: 1;
@@ -38,14 +38,15 @@
 		flex-flow: column;
 
 		.post__preview {
-			margin: -20px;
+			margin: 0px -20px -20px -20px;
 			padding: 20px;
 			color: #777;
 			background: #ccc;
 		}
 
-		p {
+		h2, p {
 			flex-grow: 1;
+			margin-top: 0;
 		}
 
 		// Temporary
