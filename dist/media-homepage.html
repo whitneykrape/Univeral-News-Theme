@@ -88,18 +88,23 @@
     	  return response.json(); // get JSON from the response 
     	}
     
-    	var data = ""
+    	var dataFrom
     
     	console.log("Fetching data...");
-    	getJSON("./demo-content.json")
-    	  .then(data => console.log(data));
+    	dataFrom = getJSON("./demo-content.json")
+    	  .then(dataFrom => {
+    			dataFrom = dataFrom
+    			console.log(dataFrom)
+    
+    			return dataFrom
+    	  });
     
     	const DATA_COUNT = 7;
     	const NUMBER_CFG = {count: DATA_COUNT, min: -10, max: 10};
     
     	const json = ""
     
-    	console.log(data)
+    	console.log(await dataFrom)
     
     	const labels = Utils.months({count: 7});
     	const data = {
