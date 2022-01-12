@@ -59,18 +59,20 @@
 	article {
 		padding: 20px;
 	    align-items: stretch;
+        display: block;
+        padding: 0px 0px 1%;
 	    @media (min-width: 768px) {
 	    	display: flex;
 	    	max-height: 340px;
 	    	padding: 20px 0 20px 20px;
 	    }
 	    background: #aaa;
-	    margin: 1% 0 5%;
+	    margin: 1% 0 5%;	    
 
 	    .article-image.imagelink {
 			order: 0;
 		    box-shadow: none;
-		    margin: -20px 0px -20px -20px;
+		    margin: 0px;
 		    z-index: 2000;
 		    position: relative;
 		    height: auto;
@@ -78,10 +80,15 @@
 		    align-content: stretch;
 		    border: 0px;
 
+		    @media (min-width: 768px) {
+		    	margin: -20px 0px -20px -20px;
+		    }
+
 		    img {
 		    	height: 100%;
     			box-shadow: none;
     			width: 100%;
+    			padding: 0;
 
     			@media (min-width: 768px) {
     				width: initial;
@@ -94,10 +101,15 @@
 			background: #fff;
 		    position: relative;
 		    z-index: 9000;
-		    padding: 20px;
 		    border-radius: 4px;
+	        margin: 5%;
+	        padding: 5%;
+	        width: 80%;
 
 		    @media (min-width: 768px) {
+		    	padding: 20px;
+		    	margin-right: 20px;
+		    	width: 100%;
 		    	margin-left: -64px;
 		    }
 
