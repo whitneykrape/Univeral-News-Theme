@@ -5,6 +5,8 @@
         <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
 
+    <p>{{ entry.excerpt }}</p>
+
     <p class="">{{ entry.postDate|datetime('D, M j, Y') }}</p>
     
     <p class="">Read more →</p>
