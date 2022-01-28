@@ -1,3 +1,6 @@
 [submodule "hyas"]
 	path = hyas
 	url = git@github.com:h-enk/hyas.git
+[submodule "base-hyas"]
+	path = base-hyas
+	url = git@github.com:h-enk/hyas.git
