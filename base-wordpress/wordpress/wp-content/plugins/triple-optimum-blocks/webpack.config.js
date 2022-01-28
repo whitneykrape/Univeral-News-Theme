@@ -1,5 +1,0 @@
-{
-     optimization: {
-          minimize: false
-     }
-}
