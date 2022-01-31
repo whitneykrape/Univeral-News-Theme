@@ -41,3 +41,4 @@ base-ghost/ghost/versions/
 base-wordpress/wordpress/wp-content/uploads/
 ._*
 .DS_Store
+base-hyas/static/admin/config.yml
