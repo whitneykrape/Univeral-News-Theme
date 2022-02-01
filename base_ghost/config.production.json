@@ -1,0 +1,29 @@
+{
+  "url": "https://ff-pitin.local/ghost-site",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "connection": {
+      "user": "base_ghost",
+      "password": "pGfwFveR6fFfSMDZ",
+      "database": "base_ghost",
+      "host": "localhost"
+    },
+    "client": "mysql"
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/media/pi/www/_becauseyouhaveto/part01-news-theme/base_ghost/content"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "active-version": "4.34.0",
+  "cli-version": "1.18.1",
+  "channel": "stable",
+  "name": "localhost",
+  "running": "production"
+}
