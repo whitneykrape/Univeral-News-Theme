@@ -38,6 +38,7 @@ base-craft/craft/storage/
 base-craft/craft/craft
 base-craft/vendor/
 base-ghost/ghost/versions/
+base_ghost/content/logs/
 base-wordpress/wordpress/wp-content/uploads/
 ._*
 .DS_Store
