@@ -1,0 +1,13 @@
+{
+  "cms": {
+    "js": "cms.71717.js"
+  },
+  "main": {
+    "css": "main.71717.css",
+    "js": "main.71717.js"
+  },
+  "": {
+    "html": "admin/index.html",
+    "": "fonts/.keep"
+  }
+}
