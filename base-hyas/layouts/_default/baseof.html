@@ -1,16 +1,29 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
-  {{ partial "head/head.html" . }}
-  {{- partial "head/body-class.html" . -}}
-  <body class="{{ delimit (.Scratch.Get "class") " " }}">
-    {{ partial "header/header.html" . }}
-    <div class="wrap container" role="document">
-      <div class="content">
-        {{ block "main" . }}{{ end }}
-      </div>
-    </div>
-    {{ block "sidebar-footer" . }}{{ end }}
-    {{ partial "footer/footer.html" . }}
-    {{ partial "footer/script-footer.html" . }}
+<html lang="{{ $.Site.Language.Lang }}">
+  {{ partial "head" . }}
+  <body class="interaction">
+
+    {{ block "header" . }}
+      <header class="site-header">
+        {{ partial "nav" . }}
+      </header>
+    {{end}}
+
+    {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}
+      <footer class="site-footer align-center layout-background">
+        {{ partial "footer" . }}
+      </footer>
+    {{end}}
+
+    {{ $script := .Site.Data.webpack.main }}
+    {{ with $script.js }}
+      <script src="{{ relURL . }}"></script>
+    {{ end }}
+
+    {{ if not .Site.IsServer }}
+      {{ partial "analytics" . }}
+    {{ end }}
   </body>
 </html>

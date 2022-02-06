@@ -1,0 +1,19 @@
+<div class="">
+  <div class="">
+    <h2 class="">{{.intro.heading}}</h2>
+    <p class="">{{.intro.text}}</p>
+
+    <div class="">
+      {{ range .multiple }}
+      <div class="">
+        <img src="{{.image}}" alt="" class="" style="width: 240px">
+        <p>{{.text}}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="">
+      <!-- <a href="/multiple" class="">See all</a> -->
+    </div>
+  </div>
+</div>
