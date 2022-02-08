@@ -2,44 +2,56 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-{{#match @custom.publication_cover_style "!=" "None"}}
-    <div class="site-header-content{{#match @custom.publication_cover_style "Large"}} large{{/match}}">
-        {{#if @site.cover_image}}
-            {{!-- This is a responsive image, it loads different sizes depending on device
-            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-            <img class="site-header-cover"
-                srcset="{{img_url @site.cover_image size="s"}} 300w,
-                        {{img_url @site.cover_image size="m"}} 600w,
-                        {{img_url @site.cover_image size="l"}} 1000w,
-                        {{img_url @site.cover_image size="xl"}} 2000w"
-                sizes="100vw"
-                src="{{img_url @site.cover_image size="xl"}}"
-                alt=""
-            />
-        {{/if}}
-        <h1 class="site-title">
-            {{#if @site.logo}}
-                <img class="site-logo" src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}" />
-            {{else}}
-                {{@site.title}}
-            {{/if}}
-        </h1>
-        <p>{{@site.description}}</p>
-    </div>
-{{/match}}
+<header class="site-header">
+    {{> site-header}}
+</header>
 
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner posts">
+<div class="entrance-image">
+  <div class="container">
+    <h1 class="">
+      {{@site.title}}
+    </h1>
 
-        <div class="post-feed{{#match @custom.feed_layout "List"}} list{{/match}}">
+    {{#if @site.description}}
+    <p class="">
+      {{@site.description}}
+    </p>
+    {{/if}}
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+
+    <h2 class="">Latest stories</h2>
+
+    <div class="latest-stories">
+        <ul class=" navigation-list">
             {{#foreach posts}}
 
+                <li class="six columns">
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
+                </li>
 
             {{/foreach}}
-        </div>
+        </ul>
 
+        <br class="clear"/>
     </div>
-</main>
+
+    <!--       
+        <div class="">
+            <a href="/post" class="">Read more</a>
+        </div> 
+    -->
+
+  </div>
+</div>
+
+<div class="short-info">
+  <div class="container">
+    <h2 class="four columns">{{@site.description}}</h2>
+    <p class="eight columns">{{@site.description}}</p>
+  </div>
+</div>
