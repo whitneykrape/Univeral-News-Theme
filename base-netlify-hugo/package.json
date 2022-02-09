@@ -1,9 +1,0 @@
-{
-  "name": "base-netlify-hugo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "victor-hugo": "https://github.com/netlify-templates/one-click-hugo-cms.git"
-  }
-}
