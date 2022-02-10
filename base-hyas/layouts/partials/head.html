@@ -4,7 +4,7 @@
 
   {{ $stylesheet := .Site.Data.webpack.main }}
   {{ with $stylesheet.css }}
-    <link href="{{ . }}" rel="stylesheet">
+    <link href="./css/{{ . }}" rel="stylesheet">
   {{ end }}
 
   <meta charset="utf-8">
