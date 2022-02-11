@@ -120,6 +120,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./dist/assets/css')) // Outputs it in the css folder
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme')) // Outputs it in the css folder
     .pipe(gulp.dest('./base-hyas/public/css')) // Outputs it in the css folder
+    .pipe(gulp.dest('./base_ghost/content/themes/casper/assets/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
