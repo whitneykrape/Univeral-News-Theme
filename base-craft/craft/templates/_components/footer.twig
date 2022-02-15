@@ -3,10 +3,10 @@
 
 		<div class="">
 
-			<p class="logo">Shapes and Screens</p>
+			<p class="logo"></p>
 
-			<form action="https://tinyletter.com/shapesandscreens" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/shapesandscreens', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-				<p class="">Transformative Information Deliveries.
+			<form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://tinyletter.com/" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+				<p class="" 
 					<label for="tlemail"></label></p><p><input type="text" style="width:240px" name="email" id="tlemail" placeholder="Enter your email address" />
 
 					<input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
@@ -20,13 +20,13 @@
 		</div>
 
 		<section class="copyright">
-			<a class="logo" href="https://shapesandscreens.com">Shapes and Screens</a> © 2020 <a href="https://formfunction.io/4-cmss-comparing-craft-cms-ghost-netlify-cms-and-wordpress">Currently Powered by Craft CMS</a>
+			<a class="logo" href=""></a> © 2020
 		</section>
 
 	</div>
 </footer>
 
-	{% if craft.app.request.getServerName() == 'shapesandscreens.com' %}
+	{% if craft.app.request.getServerName() == '.com' %}
 		{% include '_components/analytics' %}
 	{% endif %}
 </body>

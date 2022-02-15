@@ -2,7 +2,7 @@
 
     {% set staticFiles = [
         'static/libs/jquery-3.4.1.min.js',
-        'static/styles/style.css',
+        'static/styles/main.css',
         'static/js/main.js',
     ] %}
 
@@ -18,5 +18,5 @@
 
 {% else %}
     {% do view.registerJsFile(alias('@web')~'/'~'static/main.min.js') %}
-    {% do view.registerCssFile(alias('@web')~'/'~'static/styles/style.css') %}
+    {% do view.registerCssFile(alias('@web')~'/'~'static/styles/main.min.css') %}
 {% endif %}

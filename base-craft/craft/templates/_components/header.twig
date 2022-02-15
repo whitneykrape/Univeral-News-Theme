@@ -5,6 +5,7 @@
 {% include '_system/seo' %}
 {% include '_system/meta' %}
 {% include '_system/favicons' %}
+
 {% include '_system/fonts' %}
 {% include '_system/static' %}
 {% include '_system/tag_manager' %}
@@ -12,10 +13,10 @@
 
 </head>
 
-<body class="media {{body_class ?? null}} {{craft.app.request.isMobileBrowser() ? 'is-mobile' : 'is-desktop'}}">
+<body class="{{body_class ?? null}} {{craft.app.request.isMobileBrowser() ? 'is-mobile' : 'is-desktop'}}">
 
 
-<header class="media site-header">
+<header class="site-header">
     <div class="outer site-nav-main">
 	    <div class="inner">
 			<nav class="top-navbar">
@@ -24,7 +25,7 @@
 				</ul>
 
 				<div class="logo four columns align-center layout-background">
-		    		<a class=" " title="Main Link and Logo" href="/"><strong>Shapes</strong> and <strong>Screens</strong>
+		    		<a class=" " title="Main Link and Logo" href="/">
 		      		<!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
 		    		</a>
 		  		</div>
