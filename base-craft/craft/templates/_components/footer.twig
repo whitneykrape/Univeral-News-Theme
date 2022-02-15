@@ -1,0 +1,33 @@
+<footer class="site-footer align-center layout-background">
+	<div class="newsletter-signup">
+
+		<div class="">
+
+			<p class="logo">Shapes and Screens</p>
+
+			<form action="https://tinyletter.com/shapesandscreens" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/shapesandscreens', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+				<p class="">Transformative Information Deliveries.
+					<label for="tlemail"></label></p><p><input type="text" style="width:240px" name="email" id="tlemail" placeholder="Enter your email address" />
+
+					<input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
+
+					<br/>
+
+					<small><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></small>
+				</p>
+			</form>
+
+		</div>
+
+		<section class="copyright">
+			<a class="logo" href="https://shapesandscreens.com">Shapes and Screens</a> © 2020 <a href="https://formfunction.io/4-cmss-comparing-craft-cms-ghost-netlify-cms-and-wordpress">Currently Powered by Craft CMS</a>
+		</section>
+
+	</div>
+</footer>
+
+	{% if craft.app.request.getServerName() == 'shapesandscreens.com' %}
+		{% include '_components/analytics' %}
+	{% endif %}
+</body>
+</html>
