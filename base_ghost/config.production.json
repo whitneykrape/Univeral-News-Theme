@@ -25,9 +25,5 @@
   "process": "systemd",
   "paths": {
     "contentPath": "/media/pi/www/_becauseyouhaveto/part01-news-theme/base_ghost/content"
-  },
-  "bootstrap-socket": {
-    "port": 8000,
-    "host": "localhost"
   }
 }
