@@ -41,7 +41,7 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('html', () => {
-  var templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars(templateData, {
@@ -60,6 +60,8 @@ gulp.task('html', () => {
 });
 
 gulp.task('wordpress', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
   return gulp.src([
       './src/pages/wordpress/*.hbs',
       './src/pages/wordpress/content/*.hbs',
