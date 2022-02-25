@@ -6,6 +6,9 @@
  * @package WordPress
  * @subpackage Form Function IO Base
  * @since FFIOBase 1.0
+ *
+ *
+ * Start building block patterns instead of, whatever all this is.
  */
 
 get_header();
