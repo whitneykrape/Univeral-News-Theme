@@ -101,6 +101,45 @@ gulp.task('wordpress-blocks-php', () => {
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
 
+gulp.task('craft-blocks', () => {
+  return gulp.src('./src/blocks/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/blocks'],
+      handlebars_helpers
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/craft/blocks'))
+});
+
+gulp.task('ghost-blocks', () => {
+  return gulp.src('./src/blocks/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/blocks'],
+      handlebars_helpers
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/ghost/blocks'))
+});
+
+gulp.task('netlify-blocks', () => {
+  return gulp.src('./src/blocks/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/blocks'],
+      handlebars_helpers
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/netlify/blocks'))
+});
+
 gulp.task('wordpress-blocks-js', () => {
   return gulp.src('./src/pages/wordpress/blocks/*.js')
     .pipe(gulpIf('*.js', babel()))
