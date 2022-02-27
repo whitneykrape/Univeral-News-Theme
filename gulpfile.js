@@ -25,6 +25,8 @@ const stripCode = require('gulp-strip-code');
 const fs = require('fs')
 const handlebars_helpers = require('./src/js/handlebars.helpers.js');
 
+const templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
 // Development Tasks 
 // -----------------
 
