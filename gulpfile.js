@@ -24,6 +24,7 @@ const runSequence = require('gulp4-run-sequence');
 const stripCode = require('gulp-strip-code');
 const fs = require('fs')
 const handlebars_helpers = require('./src/js/handlebars.helpers.js');
+const twig = require('twig');
 
 const templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
@@ -109,10 +110,10 @@ gulp.task('craft-blocks', () => {
     .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
-      handlebars_helpers
+      twig
     }))
     .pipe(rename({
-      extname: '.hbs'
+      extname: '.twig'
     }))
     .pipe(gulp.dest('./dist/craft/blocks'))
 });
