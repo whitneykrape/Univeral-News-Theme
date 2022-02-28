@@ -104,40 +104,42 @@ gulp.task('wordpress-blocks-php', () => {
 });
 
 gulp.task('craft-blocks', () => {
-  return gulp.src('./src/blocks/*.hbs')
+  // This will change to a catch-all folder of craft blocks
+  return gulp.src('./src/blocks/craft-block-article/*.twig')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
       handlebars_helpers
     }))
     .pipe(rename({
-      extname: '.php'
+      extname: '.hbs'
     }))
     .pipe(gulp.dest('./dist/craft/blocks'))
 });
 
 gulp.task('ghost-blocks', () => {
-  return gulp.src('./src/blocks/*.hbs')
+  // All the Ghost blocks... So on.
+  return gulp.src('./src/blocks/ghost-block-article/*.hbs')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
-      batch: ['./src/blocks'],
+      batch: ['./src/blocks/ghost-block-article'],
       handlebars_helpers
     }))
     .pipe(rename({
-      extname: '.php'
+      extname: '.hbs'
     }))
     .pipe(gulp.dest('./dist/ghost/blocks'))
 });
 
 gulp.task('netlify-blocks', () => {
-  return gulp.src('./src/blocks/*.hbs')
+  return gulp.src('./src/blocks/netlify-block-article/*.html')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
       handlebars_helpers
     }))
     .pipe(rename({
-      extname: '.php'
+      extname: '.html'
     }))
     .pipe(gulp.dest('./dist/netlify/blocks'))
 });
