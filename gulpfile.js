@@ -133,7 +133,7 @@ gulp.task('ghost-blocks', () => {
 });
 
 gulp.task('netlify-blocks', () => {
-  return gulp.src('./src/blocks/netlify-block-article/*.html')
+  return gulp.src('./src/blocks/netlify-block-article/*.bhs')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
