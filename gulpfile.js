@@ -121,11 +121,11 @@ gulp.task('craft-blocks', () => {
 gulp.task('ghost-blocks', () => {
   // All the Ghost blocks... So on.
   return gulp.src('./src/blocks/ghost-block-article/*.hbs')
-    .pipe(handlebars(templateData, {
+    /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks/ghost-block-article'],
       handlebars_helpers
-    }))
+    })) */
     .pipe(rename({
       extname: '.hbs'
     }))
@@ -133,12 +133,12 @@ gulp.task('ghost-blocks', () => {
 });
 
 gulp.task('netlify-blocks', () => {
-  return gulp.src('./src/blocks/netlify-block-article/*.bhs')
-    .pipe(handlebars(templateData, {
+  return gulp.src('./src/blocks/netlify-block-article/*.hbs')
+    /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
       handlebars_helpers
-    }))
+    })) */
     .pipe(rename({
       extname: '.html'
     }))
