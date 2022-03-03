@@ -90,6 +90,20 @@ gulp.task('wordpress', () => {
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
 });
 
+gulp.task('html-blocks', () => {
+  return gulp.src('./src/pages/wordpress/blocks/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/pages/wordpress/blocks'],
+      handlebars_helpers
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/wordpress/blocks'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
+});
+
 gulp.task('wordpress-blocks-php', () => {
   return gulp.src('./src/pages/wordpress/blocks/*.hbs')
     .pipe(handlebars(templateData, {
