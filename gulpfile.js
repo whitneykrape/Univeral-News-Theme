@@ -91,17 +91,13 @@ gulp.task('wordpress', () => {
 });
 
 gulp.task('html-blocks', () => {
-  return gulp.src('./src/pages/wordpress/blocks/*.hbs')
-    .pipe(handlebars(templateData, {
-      ignorePartials: true,
-      batch: ['./src/pages/wordpress/blocks'],
-      handlebars_helpers
-    }))
-    .pipe(rename({
-      extname: '.php'
-    }))
-    .pipe(gulp.dest('./dist/wordpress/blocks'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
+  return gulp.src('./src/html-blocks/*.html')
+    // This should actually use hbs to build full html pages
+    // From a series of base blocks that are used around
+    // Craft, Ghost, WordPress, so on
+    // Then build makes all the blocks these pieces need.
+    // Try hbs or other templating engines
+    .pipe(gulp.dest('./dist/html/blocks'))
 });
 
 gulp.task('wordpress-blocks-php', () => {
