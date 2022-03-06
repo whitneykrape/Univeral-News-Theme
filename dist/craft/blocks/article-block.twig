@@ -1,13 +1,13 @@
 <article class="article article-sm sm">
-  <a href="" class="">
-    <h2 class=""></h2>
+  <a href="{{ entry.url }}" class="">
+    <h2 class="">{{ entry.blogTitle }}</h2>
     {% for image in images %}
-        <img src="" alt="">
+        <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
 
-    <p></p>
+    <p>{{ entry.excerpt }}</p>
 
-    <p class=""></p>
+    <p class="">{{!-- entry.postDate|datetime('D, M j, Y') --}}</p>
     
     <p class="">Read more →</p>
   </a>

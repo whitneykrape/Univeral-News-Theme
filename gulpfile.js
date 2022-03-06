@@ -117,11 +117,11 @@ gulp.task('wordpress-blocks-php', () => {
 gulp.task('craft-blocks', () => {
   // This will change to a catch-all folder of craft blocks
   return gulp.src('./src/blocks/craft-block-article/*.twig')
-    .pipe(handlebars(templateData, {
-      ignorePartials: true,
-      batch: ['./src/blocks'],
-      twig
-    }))
+    // .pipe(handlebars(templateData, {
+    //   ignorePartials: true,
+    //   batch: ['./src/blocks'],
+    //   twig
+    // }))
     .pipe(rename({
       extname: '.twig'
     }))
