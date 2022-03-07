@@ -100,18 +100,10 @@ gulp.task('html-blocks', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
-gulp.task('wordpress-blocks-php', () => {
-  return gulp.src('./src/pages/wordpress/blocks/*.hbs')
-    .pipe(handlebars(templateData, {
-      ignorePartials: true,
-      batch: ['./src/pages/wordpress/blocks'],
-      handlebars_helpers
-    }))
-    .pipe(rename({
-      extname: '.php'
-    }))
+gulp.task('wordpress-blocks', () => {
+  return gulp.src('./src/pages/wordpress-block-article/blocks/*.js')
+    .pipe(gulpIf('*.js', babel()))
     .pipe(gulp.dest('./dist/wordpress/blocks'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
 
 gulp.task('craft-blocks', () => {
