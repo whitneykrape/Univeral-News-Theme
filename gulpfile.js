@@ -90,8 +90,31 @@ gulp.task('wordpress', () => {
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
 });
 
-gulp.task('html-blocks', () => {
-  return gulp.src('./src/html-blocks/*.html')
+// Start from a hbs that dests into craft, ghost, netlify, wordpress folders
+// In being distributed, process hbs into mostly HTML? Does that work or does HTML mostly go to HTML? 
+// Problem is, WordPress has a complex interface in their files...
+// Others just use templating and hold the interface in their UI. 
+// 
+// 
+// 
+
+gulp.task('toblocks-wordpress', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/blocks/toblocks/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/blocks/toblocks'],
+      handlebars_helpers
+    }))
+    .pipe(stripCode({
+      start_comment:  "wp",
+      end_comment:    "end-wp"
+    }))
+    .pipe(decomment({
+      trim: true, 
+      safe: true
+    }))
     // This should actually use hbs to build full html pages
     // From a series of base blocks that are used around
     // Craft, Ghost, WordPress, so on
