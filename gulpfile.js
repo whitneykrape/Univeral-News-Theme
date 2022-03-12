@@ -108,8 +108,8 @@ gulp.task('toblocks-wordpress', () => {
       handlebars_helpers
     }))
     .pipe(stripCode({
-      start_comment:  "wp",
-      end_comment:    "end-wp"
+      start_comment:  "start",
+      end_comment:    "end"
     }))
     .pipe(decomment({
       trim: true, 
