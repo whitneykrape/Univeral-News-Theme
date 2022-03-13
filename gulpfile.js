@@ -102,11 +102,11 @@ gulp.task('toblocks-wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/blocks/toblocks/*.hbs')
-    .pipe(handlebars(templateData, {
-      ignorePartials: true,
-      batch: ['./src/blocks/toblocks'],
-      handlebars_helpers
-    }))
+    // .pipe(handlebars(templateData, {
+    //   ignorePartials: true,
+    //   batch: ['./src/blocks/toblocks'],
+    //   handlebars_helpers
+    // }))
     .pipe(stripCode({
       start_comment:  "start",
       end_comment:    "end"
