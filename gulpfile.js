@@ -115,6 +115,7 @@ gulp.task('toblocks-wordpress', () => {
       trim: true, 
       safe: true
     }))
+    // Build to .js file that, at some point, I"ll figure out how to include. 
     // This should actually use hbs to build full html pages
     // From a series of base blocks that are used around
     // Craft, Ghost, WordPress, so on
