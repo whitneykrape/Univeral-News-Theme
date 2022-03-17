@@ -108,12 +108,29 @@ gulp.task('toblocks-wordpress', () => {
     //   handlebars_helpers
     // }))
     .pipe(stripCode({
-      start_comment:  "start",
-      end_comment:    "end"
+      start_comment:  "wordpress-not-start",
+      end_comment:    "wordpress-not-end"
     }))
-    .pipe(decomment({
-      trim: true, 
-      safe: true
+    .pipe(rename({
+      extname: '.js'
+    }))
+    .pipe(gulp.dest('./dist/html/blocks'))
+});
+
+gulp.task('toblocks-html', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/blocks/toblocks/*.hbs')
+    .pipe(stripCode({
+      start_comment:  "wordpress-start",
+      end_comment:    "wordpress-end"
+    }))
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      handlebars_helpers
+    }))
+    .pipe(rename({
+      extname: '.html'
     }))
     // Build to .js file that, at some point, I"ll figure out how to include. 
     // This should actually use hbs to build full html pages
