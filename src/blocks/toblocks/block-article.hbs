@@ -9,21 +9,21 @@
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
         <img class="post-card-image"
-            srcset="{{img_url feature_image small}} 300w,
-                    {{img_url feature_image medium}} 600w,
-                    {{img_url feature_image large}} 1000w,
-                    {{img_url feature_image extralarge}} 2000w"
+            srcset="{{img_url_feature_image_small}} 300w,
+                    {{img_url_feature_image_medium}} 600w,
+                    {{img_url_feature_image_large}} 1000w,
+                    {{img_url_feature_image_extralarge}} 2000w"
             sizes="(max-width: 1000px) 400px, 700px"
-            src="{{img_url feature_image size="m"}}"
+            src="{{img_url_feature_image_medium}}"
             alt="{{title}}"
         />
     </a>
     {{/if}}
 
     {{#if feature_image}}
-        <p>{{excerpt short}}</p>
+        <p>{{excerpt_short}}</p>
     {{else}}
-        <p>{{excerpt long}}</p>
+        <p>{{excerpt_long}}</p>
     {{/if}}
 
     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>

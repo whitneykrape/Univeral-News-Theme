@@ -128,7 +128,11 @@
   ],
   "title": "sup",
   "url": "posturl",
-  "img_url": "imageurl",
-  "excerpt": "More space here for a further description that allows for 2-3 sentences, building on the 1 sentence subtitle above. In this way a full post is not needed for the user to see, and interact, and understand.",
+  "img_url_feature_image_small":      "buncha",
+  "img_url_feature_image_medium":     "bunchamucha",
+  "img_url_feature_image_large":      "bunchaluncha",
+  "img_url_feature_image_extralarge": "bunchafun",
+  "excerpt_long": "More space here for a further description that allows for 2-3 sentences, building on the 1 sentence subtitle above. In this way a full post is not needed for the user to see, and interact, and understand.",
+  "excerpt_short": "More space here for a further description that allows for 2-3 sentences, building on the 1 sentence subtitle above. In this way a full post is not needed for the user to see, and interact, and understand.",
   "feature_image": true
 }
