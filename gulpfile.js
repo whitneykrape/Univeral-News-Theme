@@ -98,7 +98,7 @@ gulp.task('wordpress', () => {
 // 
 // 
 
-gulp.task('toblocks-wordpress', () => {
+gulp.task('wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/blocks/toblocks/*.hbs')
@@ -117,7 +117,7 @@ gulp.task('toblocks-wordpress', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
-gulp.task('toblocks-html', () => {
+gulp.task('html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/blocks/toblocks/*.hbs')
@@ -127,7 +127,7 @@ gulp.task('toblocks-html', () => {
     }))
     .pipe(handlebars(templateData, {
       ignorePartials: true,
-      handlebars_helpers
+      helpers: handlebars_helpers
     }))
     .pipe(rename({
       extname: '.html'
