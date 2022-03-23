@@ -42,7 +42,7 @@ gulp.task('browserSync', function() {
 */
 
 
-
+/*
 gulp.task('html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
@@ -89,6 +89,7 @@ gulp.task('wordpress', () => {
     .pipe(gulp.dest('./dist/wordpress'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
 });
+*/
 
 // Start from a hbs that dests into craft, ghost, netlify, wordpress folders
 // In being distributed, process hbs into mostly HTML? Does that work or does HTML mostly go to HTML? 
