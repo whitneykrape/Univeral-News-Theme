@@ -4364,7 +4364,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-concat-stream@^1.2.0, concat-stream@^1.4.6, concat-stream@^1.4.7, concat-stream@^1.5.0, concat-stream@^1.6.0:
+concat-stream@^1.2.0, concat-stream@^1.4.6, concat-stream@^1.4.7, concat-stream@^1.4.8, concat-stream@^1.5.0, concat-stream@^1.6.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
   integrity sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
@@ -4937,6 +4937,13 @@ decomment@0.9.4:
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/decomment/-/decomment-0.9.4.tgz#fa40335bd90e3826d5c1984276e390525ff856d5"
   integrity sha512-8eNlhyI5cSU4UbBlrtagWpR03dqXcE5IR9zpe7PnO6UzReXDskucsD8usgrzUmQ6qJ3N82aws/p/mu/jqbURWw==
+  dependencies:
+    esprima "4.0.1"
+
+decomment@^0.9.0:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/decomment/-/decomment-0.9.5.tgz#61753c80b8949620eb6bc3f8246cc0e2720ceac1"
+  integrity sha512-h0TZ8t6Dp49duwyDHo3iw67mnh9/UpFiSSiOb5gDK1sqoXzrfX/SQxIUQd2R2QEiSnqib0KF2fnKnGfAhAs6lg==
   dependencies:
     esprima "4.0.1"
 
@@ -7469,6 +7476,17 @@ gulp-postcss@^9.0.0:
     postcss-load-config "^2.1.1"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-remove-html-comments@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-remove-html-comments/-/gulp-remove-html-comments-1.0.1.tgz#0ad079b5c2f44d6dacba0002b826405ed1767164"
+  integrity sha1-CtB5tcL0TW2sugACuCZAXtF2cWQ=
+  dependencies:
+    chalk "^1.0.0"
+    gulp-util "^3.0.4"
+    object-assign "^2.0.0"
+    remove-html-comments "^1.0.1"
+    through2 "^0.6.5"
+
 gulp-rename@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.4.0.tgz#de1c718e7c4095ae861f7296ef4f3248648240bd"
@@ -7525,6 +7543,15 @@ gulp-strip-code@^0.1.4:
   dependencies:
     event-stream "^3.1.5"
 
+gulp-strip-comments@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/gulp-strip-comments/-/gulp-strip-comments-2.5.2.tgz#d97e1d8b0be205600b1a2923d4f8b6b558bfbfc6"
+  integrity sha512-lb1bW7rsPWDD8f4ZPSguDvmCdjKmjr5HR4yZb9ros3sLl5AfW7oUj8KzY9/VRisT7dG8dL7hVHzNpQEVxfwZGQ==
+  dependencies:
+    decomment "^0.9.0"
+    plugin-error "^0.1.2"
+    through2 "^2.0.3"
+
 gulp-terser@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gulp-terser/-/gulp-terser-2.0.1.tgz#5f8f4fc54588b79519243809cc8eef4936286d0d"
@@ -7549,6 +7576,14 @@ gulp-uglify@^1.2.0:
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
+gulp-uncomment@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gulp-uncomment/-/gulp-uncomment-0.3.0.tgz#a759d061bc13a5d472007466552d8c77c00ffbac"
+  integrity sha1-p1nQYbwTpdRyAHRmVS2Md8AP+6w=
+  dependencies:
+    through2 "^2.0.0"
+    uncomment "^0.3.0"
+
 gulp-useref@^3.0.4:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/gulp-useref/-/gulp-useref-3.1.6.tgz#67721f0ba6747bcfdf40e8bbebaf3cf9330e29da"
@@ -7565,7 +7600,7 @@ gulp-useref@^3.0.4:
     useref "^1.4.1"
     vinyl-fs "^3.0.3"
 
-gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.3, gulp-util@^3.0.7:
+gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.3, gulp-util@^3.0.4, gulp-util@^3.0.7:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   integrity sha1-AFTh50RQLifATBh8PsxQXdVLu08=
@@ -7813,7 +7848,7 @@ hpack.js@^2.1.6:
     readable-stream "^2.0.1"
     wbuf "^1.1.0"
 
-html-comment-regex@^1.1.0:
+html-comment-regex@^1.0.0, html-comment-regex@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.2.tgz#97d4688aeb5c81886a364faa0cad1dda14d433a7"
   integrity sha512-P+M65QY2JQ5Y0G9KKdlDpo0zK+/OHptU5AaBwUfAIDJZk1MYf32Frm84EcOytfJE0t5JvkAnKlmjsXDnWzCJmQ==
@@ -12937,6 +12972,16 @@ remove-bom-stream@^1.2.0:
     safe-buffer "^5.1.0"
     through2 "^2.0.3"
 
+remove-html-comments@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/remove-html-comments/-/remove-html-comments-1.0.2.tgz#5722ff89789ce7c6dcd975a5d67c55f478481d9f"
+  integrity sha1-VyL/iXic58bc2XWl1nxV9HhIHZ8=
+  dependencies:
+    chalk "^1.0.0"
+    concat-stream "^1.4.8"
+    html-comment-regex "^1.0.0"
+    meow "^3.1.0"
+
 remove-trailing-separator@^1.0.1, remove-trailing-separator@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -14796,7 +14841,7 @@ through2@4.0.2, through2@^4.0.2:
   dependencies:
     readable-stream "3"
 
-through2@^0.6.0, through2@^0.6.1, through2@^0.6.3:
+through2@^0.6.0, through2@^0.6.1, through2@^0.6.3, through2@^0.6.5:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
   integrity sha1-QaucZ7KdVyCQcUEOHXp6lozTrUg=
@@ -15224,6 +15269,11 @@ unc-path-regex@^0.1.0, unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
   integrity sha1-5z3T17DXxe2G+6xrCufYxqadUPo=
+
+uncomment@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/uncomment/-/uncomment-0.3.0.tgz#f9ae77803e4b6c5d0c4cb324b7a0cc6b691d1794"
+  integrity sha1-+a53gD5LbF0MTLMkt6DMa2kdF5Q=
 
 undertaker-registry@^1.0.0:
   version "1.0.1"
