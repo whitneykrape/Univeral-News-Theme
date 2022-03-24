@@ -123,6 +123,10 @@ gulp.task('html', () => {
 
   return gulp.src('./src/blocks/toblocks/*.hbs')
     .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
+    .pipe(stripCode({
       start_comment:  "wordpress-start",
       end_comment:    "wordpress-end"
     }))
