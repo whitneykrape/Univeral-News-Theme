@@ -126,7 +126,8 @@
       "explainationBody":        "More space here for a further description that allows for 2-3 sentences, building on the 1 sentence subtitle above. In this way a full post is not needed for the user to see, and interact, and understand."
     }
   ],
-  "title": "sup",
+  "title": "Post Title",
+  "date":  "2022-03-10",
   "url": "posturl",
   "img_url_feature_image_small":      "assets/img/placeholder.jpg",
   "img_url_feature_image_medium":     "assets/img/placeholder.jpg",

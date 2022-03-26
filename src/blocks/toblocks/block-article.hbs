@@ -42,7 +42,12 @@
         <p>{{excerpt words="30"}}</p>
     {{/if}}
 
+    /* preview-start */
+    <time datetime="{{date}}">{{date}}</time>
+    /* preview-end */
+    /* ghost-start */
     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+    /* ghost-end */
 
     <p class="">Read more →</p>
 </article>
