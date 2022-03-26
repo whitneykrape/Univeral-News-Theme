@@ -35,11 +35,19 @@
     {{/if}}
 
     {{#if feature_image}}
+        /* preview-start */
         <p>{{excerpt_short}}</p>
+        /* preview-end */
+        /* ghost-start */
         <p>{{excerpt words="44"}}</p>
+        /* ghost-end */
     {{else}}
+        /* preview-start */
         <p>{{excerpt_long}}</p>
+        /* preview-end */
+        /* ghost-start */
         <p>{{excerpt words="30"}}</p>
+        /* ghost-end */
     {{/if}}
 
     /* preview-start */
