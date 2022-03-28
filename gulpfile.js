@@ -15,9 +15,6 @@ const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 
-const decomment = require('gulp-decomment');
-const strip = require('gulp-strip-comments');
-const removeHtmlComments = require('gulp-remove-html-comments');
 const uncomment = require('gulp-uncomment');
 
 const babel = require('gulp-babel');
