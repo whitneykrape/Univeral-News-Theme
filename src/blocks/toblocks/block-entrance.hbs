@@ -1,0 +1,30 @@
+/* wordpress-not-start */
+	<div class="entrance-image">
+	  <div class="container">
+	    <h1 class="">
+	    	{{selectContent templateTypes template 'title'}}
+	    </h1>
+	  
+	    <p class="">
+	    	{{selectContent templateTypes template 'subtitle'}}
+	    </p>
+	  </div>
+	</div>
+/* wordpress-not-end */
+/* wordpress-start */
+<div { ...blockProps }>
+	<div class="container">
+		<RichText.Content
+            tagName="h1"
+            className="title"
+            value={ title }
+        />
+
+        <RichText.Content
+            tagName="p"
+            className="subtitle"
+            value={ subtitle }
+        />
+	</div>
+</div>
+/* wordpress-end */
