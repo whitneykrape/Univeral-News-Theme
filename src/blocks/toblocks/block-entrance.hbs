@@ -2,11 +2,21 @@
 	<div class="entrance-image">
 	  <div class="container">
 	    <h1 class="">
-	    	{{selectContent templateTypes template 'title'}}
+	    	/* preview-start */
+	    		{{ title }}
+            /* preview-end */
+            /* ghost-start */
+	    		{{selectContent templateTypes template 'title'}}
+            /* ghost-end */
 	    </h1>
 	  
 	    <p class="">
-	    	{{selectContent templateTypes template 'subtitle'}}
+	    	/* preview-start */
+	    		{{ subtitle }}
+            /* preview-end */
+            /* ghost-start */
+	    		{{selectContent templateTypes template 'subtitle'}}
+            /* ghost-end */
 	    </p>
 	  </div>
 	</div>

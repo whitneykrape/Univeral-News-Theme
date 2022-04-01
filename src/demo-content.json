@@ -127,6 +127,7 @@
     }
   ],
   "title": "Post Title",
+  "subtitle": "Post SubTitle",
   "date":  "2022-03-10",
   "url": "posturl",
   "img_url_feature_image_small":      "assets/img/placeholder.jpg",
