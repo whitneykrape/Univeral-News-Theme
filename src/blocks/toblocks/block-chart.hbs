@@ -1,3 +1,4 @@
+/* wordpress-not-start */
 {{!--
 	Similar to the 3D block, have options where the JS is either a default load right in place, not ideal, or build some pieces to be used later, or don't load anything.
 --}}
@@ -86,3 +87,17 @@
 	    options: config
 	})
 </script>
+/* wordpress-not-end */
+/* wordpress-start */
+<article { ...blockProps }>
+    <div className="article-text-block">
+        <RichText.Content tagName="p" className="article-read-more">
+            <RichText.Content
+                tagName="span"
+                className="btn-sm article-link"
+                value={ link }
+            />
+        </RichText.Content>
+    </div>
+</article>
+/* wordpress-end */
