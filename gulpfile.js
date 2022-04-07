@@ -151,6 +151,29 @@ gulp.task('html', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
+gulp.task('ghost', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/blocks/toblocks/*.hbs')
+    // .pipe(handlebars(templateData, {
+    //   ignorePartials: true,
+    //   batch: ['./src/blocks/toblocks'],
+    //   handlebars_helpers
+    // }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-not-start",
+      end_comment:    "wordpress-not-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "preview-start",
+      end_comment:    "preview-end"
+    }))
+    .pipe(rename({
+      extname: '.js'
+    }))
+    .pipe(gulp.dest('./dist/html/blocks'))
+});
+
 gulp.task('wordpress-blocks', () => {
   return gulp.src('./src/pages/wordpress-block-article/blocks/*.js')
     .pipe(gulpIf('*.js', babel()))
