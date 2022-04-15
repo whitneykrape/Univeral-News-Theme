@@ -48,8 +48,6 @@ function twentytwentytwo_register_block_patterns() {
 		'footer-default',
 		'header-default',
 		'hidden-404',
-		'hidden-bird',
-		'hidden-heading-and-bird',
 		'page-layout-two-columns',
 		'query-default',
 	);
@@ -67,7 +65,7 @@ function twentytwentytwo_register_block_patterns() {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'twentytwentytwo/' . $block_pattern,
+			'twentytwentytwo-slimmed/' . $block_pattern,
 			require $pattern_file
 		);
 	}
