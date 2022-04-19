@@ -10,7 +10,7 @@
  */
 
 
-if ( ! function_exists( 'twentytwentytwo_support' ) ) :
+if ( ! function_exists( 'slimblocks_support' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -19,7 +19,7 @@ if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_support() {
+	function slimblocks_support() {
 
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
@@ -31,9 +31,9 @@ if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 
 endif;
 
-add_action( 'after_setup_theme', 'twentytwentytwo_support' );
+add_action( 'after_setup_theme', 'slimblocks_support' );
 
-if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
+if ( ! function_exists( 'slimblocks_styles' ) ) :
 
 	/**
 	 * Enqueue styles.
@@ -42,7 +42,7 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_styles() {
+	function slimblocks_styles() {
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -55,7 +55,7 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 		);
 
 		// Add styles inline.
-		wp_add_inline_style( 'twentytwentytwo-style', twentytwentytwo_get_font_face_styles() );
+		wp_add_inline_style( 'twentytwentytwo-style', slimblocks_get_font_face_styles() );
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'twentytwentytwo-style' );
@@ -64,9 +64,9 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 
 endif;
 
-add_action( 'wp_enqueue_scripts', 'twentytwentytwo_styles' );
+add_action( 'wp_enqueue_scripts', 'slimblocks_styles' );
 
-if ( ! function_exists( 'twentytwentytwo_editor_styles' ) ) :
+if ( ! function_exists( 'slimblocks_editor_styles' ) ) :
 
 	/**
 	 * Enqueue editor styles.
@@ -75,29 +75,29 @@ if ( ! function_exists( 'twentytwentytwo_editor_styles' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_editor_styles() {
+	function slimblocks_editor_styles() {
 
 		// Add styles inline.
-		wp_add_inline_style( 'wp-block-library', twentytwentytwo_get_font_face_styles() );
+		wp_add_inline_style( 'wp-block-library', slimblocks_get_font_face_styles() );
 
 	}
 
 endif;
 
-add_action( 'admin_init', 'twentytwentytwo_editor_styles' );
+add_action( 'admin_init', 'slimblocks_editor_styles' );
 
 
-if ( ! function_exists( 'twentytwentytwo_get_font_face_styles' ) ) :
+if ( ! function_exists( 'slimblocks_get_font_face_styles' ) ) :
 
 	/**
 	 * Get font face styles.
-	 * Called by functions twentytwentytwo_styles() and twentytwentytwo_editor_styles() above.
+	 * Called by functions slimblocks_styles() and slimblocks_editor_styles() above.
 	 *
 	 * @since Twenty Twenty-Two 1.0
 	 *
 	 * @return string
 	 */
-	function twentytwentytwo_get_font_face_styles() {
+	function slimblocks_get_font_face_styles() {
 
 		return "
 		@font-face{
@@ -123,7 +123,7 @@ if ( ! function_exists( 'twentytwentytwo_get_font_face_styles' ) ) :
 
 endif;
 
-if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
+if ( ! function_exists( 'slimblocks_preload_webfonts' ) ) :
 
 	/**
 	 * Preloads the main web font to improve performance.
@@ -137,7 +137,7 @@ if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_preload_webfonts() {
+	function slimblocks_preload_webfonts() {
 		?>
 		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
 		<?php
@@ -145,7 +145,7 @@ if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
 
 endif;
 
-add_action( 'wp_head', 'twentytwentytwo_preload_webfonts' );
+add_action( 'wp_head', 'slimblocks_preload_webfonts' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';

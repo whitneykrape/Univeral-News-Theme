@@ -12,7 +12,7 @@
  *
  * @return void
  */
-function twentytwentytwo_register_block_patterns() {
+function slimblocks_register_block_patterns() {
 	$block_pattern_categories = array(
 		'featured' => array( 'label' => __( 'Featured', 'twentytwentytwo' ) ),
 		'footer'   => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
@@ -36,7 +36,7 @@ function twentytwentytwo_register_block_patterns() {
 	 *     }
 	 * }
 	 */
-	$block_pattern_categories = apply_filters( 'twentytwentytwo_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'slimblocks_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -59,7 +59,7 @@ function twentytwentytwo_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
-	$block_patterns = apply_filters( 'twentytwentytwo_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'slimblocks_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
@@ -70,4 +70,4 @@ function twentytwentytwo_register_block_patterns() {
 		);
 	}
 }
-add_action( 'init', 'twentytwentytwo_register_block_patterns', 9 );
+add_action( 'init', 'slimblocks_register_block_patterns', 9 );
