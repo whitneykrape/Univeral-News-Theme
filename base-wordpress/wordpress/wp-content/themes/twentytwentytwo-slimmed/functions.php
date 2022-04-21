@@ -1,12 +1,12 @@
 <?php
 /**
- * Twenty Twenty-Two functions and definitions
+ * Slim Blocks functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_Two
- * @since Twenty Twenty-Two 1.0
+ * @since Slim Blocks 1.0
  */
 
 
@@ -15,7 +15,7 @@ if ( ! function_exists( 'slimblocks_support' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @return void
 	 */
@@ -38,7 +38,7 @@ if ( ! function_exists( 'slimblocks_styles' ) ) :
 	/**
 	 * Enqueue styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @return void
 	 */
@@ -71,7 +71,7 @@ if ( ! function_exists( 'slimblocks_editor_styles' ) ) :
 	/**
 	 * Enqueue editor styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @return void
 	 */
@@ -93,7 +93,7 @@ if ( ! function_exists( 'slimblocks_get_font_face_styles' ) ) :
 	 * Get font face styles.
 	 * Called by functions slimblocks_styles() and slimblocks_editor_styles() above.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @return string
 	 */
@@ -133,7 +133,7 @@ if ( ! function_exists( 'slimblocks_preload_webfonts' ) ) :
 	 * and therefore preloading it would in most cases regress performance when that font would otherwise not be loaded
 	 * at all.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @return void
 	 */

@@ -1,14 +1,14 @@
 <?php
 /**
- * Twenty Twenty-Two: Block Patterns
+ * Slim Blocks: Block Patterns
  *
- * @since Twenty Twenty-Two 1.0
+ * @since Slim Blocks 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
- * @since Twenty Twenty-Two 1.0
+ * @since Slim Blocks 1.0
  *
  * @return void
  */
@@ -24,7 +24,7 @@ function slimblocks_register_block_patterns() {
 	/**
 	 * Filters the theme block pattern categories.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @param array[] $block_pattern_categories {
 	 *     An associative array of block pattern categories, keyed by category name.
@@ -55,7 +55,7 @@ function slimblocks_register_block_patterns() {
 	/**
 	 * Filters the theme block patterns.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Slim Blocks 1.0
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
