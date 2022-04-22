@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_Two
+ * @subpackage Slim_Blocks
  * @since Slim Blocks 1.0
  */
 
