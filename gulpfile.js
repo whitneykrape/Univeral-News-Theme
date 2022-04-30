@@ -227,7 +227,7 @@ gulp.task('wordpress-blocks-js', () => {
     .pipe(gulp.dest('./dist/wordpress/blocks'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
-
+// Revist the kind of blocks needed (post) since WP has patterns that work well 
 
 gulp.task('sass', function() {
   return gulp.src('./src/assets/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
