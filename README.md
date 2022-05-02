@@ -4,7 +4,7 @@ Starting from a simple HTML theme to be a universal theme for multiple platforms
 Started from:
 1. Craft base template.
 2. Ghost base template.
-3. Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms
+3. Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms (Edit, moving to HYAS.)
 4. WordPress Twenty Twenty-One
 
 Gulp is workable but overall foundations still being rebuilt.
@@ -34,8 +34,8 @@ WordPress Template Use:
 1. WordPress template is now started in standard WordPress folder structure, so composer can build an example WordPress for smoke test, initial integration.
 ### (Upcoming commit will have Gulp moving and packing files.)
 
-Next 3 commits:
-1. ~~Usable WordPress template (basic container for blocks.)~~
+Next important commits:
+1. ~~Move WordPress to simple simple FSE theme with included block patterns.~~
 2. ~~webpack for proper mod management.~~
 3. ~~Gulp? that that eliminates above. Deals templates with "ease."~~
 3. All of these are in but need refining, strongly, so:
