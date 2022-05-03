@@ -36,11 +36,11 @@ WordPress Template Use:
 
 Next important commits:
 1. ~~Move WordPress to simple simple FSE theme with included block patterns.~~
-2. ~~webpack for proper mod management.~~
-3. ~~Gulp? that that eliminates above. Deals templates with "ease."~~
+2. For all 4, there should be similar block patterns. 
+3. ~~Gulp? that that eliminates above. Deals templates with "ease."~~ (Gulp is there, build it out more.)
 3. All of these are in but need refining, strongly, so:
 3. Refine webpack, gulp, split templates, develop WordPress template.
-4. Have the ability to choose a theme and it refactor for the particular CMS. 
+4. Have the ability to choose a theme and it refactor for the particular CMS. (Oh this is good actually but have it depend on the theme of the block implementation...)
 
 X. Have a dependency for theme updates from Craft, Ghost, Hugo? and WordPress. Very open ended, but as the templates evolve, have a way of pulling in those iterated pieces.
 
