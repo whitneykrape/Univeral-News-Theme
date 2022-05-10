@@ -89,20 +89,16 @@
 </script>
 /* wordpress-not-end */
 /* wordpress-start */
-<!-- wp:columns -->
-<div class="wp-block-columns"
-    ><!-- wp:column {"width":"50%"} -->
-    <div class="wp-block-column" style="flex-basis:50%">
-        <!-- wp:post-featured-image /-->
+/* This is a place where custom WP block as plugin makes sense. */
+<article { ...blockProps }>
+    <div className="article-text-block">
+        <RichText.Content tagName="p" className="article-read-more">
+            <RichText.Content
+                tagName="span"
+                className="btn-sm article-link"
+                value={ link }
+            />
+        </RichText.Content>
     </div>
-    <!-- /wp:column -->
-
-    <!-- wp:column {"width":"50%"} -->
-    <div class="wp-block-column" style="flex-basis:50%">
-        <!-- wp:post-title /-->
-
-        <!-- wp:post-excerpt /-->
-    </div>
-    <!-- /wp:column --></div>
-<!-- /wp:columns -->
+</article>
 /* wordpress-end */
