@@ -1,18 +1,19 @@
 
 /* wordpress-start */
-<div { ...blockProps }>
-	<div class="container">
-		<RichText.Content
-            tagName="h1"
-            className="title"
-            value={ title }
-        />
+<!-- wp:columns -->
+<div class="wp-block-columns"
+    ><!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column" style="flex-basis:50%">
+        <!-- wp:post-featured-image /-->
+    </div>
+    <!-- /wp:column -->
 
-        <RichText.Content
-            tagName="p"
-            className="subtitle"
-            value={ subtitle }
-        />
-	</div>
-</div>
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column" style="flex-basis:50%">
+        <!-- wp:post-title /-->
+
+        <!-- wp:post-excerpt /-->
+    </div>
+    <!-- /wp:column --></div>
+<!-- /wp:columns -->
 /* wordpress-end */
