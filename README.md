@@ -4,7 +4,7 @@ Starting from a simple HTML theme to be a universal theme for multiple platforms
 Started from:
 1. Craft base template.
 2. Ghost base template.
-3. Hugo Netlify https://github.com/netlify-templates/one-click-hugo-cms (Edit, moving to HYAS.)
+3. (Edit, moving to HYAS.)
 4. WordPress Twenty Twenty-One
 
 Gulp is workable but overall foundations still being rebuilt.
