@@ -97,9 +97,6 @@ gulp.task('wordpress', () => {
 // In being distributed, process hbs into mostly HTML? Does that work or does HTML mostly go to HTML? 
 // Problem is, WordPress has a complex interface in their files...
 // Others just use templating and hold the interface in their UI. 
-// 
-// 
-// 
 
 gulp.task('wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
