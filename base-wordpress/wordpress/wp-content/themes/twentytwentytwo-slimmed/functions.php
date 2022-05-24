@@ -149,3 +149,5 @@ add_action( 'wp_head', 'slimblocks_preload_webfonts' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+
+// Get more of the block patterns programatically. 

@@ -99,7 +99,7 @@ gulp.task('wordpress', () => {
 // Others just use templating and hold the interface in their UI. 
 
 // Compile collections to be included
-// Need to Write something 
+// Need to Write something into the WordPress theme that gets all from inc.
 gulp.task('wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
