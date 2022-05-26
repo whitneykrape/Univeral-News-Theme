@@ -114,7 +114,7 @@ gulp.task('wordpress', () => {
       end_comment:    "wordpress-not-end"
     }))
     .pipe(rename({
-      extname: '.js'
+      extname: '.php'
     }))
     .pipe(gulp.dest('./dist/html/blocks'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/twentytwentytwo-slimmed/inc/'))
