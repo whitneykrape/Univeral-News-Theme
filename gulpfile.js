@@ -117,7 +117,7 @@ gulp.task('wordpress', () => {
       extname: '.php'
     }))
     .pipe(gulp.dest('./dist/html/blocks'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/twentytwentytwo-slimmed/inc/'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/twentytwentytwo-slimmed/inc/patterns/'))
 });
 
 gulp.task('html', () => {
@@ -174,11 +174,13 @@ gulp.task('ghost', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
+/*
 gulp.task('wordpress-blocks', () => {
   return gulp.src('./src/pages/wordpress-block-article/blocks/*.js')
     .pipe(gulpIf('*.js', babel()))
     .pipe(gulp.dest('./dist/wordpress/blocks'))
 });
+*/
 
 gulp.task('craft-blocks', () => {
   // This will change to a catch-all folder of craft blocks
