@@ -44,7 +44,7 @@ function slimblocks_register_block_patterns() {
 		}
 	}
 
-	$patterns_directory    	= './patterns';
+	$patterns_directory    	= __DIR__ . '/patterns/';
 	$patterns_files 		= array_diff(scandir($patterns_directory), array('..', '.'));
 	$patterns_files 		= array_map(function($e) {
 	    return pathinfo($e, PATHINFO_FILENAME);
