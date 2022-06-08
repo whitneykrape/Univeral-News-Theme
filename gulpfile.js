@@ -100,6 +100,7 @@ gulp.task('wordpress', () => {
 
 // Compile collections to be included
 // Need to Write something into the WordPress theme that gets all from inc.
+// Wrote part of the includer... Test with live theme
 gulp.task('wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
