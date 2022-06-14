@@ -5,7 +5,7 @@
  * Article Block
  */
 return array(
-    'title'      => __( 'Article Block', single-2022' ),
+    'title'      => __( 'Article Block', 'single-2022' ),
     'categories' => array( 'single' ),
     'content'    => '<!-- wp:columns --><div class="wp-block-columns"
     ><!-- wp:column {"width":"50%"} -->
