@@ -1,6 +1,6 @@
 {
   "name": "news-theme",
-  "version": "0.4.2",
+  "version": "0.4.5",
   "description": "Theme for Multiple CMS",
   "main": "./base-html/index.html",
   "private": true,
