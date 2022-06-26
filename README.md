@@ -35,8 +35,8 @@ WordPress Template Use:
 ### (Upcoming commit will have Gulp moving and packing files.)
 
 Next important commits:
-1. ~~Move WordPress to simple simple FSE theme with included block patterns.~~
-2. For all 4, there should be similar block patterns. 
+1. ~~Move WordPress to simple simple FSE theme with included block patterns.~~ Much further along now...
+2. For all 4, there should be similar block patterns. (Need to investigate what blocks look like in the other CMSes.)
 3. ~~Gulp? that that eliminates above. Deals templates with "ease."~~ (Gulp is there, build it out more.)
 3. All of these are in but need refining, strongly, so:
 3. Refine webpack, gulp, split templates, develop WordPress template.
