@@ -14,6 +14,7 @@ Craft Template Use:
 2. Modify CSS by copying over the /web/static/styles/style.css (and map) files.
 3. Repo the overall Craft install directory but ignore the unneeded directories.  
 ### (Upcoming commit will have Gulp moving and packing files. Composer install craft.)
+### Matrix blocks.
 
 Ghost Template Use:
 1. At the moment, copying over the original Casper theme. (More details incoming.)
