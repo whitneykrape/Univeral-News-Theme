@@ -33,7 +33,7 @@ const templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 // Development Tasks 
 // -----------------
 
-/* Start browserSync server
+/* Start browserSync server*/
 gulp.task('browserSync', function() {
   browserSync({
     server: {
@@ -41,7 +41,7 @@ gulp.task('browserSync', function() {
     }
   })
 })
-*/
+
 
 
 /*
