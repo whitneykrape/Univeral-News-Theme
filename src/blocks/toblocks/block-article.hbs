@@ -1,4 +1,5 @@
 /* wordpress-not-start */
+
 {# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
 {% set myMatrixBlockQuery = craft.matrixBlocks()
   .owner(myEntry)
@@ -13,6 +14,9 @@
   <p>{{ block.ctaTitle }}</p>
   <p>{{ block.ctaImage }}</p>
 {% endfor %}
+
+
+{{{block "section"}}} and {{#contentFor "section"}} content {{/contentFor}}
 
 
 <article class="article article-sm sm">
