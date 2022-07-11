@@ -1,5 +1,7 @@
 /* wordpress-not-start */
 
+
+// Craft CMS
 {# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
 {% set myMatrixBlockQuery = craft.matrixBlocks()
   .owner(myEntry)
@@ -16,9 +18,11 @@
 {% endfor %}
 
 
+// Ghost CMS (make areas to echo for each run through)
 {{{block "section"}}} and {{#contentFor "section"}} content {{/contentFor}}
 
 
+// WordPress CMS
 <article class="article article-sm sm">
     <h2 class="">
         {{title}}
