@@ -14,12 +14,12 @@
  */
 function slimblocks_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'twentytwentytwo' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
-		'query'    => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
-		'single'    => array( 'label' => __( 'Single', 'twentytwentytwo' ) ),
+		'custom'   => array( 'label' => __( 'Custom', 'twentytwentytwo' ) )
+		// 'footer'   => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
+		// 'header'   => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
+		// 'query'    => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
+		// 'pages'    => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
+		// 'single'    => array( 'label' => __( 'Single', 'twentytwentytwo' ) ),
 	);
 
 	/**
@@ -37,6 +37,8 @@ function slimblocks_register_block_patterns() {
 	 *     }
 	 * }
 	 */
+	remove_theme_support( 'core-block-patterns' );
+	
 	$block_pattern_categories = apply_filters( 'slimblocks_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
