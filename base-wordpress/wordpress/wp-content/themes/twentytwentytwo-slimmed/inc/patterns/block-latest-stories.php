@@ -1,6 +1,6 @@
-
+<?php
 /* Match classes? */
-/* wordpress-start */
+/* wordpress-start
 <!-- wp:columns -->
 <div class="wp-block-columns"
     ><!-- wp:column {"width":"50%"} -->
@@ -17,4 +17,4 @@
     </div>
     <!-- /wp:column --></div>
 <!-- /wp:columns -->
-/* wordpress-end */
+wordpress-end */
