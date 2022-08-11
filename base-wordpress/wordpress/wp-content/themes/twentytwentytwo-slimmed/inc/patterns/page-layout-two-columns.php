@@ -1,7 +1,7 @@
 <?php
 /**
  * Page layout with two columns.
- */
+
 return array(
 	'title'      => __( 'Page layout with two columns', 'twentytwentytwo' ),
 	'categories' => array( 'pages' ),
@@ -71,3 +71,4 @@ return array(
 					<!-- /wp:columns --></div>
 					<!-- /wp:group -->',
 );
+ */

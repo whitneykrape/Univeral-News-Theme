@@ -1,7 +1,7 @@
 <?php
 /**
  * Default posts block pattern
- */
+
 return array(
 	'title'      => __( 'Default posts', 'twentytwentytwo' ),
 	'categories' => array( 'query' ),
@@ -48,3 +48,4 @@ return array(
 					<!-- /wp:query-pagination --></div>
 					<!-- /wp:query -->',
 );
+ */

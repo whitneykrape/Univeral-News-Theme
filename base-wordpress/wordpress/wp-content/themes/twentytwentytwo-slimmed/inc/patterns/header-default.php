@@ -1,7 +1,7 @@
 <?php
 /**
  * Default header block pattern
- */
+ 
 return array(
 	'title'      => __( 'Default header', 'twentytwentytwo' ),
 	'categories' => array( 'header' ),
@@ -21,3 +21,4 @@ return array(
 					<!-- /wp:group --></div>
 					<!-- /wp:group -->',
 );
+ */
