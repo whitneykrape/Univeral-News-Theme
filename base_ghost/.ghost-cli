@@ -1,7 +1,9 @@
 {
-  "active-version": "4.34.0",
-  "cli-version": "1.18.1",
+  "active-version": "5.15.0",
+  "cli-version": "1.19.3",
   "channel": "stable",
   "name": "localhost",
-  "running": "production"
+  "node-version": "14.18.3",
+  "previous-version": "4.48.4",
+  "running": "development"
 }
