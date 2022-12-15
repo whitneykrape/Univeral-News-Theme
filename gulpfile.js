@@ -93,6 +93,36 @@ gulp.task('wordpress', () => {
 });
 */
 
+/*
+gulp.task('wordpresstest', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src([
+      './src/dev/wordpress/*.hbs',
+      './src/dev/wordpress/content/*.hbs',
+      './src/dev/pages/wordpress/header/*.hbs'
+      ])
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/partials'],
+      handlebars_helpers
+    }))
+    .pipe(stripCode({
+      start_comment: "only-html-code",
+      end_comment: "end-only-html-code"
+    }))
+    .pipe(decomment({
+      trim: true, 
+      safe: true
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/wordpress'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
+});
+*/
+
 // Start from a hbs that dests into craft, ghost, netlify, wordpress folders
 // In being distributed, process hbs into mostly HTML? Does that work or does HTML mostly go to HTML? 
 // Problem is, WordPress has a complex interface in their files...
