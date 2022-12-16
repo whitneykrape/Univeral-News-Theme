@@ -1,5 +1,5 @@
-<?php
-/* wordpress-start 
+
+/* wordpress-start */
 <!-- wp:columns {"verticalAlignment":null} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:post-featured-image /--></div>
@@ -11,4 +11,4 @@
 <!-- wp:post-excerpt /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
-wordpress-end */
+/* wordpress-end */
