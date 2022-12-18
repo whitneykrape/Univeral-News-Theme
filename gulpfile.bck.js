@@ -43,6 +43,86 @@ gulp.task('browserSync', function() {
 })
 
 
+
+/*
+gulp.task('html', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/pages/*.hbs')
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/partials'],
+      handlebars_helpers
+    }))
+    .pipe(stripCode({
+      start_comment: "php-code",
+      end_comment: "end-php-code"
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('wordpress', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src([
+      './src/pages/wordpress/*.hbs',
+      './src/pages/wordpress/content/*.hbs',
+      './src/pages/wordpress/header/*.hbs'
+      ])
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/partials'],
+      handlebars_helpers
+    }))
+    .pipe(stripCode({
+      start_comment: "only-html-code",
+      end_comment: "end-only-html-code"
+    }))
+    .pipe(decomment({
+      trim: true, 
+      safe: true
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/wordpress'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
+});
+*/
+
+/*
+gulp.task('wordpresstest', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src([
+      './src/dev/wordpress/*.hbs',
+      './src/dev/wordpress/content/*.hbs',
+      './src/dev/pages/wordpress/header/*.hbs'
+      ])
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      batch: ['./src/partials'],
+      handlebars_helpers
+    }))
+    .pipe(stripCode({
+      start_comment: "only-html-code",
+      end_comment: "end-only-html-code"
+    }))
+    .pipe(decomment({
+      trim: true, 
+      safe: true
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/wordpress'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme'));
+});
+*/
+
 // Start from a hbs that dests into craft, ghost, netlify, wordpress folders
 // In being distributed, process hbs into mostly HTML? Does that work or does HTML mostly go to HTML? 
 // Problem is, WordPress has a complex interface in their files...
@@ -125,6 +205,13 @@ gulp.task('ghost', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
+/*
+gulp.task('wordpress-blocks', () => {
+  return gulp.src('./src/pages/wordpress-block-article/blocks/*.js')
+    .pipe(gulpIf('*.js', babel()))
+    .pipe(gulp.dest('./dist/wordpress/blocks'))
+});
+*/
 
 gulp.task('craft-blocks', () => {
   // This will change to a catch-all folder of craft blocks
@@ -208,6 +295,9 @@ gulp.task('watch', function() {
   gulp.watch('./src/assets/js/*.js', { usePolling: true }, gulp.series('js'));
   gulp.watch(['./src/partials/blocks/*.hbs', './src/partials/includes/*.hbs', './src/partials/layouts/*.hbs'], { usePolling: true }, gulp.series('html'));
   gulp.watch(['./src/pages/wordpress/*.hbs'], { usePolling: true }, gulp.series('wordpress'));
+  gulp.watch(['./src/pages/wordpress/blocks/*.hbs','./src/pages/wordpress/blocks/*.js'], { usePolling: true }, gulp.series(['wordpress-blocks-php','wordpress-blocks-js']));
+
+  // gulp.watch('app/js/**/*.js', browserSync.reload);
 })
 
 // Optimization Tasks 
