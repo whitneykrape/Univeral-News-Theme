@@ -11,3 +11,23 @@
         color: #000;
     }
 }
+
+.site-nav {
+    background: #aaa;
+}
+
+#subscribe,
+.message-success,
+.message-error,
+.button-loader,
+.subscribe-success-message {
+    display: none;
+}
+
+.success .message-success {
+    display: block;
+}
+
+.error .message-error {
+    display: block;
+}
