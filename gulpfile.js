@@ -83,10 +83,10 @@ gulp.task('html', () => {
       start_comment:  "wordpress-start",
       end_comment:    "wordpress-end"
     }))
-    .pipe(handlebars(templateData, {
-      ignorePartials: true,
-      helpers: handlebars_helpers
-    }))
+    //.pipe(handlebars(templateData, {
+    //  ignorePartials: true,
+    //  helpers: handlebars_helpers
+    //}))
     .pipe(uncomment({
         removeEmptyLines: true
     }))
