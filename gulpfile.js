@@ -130,7 +130,7 @@ gulp.task('ghost', () => {
 });
 
 
-gulp.task('craft-blocks', () => {
+gulp.task('blocks-craft', () => {
   // This will change to a catch-all folder of craft blocks
   return gulp.src('./src/blocks/craft-block-article/*.twig')
     // .pipe(handlebars(templateData, {
@@ -144,7 +144,7 @@ gulp.task('craft-blocks', () => {
     .pipe(gulp.dest('./dist/craft/blocks'))
 });
 
-gulp.task('ghost-blocks', () => {
+gulp.task('blocks-ghost', () => {
   // All the Ghost blocks... So on.
   return gulp.src('./src/blocks/ghost-block-article/*.hbs')
     /* .pipe(handlebars(templateData, {
@@ -158,7 +158,7 @@ gulp.task('ghost-blocks', () => {
     .pipe(gulp.dest('./dist/ghost/blocks'))
 });
 
-gulp.task('netlify-blocks', () => {
+gulp.task('blocks-netlify', () => {
   return gulp.src('./src/blocks/netlify-block-article/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
@@ -171,6 +171,7 @@ gulp.task('netlify-blocks', () => {
     .pipe(gulp.dest('./dist/netlify/blocks'))
 });
 
+/* Patterns not fully custom blocks.
 gulp.task('wordpress-blocks-js', () => {
   return gulp.src('./src/pages/wordpress/blocks/*.js')
     .pipe(gulpIf('*.js', babel()))
@@ -178,6 +179,7 @@ gulp.task('wordpress-blocks-js', () => {
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/plugins/wooden-blocks'))
 });
 // Revist the kind of blocks needed (post) since WP has patterns that work well 
+*/
 
 gulp.task('sass', function() {
   return gulp.src('./src/assets/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
