@@ -130,6 +130,9 @@ gulp.task('ghost', () => {
 });
 
 
+// Above is less common? Bundle up whole template?
+// Below is the more common run, "build a block and use it..."
+
 gulp.task('blocks-craft', () => {
   // This will change to a catch-all folder of craft blocks
   return gulp.src('./src/blocks/craft-block-article/*.twig')
