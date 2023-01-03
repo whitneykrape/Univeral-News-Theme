@@ -1,9 +1,27 @@
-/* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */
-
 <?php
 /* wordpress-start */
 /* Change to a block made in WordPress that can be loaded as a pattern. */
+/**
+ * Article Block
+ */
+return array(
+    'title'      => __( 'Article Block', 'single-2022' ),
+    'categories' => array( 'single' ),
+    'content'    => '<!-- wp:columns -->
+        <div class="wp-block-columns">
+            <!-- wp:column {"width":"50%"} -->
+            <div class="wp-block-column" style="flex-basis:50%">
+                <!-- wp:post-featured-image /-->
+            </div>
+            <!-- /wp:column -->
 
-/* Not a block, a pattern. */
+            <!-- wp:column {"width":"50%"} -->
+            <div class="wp-block-column" style="flex-basis:50%">
+                <!-- wp:post-title /-->
 
+                <!-- wp:post-excerpt /-->
+            </div>
+            <!-- /wp:column -->
+        </div><!-- /wp:columns -->',
+    );
 /* wordpress-end */
