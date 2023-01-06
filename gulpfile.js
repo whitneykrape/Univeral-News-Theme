@@ -51,6 +51,7 @@ gulp.task('browserSync', function() {
 // Compile collections to be included
 // Need to Write something into the WordPress theme that gets all from inc.
 // Wrote part of the includer... Test with live theme
+/*
 gulp.task('wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
@@ -70,6 +71,7 @@ gulp.task('wordpress', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/twentytwentytwo-slimmed/inc/patterns/'))
 });
+*/
 
 gulp.task('html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
@@ -173,6 +175,28 @@ gulp.task('blocks-netlify', () => {
     }))
     .pipe(gulp.dest('./dist/netlify/blocks'))
 });
+
+// Mostly just moved this...
+gulp.task('blocks-wordpress', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/blocks/toblocks/*.hbs')
+    // .pipe(handlebars(templateData, {
+    //   ignorePartials: true,
+    //   batch: ['./src/blocks/toblocks'],
+    //   handlebars_helpers
+    // }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-not-start",
+      end_comment:    "wordpress-not-end"
+    }))
+    .pipe(rename({
+      extname: '.php'
+    }))
+    .pipe(gulp.dest('./dist/html/blocks'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/twentytwentytwo-slimmed/inc/patterns/'))
+});
+// Revist the kind of blocks needed (post) since WP has patterns that work well 
 
 /* Patterns not fully custom blocks.
 gulp.task('wordpress-blocks-js', () => {
