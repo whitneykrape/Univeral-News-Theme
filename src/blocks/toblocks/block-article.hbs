@@ -34,6 +34,44 @@
 /* Not a block, a pattern. */
 
 // WordPress CMS
+
+/**
+ * Brand Block
+ */
+return array(
+    'title'      => __( 'Image Feature Short 01', 'slim-2022' ),
+    'categories' => array( 'slim' ),
+    'content'    => '<!-- wp:cover {"url":"image","id":4432,"dimRatio":30,"isDark":false,"className":"block__image-feature-short-01"} -->
+<div class="wp-block-cover is-light block__image-feature-short-01"><span aria-hidden="true" class="has-background-dim-30 wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-4432" alt="" src="image" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"background"} -->
+<h3 class="has-background-color has-text-color">South Shore Wine Company</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"background"} -->
+<p class="has-background-color has-text-color">Brand description with a bunch of extra text.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"gold","textColor":"foreground","style":{"spacing":{"padding":{"top":"5px","bottom":"5px","left":"15px","right":"15px"}}},"className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-foreground-color has-gold-background-color has-text-color has-background" style="padding-top:5px;padding-right:15px;padding-bottom:5px;padding-left:15px">LEARN MORE</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"backgroundColor":"gold","textColor":"foreground","style":{"spacing":{"padding":{"top":"5px","bottom":"5px","left":"15px","right":"15px"}}},"className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-foreground-color has-gold-background-color has-text-color has-background" style="padding-top:5px;padding-right:15px;padding-bottom:5px;padding-left:15px">SHOP</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
+<!-- /wp:cover -->',
+);
+
+
+/*
 <article class="article article-sm sm">
     <h2 class="">
         {{title}}
@@ -94,5 +132,5 @@
 
     <p class="">Read more →</p>
 </article>
-
+*/
 /* wordpress-end */
