@@ -4,5 +4,6 @@
   "channel": "stable",
   "name": "localhost",
   "node-version": "14.18.3",
-  "previous-version": "5.26.2"
+  "previous-version": "5.26.2",
+  "running": "development"
 }
