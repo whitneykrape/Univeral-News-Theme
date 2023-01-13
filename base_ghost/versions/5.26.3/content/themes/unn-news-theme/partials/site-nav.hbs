@@ -1,5 +1,5 @@
-<nav class="top-navbar site-nav">
-    <div class="site-nav-left-wrapper">
+<nav class="top-navbar site-nav flex">
+    <div class="menu breakout column col-4 navigation-list">
         <div class="site-nav-left">
             {{#if @site.logo}}
                 <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
@@ -16,7 +16,10 @@
             </div>
         </div>
     </div>
-    <div class="site-nav-right">
+    <div class="logo four column col-4 align-center layout-background">
+        logo
+    </div>
+    <div class="menu breakout column col-4 navigation-list">
         {{#if @site.secondary_navigation}}
             {{navigation type="secondary"}}
         {{else}}
