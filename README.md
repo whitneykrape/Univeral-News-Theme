@@ -1,4 +1,4 @@
-# UNN-News-Theme
+# News Theme
 Starting from a simple HTML theme to be a universal theme for multiple platforms.
 
 Started from:
