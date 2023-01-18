@@ -15,28 +15,26 @@
 
 <body class="{{body_class ?? null}} {{craft.app.request.isMobileBrowser() ? 'is-mobile' : 'is-desktop'}}">
 
-
+<!-- Top Bar -->
 <header class="site-header">
-    <div class="outer site-nav-main">
-	    <div class="inner">
-			<nav class="top-navbar">
-				<ul class="menu breakout four columns navigation-list">
-					<li><!-- Breakout --></li>
-				</ul>
+	<nav class="top-navbar row">
+	  <ul  class="menu breakout column col-4 navigation-list">
+	    <li><!-- Breakout --></li> 
+	  </ul>
 
-				<div class="logo four columns align-center layout-background">
-		    		<a class=" " title="Main Link and Logo" href="/">
-		      		<!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
-		    		</a>
-		  		</div>
-				
-				<ul class="menu individual four columns navigation-list flex">
-					<li><a href="/frequently-asked-questions" class="">FAQs</a></li>
-					<li><a href="/blog" class="pa3 no-underline db">Blog</a></li>
-				</ul>
+	  <div  class="logo column col-4 align-center layout-background">
+	    <a class="" title="Main Link and Logo" href="../homepage-simple/"><strong>Text</strong>Text
+	      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
+	    </a>
+	  </div> 
 
-				<br class="clear" />
-			</nav>
-		</div>
-	</div>
+	  <ul  class="menu individual column col-4 align-left navigation-list">
+	    <li>
+			<li><a href="/frequently-asked-questions" class="">FAQs</a></li>
+			<li><a href="/blog" class="pa3 no-underline db">Blog</a></li>
+	    </li>
+	  </ul>
+
+	  <br class="clear" />
+	</nav>
 </header>
