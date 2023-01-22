@@ -30,7 +30,7 @@
 
 
         {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-footer outer">
+        <footer class="site-footer align-center layout-background">
 
 
                 {{!-- The big email subscribe modal content --}}
@@ -47,30 +47,23 @@
                             <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
                         {{/if}}
                         <div class="subscribe-form">
-                            <h1 class="subscribe-overlay-title">Subscribe to {{@site.title}}</h1>
-                            <p class="subscribe-overlay-description">Stay up to date! Get all the latest & greatest posts delivered straight to your inbox</p>
-                            <form data-members-form="subscribe">
-                                <div class="form-group">
-                                    <input class="subscribe-email" data-members-email placeholder="youremail@example.com"
-                                        autocomplete="false" />
-                                    <button class="button primary" type="submit">
-                                        <span class="button-content">Subscribe</span>
-                                        <span class="button-loader">{{> "icons/loader"}}</span>
-                                    </button>
-                                </div>
-                                <div class="message-success">
-                                    <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
-                                </div>
-                                <div class="message-error">
-                                    Please enter a valid email address!
-                                </div>
+                            <h1 class="subscribe-overlay-title"></h1>
+                            <p class="subscribe-overlay-description"></p>
+                            <form action="https://tinyletter.com/" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">                                <label for="tlemail"></label></p><p><input type="text" style="width:240px" name="email" id="tlemail" placeholder="Enter your email address" />
+
+                                <input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
+
+                                <br/>
+
+                                <small><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></small>
                             </form>
                         </div>
                     </div>
                 </div>
                 {{/if}}
 
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+                <section class="copyright">
+                    <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
                     <!-- <nav class="site-footer-nav">
                         <a href="{{@site.url}}">Latest Posts</a>
                         {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
