@@ -1,22 +1,21 @@
-/* Outer container space as well as article content preview in an outer shell. */
+<?php
+/**
+ * Latest Stores Block
+ */
+return array(
+    'title'      => __( 'Latest Stores Text Block', 'slim-2022' ),
+    'categories' => array( 'slim' ),
+    'content'    => '<!-- wp:group {"className":"block__header-text"} -->
+<div class="wp-block-group block__header-text"><!-- wp:heading {"textAlign":"center","level":5} -->
+<h5 class="has-text-align-center has-text-color"><strong>Mazza Brands, About Us, Other</strong></h5>
+<!-- /wp:heading -->
 
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="has-text-align-center">Brands, Long, Short Headline Text</h2>
+<!-- /wp:heading -->
 
-/* Match classes? */
-/* wordpress-start */
-<!-- wp:columns -->
-<div class="wp-block-columns"
-    ><!-- wp:column {"width":"50%"} -->
-    <div class="wp-block-column" style="flex-basis:50%">
-        <!-- wp:post-featured-image /-->
-    </div>
-    <!-- /wp:column -->
-
-    <!-- wp:column {"width":"50%"} -->
-    <div class="wp-block-column" style="flex-basis:50%">
-        <!-- wp:post-title /-->
-
-        <!-- wp:post-excerpt /-->
-    </div>
-    <!-- /wp:column --></div>
-<!-- /wp:columns -->
-/* wordpress-end */
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Headline lorem ipsum Headline lorem ipsum Headline lorem ipsum Headline lorem ipsum Headline lorem ipsumHeadline lorem ipsumHeadline lorem ipsum</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->',
+);
