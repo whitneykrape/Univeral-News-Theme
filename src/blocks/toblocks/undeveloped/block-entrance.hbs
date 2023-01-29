@@ -1,0 +1,36 @@
+/* wordpress-not-start */
+	<div class="entrance-image">
+	  <div class="container">
+	    <h1 class="">
+	    	/* preview-start */
+	    		{{ title }}
+            /* preview-end */
+            /* ghost-start */
+	    		{{selectContent templateTypes template 'title'}}
+            /* ghost-end */
+	    </h1>
+	  
+	    <p class="">
+	    	/* preview-start */
+	    		{{ subtitle }}
+            /* preview-end */
+            /* ghost-start */
+	    		{{selectContent templateTypes template 'subtitle'}}
+            /* ghost-end */
+	    </p>
+	  </div>
+	</div>
+/* wordpress-not-end */
+/* wordpress-start */
+<!-- wp:columns {"verticalAlignment":null} -->
+<div class="wp-block-columns"><!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:post-featured-image /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:post-title /-->
+
+<!-- wp:post-excerpt /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+/* wordpress-end */
