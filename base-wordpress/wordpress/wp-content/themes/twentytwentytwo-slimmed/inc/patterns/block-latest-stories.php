@@ -1,8 +1,3 @@
-/* Outer container space as well as article content preview in an outer shell. */
-
-
-/* Match classes? */
-/* wordpress-start */
 	<?php
 	/**
 	 * Latest Stores Block

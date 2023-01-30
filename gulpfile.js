@@ -190,6 +190,9 @@ gulp.task('blocks-wordpress', () => {
       start_comment:  "wordpress-not-start",
       end_comment:    "wordpress-not-end"
     }))
+    .pipe(uncomment({
+        removeEmptyLines: true
+    }))
     .pipe(rename({
       extname: '.php'
     }))
