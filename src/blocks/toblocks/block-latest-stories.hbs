@@ -47,6 +47,21 @@
 
 /* wordpress-not-end */
 /* Twig need the foreach */
+{# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
+{% set myMatrixBlockQuery = craft.matrixBlocks()
+  .owner(myEntry)
+  .fieldId(10)
+  .type('ctaType01') %}
+
+{# Fetch the Matrix blocks #}
+{% set matrixBlocks = myMatrixBlockQuery.all() %}
+
+{# Display their contents #}
+{% for block in matrixBlocks %}
+  /* Replace with a block reference. */
+{% endfor %}
+/* craft-end */
+
 <article class="article article-sm sm">
   <a href="{{ entry.url }}" class="">
     <h2 class="">{{ entry.blogTitle }}</h2>
