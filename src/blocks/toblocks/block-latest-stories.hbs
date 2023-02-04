@@ -47,11 +47,13 @@
 
 /* wordpress-not-end */
 /* Twig need the foreach */
+
+/* craft-start */
 {# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
 {% set myMatrixBlockQuery = craft.matrixBlocks()
   .owner(myEntry)
   .fieldId(10)
-  .type('ctaType01') %}
+  .type('post-article') %}
 
 {# Fetch the Matrix blocks #}
 {% set matrixBlocks = myMatrixBlockQuery.all() %}
@@ -61,6 +63,24 @@
   /* Replace with a block reference. */
 {% endfor %}
 /* craft-end */
+
+/* ghost-start */
+    <div class="latest-stories">
+        <ul class=" navigation-list">
+            {{#foreach posts}}
+
+                <li class="six columns">
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+                </li>
+
+            {{/foreach}}
+        </ul>
+
+        <br class="clear"/>
+    </div>
+/* ghost-end */
+
 
 <article class="article article-sm sm">
   <a href="{{ entry.url }}" class="">
