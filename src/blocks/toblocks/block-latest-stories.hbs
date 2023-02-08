@@ -54,7 +54,7 @@
 {% set myMatrixBlockQuery = craft.matrixBlocks()
   .owner(myEntry)
   .fieldId(6)
-  .type('post-article') %}
+  .type('post-article-list-single') %}
 
 {# Fetch the Matrix blocks #}
 {% set matrixBlocks = myMatrixBlockQuery.all() %}
