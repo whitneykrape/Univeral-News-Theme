@@ -142,7 +142,19 @@ gulp.task('blocks-craft', () => {
     //   ignorePartials: true,
     //   batch: ['./src/blocks'],
     //   twig
-    // }))
+    // })
+    .pipe(stripCode({
+      start_comment:  "html-start",
+      end_comment:    "html-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-start",
+      end_comment:    "wordpress-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
     .pipe(rename({
       extname: '.twig'
     }))
