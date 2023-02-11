@@ -1,0 +1,30 @@
+/* wordpress-not-start */
+/* Outer container space as well as article content preview in an outer shell. */
+
+/* HTML below... Need Twig and HBS. I think those can be together. */
+
+
+/* Twig need the foreach */
+
+/* craft-start */
+{# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
+{% set myMatrixBlockQuery = craft.matrixBlocks()
+  .owner(myEntry)
+  .fieldId(6)
+  .type('post-article-list-single') %}
+
+{# Fetch the Matrix blocks #}
+{% set matrixBlocks = myMatrixBlockQuery.all() %}
+
+{# Display their contents #}
+{% for block in matrixBlocks %}
+  /* Wait, no, the post-article pull does that. Remove note once tested. */
+{% endfor %}
+/* craft-end */
+
+
+
+/* HBS need the foreach */
+
+/* Match classes? */
+

@@ -137,7 +137,7 @@ gulp.task('ghost', () => {
 
 gulp.task('blocks-craft', () => {
   // This will change to a catch-all folder of craft blocks
-  return gulp.src('./src/blocks/craft-block-article/*.twig')
+  return gulp.src('./src/blocks/toblocks/*.hbs')
     // .pipe(handlebars(templateData, {
     //   ignorePartials: true,
     //   batch: ['./src/blocks'],
