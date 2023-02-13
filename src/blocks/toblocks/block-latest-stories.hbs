@@ -97,20 +97,27 @@
 /* craft-end */
 
 /* ghost-start */
-    <div class="latest-stories">
-        <ul class=" navigation-list">
-            {{#foreach posts}}
+<div class="">
+	<div class="container">
 
-                <li class="six columns">
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-                </li>
+		<h2 class="">Latest stories</h2>
 
-            {{/foreach}}
-        </ul>
+	    <div class="latest-stories">
+	        <ul class=" navigation-list">
+	            {{#foreach posts}}
 
-        <br class="clear"/>
-    </div>
+	                <li class="six columns">
+	                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+	                {{> "post-card"}}
+	                </li>
+
+	            {{/foreach}}
+	        </ul>
+
+	        <br class="clear"/>
+	    </div>
+	</div>
+</div>
 /* ghost-end */
 
 /* HBS need the foreach */
