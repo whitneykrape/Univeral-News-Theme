@@ -169,6 +169,18 @@ gulp.task('blocks-ghost', () => {
       batch: ['./src/blocks/ghost-block-article'],
       handlebars_helpers
     })) */
+    .pipe(stripCode({
+      start_comment:  "html-start",
+      end_comment:    "html-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-start",
+      end_comment:    "wordpress-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "craft-start",
+      end_comment:    "craft-end"
+    }))
     .pipe(rename({
       extname: '.hbs'
     }))
