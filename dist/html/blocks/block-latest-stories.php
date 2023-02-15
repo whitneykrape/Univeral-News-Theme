@@ -1,4 +1,82 @@
 
+<div class="container">
+	<h2 class="">Latest stories</h2>
+	<div class="latest-stories">
+	    <ul class=" navigation-list">
+			<li class="six columns">
+				<a href="../single-post-simple/" class="">
+					<img src="../assets/img/placeholder.jpg" alt="Placeholder"/>
+					<h2 class="">New Post</h2>
+					<p class="">Fri, May 29, 2020</p>
+					<p class="formattingtextbody">
+						Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+					</p>
+					<p class="">Read more →</p>
+				</a>
+			</li>
+			<li class="six columns">
+				<a href="../single-post-simple/" class="">
+					<img src="../assets/img/placeholder.jpg" alt="Placeholder"/>
+					<h2 class="">New Post</h2>
+					<p class="">Fri, May 29, 2020</p>
+					<p class="formattingtextbody">
+						Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+					</p>
+					<p class="">Read more →</p>
+				</a>
+			</li>
+	    </ul>
+	    <br class="clear">
+	  </div>
+</div>
+{# Create an entry query with the 'section' and 'limit' parameters #}
+{% set myEntryQuery = craft.entries()
+    .section('blog_posts')
+    .limit(3) %}
+{# Fetch the entries #}
+{% set entries = myEntryQuery.all() %}
+<div class="">
+	<div class="container">
+		<h2 class="">Latest stories</h2>
+		<div class="latest-stories">
+		  <ul class="navigation-list">
+		  		{% for entry in entries %}
+				{% set myAssetQuery = craft.assets()
+				    .volume('defaultvolume')
+				    .kind('image') %}
+				{# Fetch the assets #}
+				{% set images = myAssetQuery.all() %}
+				<li class="twelve columns">
+					<a href="{{ entry.url }}" class="">
+				    {% for image in images %}
+				        <img src="{{ image.url }}" alt="{{ image.title }}">
+				    {% endfor %}
+						<h2 class="">{{ entry.blogTitle }}</h2>
+						<p class="">{{ entry.postDate|datetime('D, M j, Y') }}</p>
+						<p class="">Read more →</p>
+					</a>
+				</li>
+				{% endfor %}
+		  </ul>
+		</div>
+	</div>
+</div>
+<div class="">
+	<div class="container">
+		<h2 class="">Latest stories</h2>
+	    <div class="latest-stories">
+	        <ul class=" navigation-list">
+	            {{#foreach posts}}
+	                <li class="six columns">
+	                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+	                {{> "post-card"}}
+	                </li>
+	            {{/foreach}}
+	        </ul>
+	        <br class="clear"/>
+	    </div>
+	</div>
+</div>
 	<?php
 	return array(
 	    'title'      => __( 'Latest Stores Text Block', 'slim-2022' ),

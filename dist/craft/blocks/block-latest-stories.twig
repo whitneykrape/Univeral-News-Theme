@@ -1,30 +1,53 @@
-/* wordpress-not-start */
 /* Outer container space as well as article content preview in an outer shell. */
-
 /* HTML below... Need Twig and HBS. I think those can be together. */
 
 
-/* Twig need the foreach */
-
 /* craft-start */
-{# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
-{% set myMatrixBlockQuery = craft.matrixBlocks()
-  .owner(myEntry)
-  .fieldId(6)
-  .type('post-article-list-single') %}
+{# Create an entry query with the 'section' and 'limit' parameters #}
+{% set myEntryQuery = craft.entries()
+    .section('blog_posts')
+    .limit(3) %}
 
-{# Fetch the Matrix blocks #}
-{% set matrixBlocks = myMatrixBlockQuery.all() %}
+{# Fetch the entries #}
+{% set entries = myEntryQuery.all() %}
 
-{# Display their contents #}
-{% for block in matrixBlocks %}
-  /* Wait, no, the post-article pull does that. Remove note once tested. */
-{% endfor %}
+<div class="">
+	<div class="container">
+
+		<h2 class="">Latest stories</h2>
+
+		<div class="latest-stories">
+		  <ul class="navigation-list">
+		  		{% for entry in entries %}
+
+				{% set myAssetQuery = craft.assets()
+				    .volume('defaultvolume')
+				    .kind('image') %}
+
+				{# Fetch the assets #}
+				{% set images = myAssetQuery.all() %}
+
+				<li class="twelve columns">
+					<a href="{{ entry.url }}" class="">
+				    {% for image in images %}
+				        <img src="{{ image.url }}" alt="{{ image.title }}">
+				    {% endfor %}
+
+						<h2 class="">{{ entry.blogTitle }}</h2>
+						<p class="">{{ entry.postDate|datetime('D, M j, Y') }}</p>
+						
+						<p class="">Read more →</p>
+					</a>
+
+				</li>
+				{% endfor %}
+		  </ul>
+		</div>
+
+	</div>
+</div>
 /* craft-end */
 
 
 
-/* HBS need the foreach */
-
-/* Match classes? */
 
