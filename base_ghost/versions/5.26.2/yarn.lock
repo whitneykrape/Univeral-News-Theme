@@ -9371,6 +9371,21 @@ node-jose@2.1.1:
     process "^0.11.10"
     uuid "^8.3.2"
 
+node-jose@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-jose/-/node-jose-2.2.0.tgz#b64f3225ad6bec328509a420800de597ba2bf3ed"
+  integrity sha512-XPCvJRr94SjLrSIm4pbYHKLEaOsDvJCpyFw/6V/KK/IXmyZ6SFBzAUDO9HQf4DB/nTEFcRGH87mNciOP23kFjw==
+  dependencies:
+    base64url "^3.0.1"
+    buffer "^6.0.3"
+    es6-promise "^4.2.8"
+    lodash "^4.17.21"
+    long "^5.2.0"
+    node-forge "^1.2.1"
+    pako "^2.0.4"
+    process "^0.11.10"
+    uuid "^9.0.0"
+
 node-loggly-bulk@^2.2.4:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/node-loggly-bulk/-/node-loggly-bulk-2.2.5.tgz#6f41136f91b363d1b50612e8be0063859226967e"
