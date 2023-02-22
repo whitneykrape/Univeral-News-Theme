@@ -34,16 +34,31 @@
 /* craft-end */
 
 /* ghost-start */
-    <a href="../single-post-simple/" class="">
-        <img src="../assets/img/placeholder.jpg" alt="Placeholder"/>
+    <a class="post-card-image-link" href="{{url}}">
+        <h2 class="">{{title}}</h2>
 
-        <h2 class="">New Post</h2>
-        <p class="">Fri, May 29, 2020</p>
+        {{#if feature_image}}
+            {{!-- This is a responsive image, it loads different sizes depending on device
+            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+            <img class="post-card-image"
+                srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w"
+                sizes="(max-width: 1000px) 400px, 700px"
+                src="{{img_url feature_image size="m"}}"
+                alt="{{title}}"
+            />
+        {{/if}}
 
-        <p class="formattingtextbody">
-            Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
-        </p>
-        
+        {{#if feature_image}}
+            <p>{{excerpt words="30"}}</p>
+        {{else}}
+            <p>{{excerpt words="44"}}</p>
+        {{/if}}
+
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+
         <p class="">Read more →</p>
     </a>
 /* ghost-end */
