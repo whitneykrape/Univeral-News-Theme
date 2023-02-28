@@ -3,7 +3,9 @@
 return array(
     'title'      => __( 'Image Feature Short 01', 'slim-2022' ),
     'categories' => array( 'slim' ),
-    'content'    => '<!-- wp:cover {"url":"image","id":4432,"dimRatio":30,"isDark":false,"className":"block__image-feature-short-01"} -->
+    'content'    => '
+<article> Start here.
+<!-- wp:cover {"url":"image","id":4432,"dimRatio":30,"isDark":false,"className":"block__image-feature-short-01"} -->
 <div class="wp-block-cover is-light block__image-feature-short-01"><span aria-hidden="true" class="has-background-dim-30 wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-4432" alt="" src="image" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"background"} -->
