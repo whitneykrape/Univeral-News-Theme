@@ -188,7 +188,7 @@ gulp.task('blocks-ghost', () => {
 });
 
 gulp.task('blocks-hyas', () => {
-  return gulp.src('./src/blocks/netlify-block-article/*.hbs')
+  return gulp.src('./src/blocks/toblocks/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
