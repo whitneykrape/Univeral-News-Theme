@@ -155,6 +155,10 @@ gulp.task('blocks-craft', () => {
       start_comment:  "ghost-start",
       end_comment:    "ghost-end"
     }))
+    .pipe(stripCode({
+      start_comment:  "hyas-start",
+      end_comment:    "hyas-end"
+    }))
     .pipe(rename({
       extname: '.twig'
     }))
@@ -181,6 +185,10 @@ gulp.task('blocks-ghost', () => {
       start_comment:  "craft-start",
       end_comment:    "craft-end"
     }))
+    .pipe(stripCode({
+      start_comment:  "hyas-start",
+      end_comment:    "hyas-end"
+    }))
     .pipe(rename({
       extname: '.hbs'
     }))
@@ -206,6 +214,10 @@ gulp.task('blocks-hyas', () => {
       start_comment:  "craft-start",
       end_comment:    "craft-end"
     }))
+    .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
     .pipe(rename({
       extname: '.html'
     }))
@@ -223,8 +235,20 @@ gulp.task('blocks-wordpress', () => {
     //   handlebars_helpers
     // }))
     .pipe(stripCode({
-      start_comment:  "wordpress-not-start",
-      end_comment:    "wordpress-not-end"
+      start_comment:  "html-start",
+      end_comment:    "html-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "craft-start",
+      end_comment:    "craft-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "hyas-start",
+      end_comment:    "hyas-end"
     }))
     .pipe(uncomment({
         removeEmptyLines: true
