@@ -1,24 +1,4 @@
 
-<div class="">
-  <div class="container">
-    <h2 class="">Latest stories</h2>
-    <div class="latest-stories">
-        <ul class=" navigation-list">
-        {{ range (where .Data.Pages "Type" "post") }}
-        {{ range first 3 .Pages  }}
-  					<li class="six columns">
-  						{{ .Render "li" }}
-  					</li>
-  				{{ end }}
-  			{{ end }}
-        </ul>
-        <br class="clear"/>
-      </div>
-<!--       <div class="">
-        <a href="/post" class="">Read more</a>
-      </div> -->
-  </div>
-</div>
 	<?php
 	return array(
 	    'title'      => __( 'Latest Stores Text Block', 'slim-2022' ),

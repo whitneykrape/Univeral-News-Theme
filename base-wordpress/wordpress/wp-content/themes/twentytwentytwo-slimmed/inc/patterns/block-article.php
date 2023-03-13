@@ -14,29 +14,3 @@ return array(
     </article>
     <!-- /wp:block-article/article-block -->',
 );
-    {{#if feature_image}}
-    <a class="post-card-image-link" href="{{url}}">
-        {{!-- This is a responsive image, it loads different sizes depending on device
-        https:
-        <img class="post-card-image"
-            srcset="{{img_url_feature_image_small}} 300w,
-                    {{img_url_feature_image_medium}} 600w,
-                    {{img_url_feature_image_large}} 1000w,
-                    {{img_url_feature_image_extralarge}} 2000w"
-            sizes="(max-width: 1000px) 400px, 700px"
-            src="{{img_url_feature_image_medium}}"
-            alt="{{title}}"
-        />
-    </a>
-    {{/if}}
-    {{#if feature_image}}
-        /* preview-start */
-        <p>{{excerpt_short}}</p>
-    {{else}}
-        <p>{{excerpt_long}}</p>
-    {{/if}}
-    /* preview-start */
-    <time datetime="{{date}}">{{date}}</time>
-    <p class="">Read more →</p>
-</article>
-*/
