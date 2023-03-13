@@ -1,7 +1,7 @@
 
 	<?php
 	return array(
-	    'title'      => __( 'Latest Stores Text Block', 'slim-2022' ),
+	    'title'      => __( 'Latest Stories Text Block', 'slim-2022' ),
 	    'categories' => array( 'slim' ),
 	    'content'    => '<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide"><!-- wp:query {"queryId":11,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list"},"align":"wide","layout":{"inherit":true}} -->

@@ -19,7 +19,8 @@ function slimblocks_register_block_patterns() {
 		// 'header'   => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
 		// 'query'    => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
 		// 'pages'    => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
-		// 'single'    => array( 'label' => __( 'Single', 'twentytwentytwo' ) ),
+		// 'single'   => array( 'label' => __( 'Single', 'twentytwentytwo' ) ),
+		'slim'    	  => array( 'label' => __( 'Slim', 'twentytwentytwo' ) ),
 	);
 
 	/**
