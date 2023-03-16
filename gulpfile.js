@@ -167,7 +167,7 @@ gulp.task('blocks-craft', () => {
 
 gulp.task('blocks-ghost', () => {
   // All the Ghost blocks... So on.
-  return gulp.src('./src/blocks/ghost-block-article/*.hbs')
+  return gulp.src('./src/blocks/toblocks/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks/ghost-block-article'],
