@@ -14,13 +14,13 @@
  */
 function slimblocks_register_block_patterns() {
 	$block_pattern_categories = array(
-		// 'featured' => array( 'label' => __( 'Featured', 'twentytwentytwo' ) ),
-		// 'footer'   => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
-		// 'header'   => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
-		// 'query'    => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
-		// 'pages'    => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
-		// 'single'   => array( 'label' => __( 'Single', 'twentytwentytwo' ) ),
-		'slim'    	  => array( 'label' => __( 'Slim', 'twentytwentytwo' ) ),
+		// 'featured' => array( 'label' => __( 'Featured', 'blocksslim' ) ),
+		// 'footer'   => array( 'label' => __( 'Footers', 'blocksslim' ) ),
+		// 'header'   => array( 'label' => __( 'Headers', 'blocksslim' ) ),
+		// 'query'    => array( 'label' => __( 'Query', 'blocksslim' ) ),
+		// 'pages'    => array( 'label' => __( 'Pages', 'blocksslim' ) ),
+		// 'single'   => array( 'label' => __( 'Single', 'blocksslim' ) ),
+		'slim'    	  => array( 'label' => __( 'Slim', 'blocksslim' ) ),
 	);
 
 	/**
@@ -76,7 +76,7 @@ function slimblocks_register_block_patterns() {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'twentytwentytwo-slimmed/' . $block_pattern,
+			'blocksslim-slimmed/' . $block_pattern,
 			require $pattern_file
 		);
 	}

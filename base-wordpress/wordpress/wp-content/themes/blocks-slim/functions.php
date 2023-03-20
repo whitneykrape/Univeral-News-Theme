@@ -48,17 +48,17 @@ if ( ! function_exists( 'blocksslim_styles' ) ) :
 
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		wp_register_style(
-			'twentytwentytwo-style',
+			'blocksslim-style',
 			get_template_directory_uri() . '/style.css',
 			array(),
 			$version_string
 		);
 
 		// Add styles inline.
-		wp_add_inline_style( 'twentytwentytwo-style', blocksslim_get_font_face_styles() );
+		wp_add_inline_style( 'blocksslim-style', blocksslim_get_font_face_styles() );
 
 		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'twentytwentytwo-style' );
+		wp_enqueue_style( 'blocksslim-style' );
 
 	}
 

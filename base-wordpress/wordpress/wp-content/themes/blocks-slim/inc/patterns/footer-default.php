@@ -3,7 +3,7 @@
  * Default footer
  */
 return array(
-	'title'      => __( 'Default footer', 'twentytwentytwo' ),
+	'title'      => __( 'Default footer', 'blocksslim' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
@@ -14,8 +14,8 @@ return array(
 					<p class="has-text-align-right">' .
 					sprintf(
 						/* Translators: WordPress link. */
-						esc_html__( 'Proudly powered by %s', 'twentytwentytwo' ),
-						'<a href="' . esc_url( __( 'https://wordpress.org', 'twentytwentytwo' ) ) . '" rel="nofollow">WordPress</a>'
+						esc_html__( 'Proudly powered by %s', 'blocksslim' ),
+						'<a href="' . esc_url( __( 'https://wordpress.org', 'blocksslim' ) ) . '" rel="nofollow">WordPress</a>'
 					) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group --></div>
