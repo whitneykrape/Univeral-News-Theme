@@ -1,25 +1,25 @@
 <?php
 /**
- * Twenty Twenty-Two functions and definitions
+ * Blocks Slim functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_Two
- * @since Twenty Twenty-Two 1.0
+ * @subpackage Blocks_Slim
+ * @since Blocks Slim 1.0
  */
 
 
-if ( ! function_exists( 'twentytwentytwo_support' ) ) :
+if ( ! function_exists( 'blocksslim_support' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Blocks Slim 1.0
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_support() {
+	function blocksslim_support() {
 
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
@@ -31,18 +31,18 @@ if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 
 endif;
 
-add_action( 'after_setup_theme', 'twentytwentytwo_support' );
+add_action( 'after_setup_theme', 'blocksslim_support' );
 
-if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
+if ( ! function_exists( 'blocksslim_styles' ) ) :
 
 	/**
 	 * Enqueue styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Blocks Slim 1.0
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_styles() {
+	function blocksslim_styles() {
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -55,7 +55,7 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 		);
 
 		// Add styles inline.
-		wp_add_inline_style( 'twentytwentytwo-style', twentytwentytwo_get_font_face_styles() );
+		wp_add_inline_style( 'twentytwentytwo-style', blocksslim_get_font_face_styles() );
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'twentytwentytwo-style' );
@@ -64,40 +64,40 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 
 endif;
 
-add_action( 'wp_enqueue_scripts', 'twentytwentytwo_styles' );
+add_action( 'wp_enqueue_scripts', 'blocksslim_styles' );
 
-if ( ! function_exists( 'twentytwentytwo_editor_styles' ) ) :
+if ( ! function_exists( 'blocksslim_editor_styles' ) ) :
 
 	/**
 	 * Enqueue editor styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Blocks Slim 1.0
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_editor_styles() {
+	function blocksslim_editor_styles() {
 
 		// Add styles inline.
-		wp_add_inline_style( 'wp-block-library', twentytwentytwo_get_font_face_styles() );
+		wp_add_inline_style( 'wp-block-library', blocksslim_get_font_face_styles() );
 
 	}
 
 endif;
 
-add_action( 'admin_init', 'twentytwentytwo_editor_styles' );
+add_action( 'admin_init', 'blocksslim_editor_styles' );
 
 
-if ( ! function_exists( 'twentytwentytwo_get_font_face_styles' ) ) :
+if ( ! function_exists( 'blocksslim_get_font_face_styles' ) ) :
 
 	/**
 	 * Get font face styles.
-	 * Called by functions twentytwentytwo_styles() and twentytwentytwo_editor_styles() above.
+	 * Called by functions blocksslim_styles() and blocksslim_editor_styles() above.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Blocks Slim 1.0
 	 *
 	 * @return string
 	 */
-	function twentytwentytwo_get_font_face_styles() {
+	function blocksslim_get_font_face_styles() {
 
 		return "
 		@font-face{
@@ -123,7 +123,7 @@ if ( ! function_exists( 'twentytwentytwo_get_font_face_styles' ) ) :
 
 endif;
 
-if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
+if ( ! function_exists( 'blocksslim_preload_webfonts' ) ) :
 
 	/**
 	 * Preloads the main web font to improve performance.
@@ -133,11 +133,11 @@ if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
 	 * and therefore preloading it would in most cases regress performance when that font would otherwise not be loaded
 	 * at all.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Blocks Slim 1.0
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_preload_webfonts() {
+	function blocksslim_preload_webfonts() {
 		?>
 		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
 		<?php
@@ -145,7 +145,7 @@ if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
 
 endif;
 
-add_action( 'wp_head', 'twentytwentytwo_preload_webfonts' );
+add_action( 'wp_head', 'blocksslim_preload_webfonts' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
