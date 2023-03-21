@@ -1,6 +1,6 @@
 <?php
 return array(
-    'title'      => __( 'Block Article', 'slim-2022' ),
+    'title'      => __( 'Block Article', 'blocksslim' ),
     'categories' => array( 'slim' ),
     'content'    => '<!-- wp:block-article/article-block {"mediaID":21,"imagelink":"http://ff-pitin.local/_becauseyouhaveto"} -->
         <article class="wp-block-block-article-article-block">
