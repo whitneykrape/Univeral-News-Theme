@@ -2,7 +2,7 @@
 return array(
     'title'      => __( 'Block Moving Preview', 'blocksslim' ),
     'categories' => array( 'slim' ),
-    'content'    => '<!-- wp:query {"queryId":14,"query":{"perPage":"1","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[]},"displayLayout":{"type":"list"},"align":"wide","layout":{"inherit":true}} -->
+    'content'    => '<!-- wp:query {"queryId":14,"query":{"perPage":"1","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"only","inherit":false,"parents":[]},"displayLayout":{"type":"list"},"align":"wide","layout":{"inherit":true}} -->
         <div class="wp-block-query alignwide"><!-- wp:post-template {"align":"wide"} -->
             <!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
             <div class="wp-block-group"><!-- wp:post-title {"isLink":true,"align":"wide","fontSize":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dtypography\u002d\u002dfont-size\u002d\u002dhuge, clamp(2.25rem, 4vw, 2.75rem))"} /-->
@@ -34,7 +34,6 @@ return array(
             <!-- /wp:spacer --></div>
             <!-- /wp:group -->
             <!-- /wp:post-template -->
-
         </div>
         <!-- /wp:query -->',
 );
