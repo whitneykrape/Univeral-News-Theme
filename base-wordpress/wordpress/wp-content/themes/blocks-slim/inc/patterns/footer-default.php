@@ -11,12 +11,7 @@ return array(
 					<div class="wp-block-group alignwide" style="padding-top:4rem;padding-bottom:4rem"><!-- wp:site-title {"level":0} /-->
 
 					<!-- wp:paragraph {"align":"right"} -->
-					<p class="has-text-align-right">' .
-					sprintf(
-						/* Translators: WordPress link. */
-						esc_html__( 'Proudly powered by %s', 'blocksslim' ),
-						'<a href="' . esc_url( __( 'https://wordpress.org', 'blocksslim' ) ) . '" rel="nofollow">WordPress</a>'
-					) . '</p>
+					<p class="has-text-align-right">
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group -->',
