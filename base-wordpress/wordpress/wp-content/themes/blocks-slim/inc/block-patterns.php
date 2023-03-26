@@ -5,6 +5,17 @@
  * @since Slim Blocks 1.0
  */
 
+function prefix_remove_core_block_styles() {
+	global $wp_styles;
+
+	foreach ( $wp_styles->queue as $key => $handle ) {
+		if ( strpos( $handle, 'wp-block-' ) === 0 ) {
+			wp_dequeue_style( $handle );
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', 'prefix_remove_core_block_styles' );
+
 /**
  * Registers block patterns and categories.
  *

@@ -61,13 +61,13 @@ return array(
 					<!-- /wp:columns -->
 
 					<!-- wp:columns {"align":"wide"} -->
-					<div class="wp-block-columns alignwide"><!-- wp:column -->
-					<div class="wp-block-column"></div>
-					<!-- /wp:column -->
+						<div class="wp-block-columns alignwide"><!-- wp:column -->
+						<div class="wp-block-column"></div>
+						<!-- /wp:column -->
 
-					<!-- wp:column -->
-					<div class="wp-block-column"><!-- wp:latest-posts /--></div>
-					<!-- /wp:column --></div>
+						<!-- wp:column -->
+						<div class="wp-block-column"><!-- wp:latest-posts /--></div>
+						<!-- /wp:column --></div>
 					<!-- /wp:columns --></div>
-					<!-- /wp:group -->',
+	<!-- /wp:group -->',
 );
