@@ -5,16 +5,18 @@
  * @since Slim Blocks 1.0
  */
 
-function prefix_remove_core_block_styles() {
-	global $wp_styles;
+add_action('init', 'removeCorePatterns');
 
-	foreach ( $wp_styles->queue as $key => $handle ) {
-		if ( strpos( $handle, 'wp-block-' ) === 0 ) {
-			wp_dequeue_style( $handle );
-		}
-	}
+function removeCorePatterns() {
+        remove_theme_support('core-block-patterns');
+
+	unregister_block_pattern_category('buttons');
+	unregister_block_pattern_category('columns');
+	unregister_block_pattern_category('gallery');
+	unregister_block_pattern_category('header');
+	unregister_block_pattern_category('text');
+	unregister_block_pattern_category('uncategorized');
 }
-add_action( 'wp_enqueue_scripts', 'prefix_remove_core_block_styles' );
 
 /**
  * Registers block patterns and categories.
