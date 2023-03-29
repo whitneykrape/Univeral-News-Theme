@@ -15,6 +15,8 @@ function removeCorePatterns() {
 	unregister_block_pattern_category('gallery');
 	unregister_block_pattern_category('header');
 	unregister_block_pattern_category('text');
+	unregister_block_pattern_category('footers');
+	unregister_block_pattern_category('query');
 	unregister_block_pattern_category('uncategorized');
 }
 
