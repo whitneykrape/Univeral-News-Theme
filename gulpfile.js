@@ -108,6 +108,7 @@ gulp.task('html', () => {
     .pipe(gulp.dest('./dist/html/blocks'))
 });
 
+/*
 gulp.task('ghost', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
@@ -130,6 +131,7 @@ gulp.task('ghost', () => {
     }))
     .pipe(gulp.dest('./dist/html/blocks'))
 });
+*/
 
 
 // Above is less common? Bundle up whole template?
@@ -195,7 +197,7 @@ gulp.task('blocks-ghost', () => {
     .pipe(gulp.dest('./dist/ghost/blocks'))
 });
 
-gulp.task('blocks-hyas', () => {
+gulp.task('blocks-netlify', () => {
   return gulp.src('./src/blocks/toblocks/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
