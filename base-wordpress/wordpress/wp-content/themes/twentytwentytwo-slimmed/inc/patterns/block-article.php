@@ -1,7 +1,18 @@
 
+<article class="article article-sm sm">
+  <a href="{{ entry.url }}" class="">
+    <h2 class="">{{ entry.blogTitle }}</h2>
+    {% for image in images %}
+        <img src="{{ image.url }}" alt="{{ image.title }}">
+    {% endfor %}
+    <p>{{ entry.excerpt }}</p>
+    <p class="">{{!-- entry.postDate|datetime('D, M j, Y') --}}</p>
+    <p class="">Read more →</p>
+  </a>
+</article>
 <?php
 return array(
-    'title'      => __( 'Block Article', 'slim-2022' ),
+    'title'      => __( 'Block Article', 'blocksslim' ),
     'categories' => array( 'slim' ),
     'content'    => '<!-- wp:block-article/article-block {"mediaID":21,"imagelink":"http://ff-pitin.local/_becauseyouhaveto"} -->
     <article class="wp-block-block-article-article-block">
