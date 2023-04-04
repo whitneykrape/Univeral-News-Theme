@@ -304,8 +304,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
   gulp.watch('./src/assets/scss/**/*.scss', { usePolling: true }, gulp.series('sass'));
   gulp.watch('./src/assets/js/*.js', { usePolling: true }, gulp.series('js'));
-  gulp.watch(['./src/partials/blocks/*.hbs', './src/partials/includes/*.hbs', './src/partials/layouts/*.hbs'], { usePolling: true }, gulp.series('html'));
-  gulp.watch(['./src/pages/wordpress/*.hbs'], { usePolling: true }, gulp.series('wordpress'));
+  gulp.watch(['./src/blocks/toblocks/*.hbs'], { usePolling: true }, gulp.series.apply(gulp, ['html','blocks-craft', 'blocks-ghost', 'blocks-netlify', 'blocks-wordpress']));
 })
 
 // Optimization Tasks 
@@ -352,6 +351,12 @@ gulp.task('clean:dist', function() {
 
 // Build Sequences
 // ---------------
+
+gulp.task('all', function(callback) {
+  runSequence(['html','blocks-craft', 'blocks-ghost', 'blocks-netlify', 'blocks-wordpress'], 'watch',
+    callback
+  )
+})
 
 gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync'], 'watch',
