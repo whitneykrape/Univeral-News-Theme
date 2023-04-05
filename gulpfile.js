@@ -82,6 +82,10 @@ gulp.task('html', () => {
       end_comment:    "ghost-end"
     }))
     .pipe(stripCode({
+      start_comment:  "netlify-start",
+      end_comment:    "netlify-end"
+    }))
+    .pipe(stripCode({
       start_comment:  "wordpress-start",
       end_comment:    "wordpress-end"
     }))

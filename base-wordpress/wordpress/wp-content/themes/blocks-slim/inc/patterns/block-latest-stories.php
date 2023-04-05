@@ -1,8 +1,29 @@
-<?php
-return array(
-    'title'      => __( 'Latest Stories Text Block', 'blocksslim' ),
-    'categories' => array( 'slim' ),
-    'content'    => '<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+
+<div class="">
+  <div class="container">
+    <h2 class="">Latest stories</h2>
+    <div class="latest-stories">
+        <ul class=" navigation-list">
+        {{ range (where .Data.Pages "Type" "post") }}
+        {{ range first 3 .Pages  }}
+  					<li class="six columns">
+  						{{ .Render "li" }}
+  					</li>
+  				{{ end }}
+  			{{ end }}
+        </ul>
+        <br class="clear"/>
+      </div>
+<!--       <div class="">
+        <a href="/post" class="">Read more</a>
+      </div> -->
+  </div>
+</div>
+	<?php
+	return array(
+	    'title'      => __( 'Block Latest Stories', 'blocksslim' ),
+	    'categories' => array( 'slim' ),
+	    'content'    => '<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide"><!-- wp:query {"queryId":11,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list"},"align":"wide","layout":{"inherit":true}} -->
 		<div class="wp-block-query alignwide"><!-- wp:post-template {"align":"wide"} -->
 			<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
