@@ -1,0 +1,62 @@
+/* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */
+
+/* html-start */
+<div class="article article-sm sm">
+    <img src="" alt=""/>
+</div>
+/* html-end */
+
+/* netlify-start */
+<div class="animated wipeout">
+    {% for image in images %}
+        <img src="{{ image.url }}" alt="{{ image.title }}">
+    {% endfor %}
+</div>
+/* netlify-end */
+
+/* craft-start */
+<div class="animated wipeout">
+    {% for image in images %}
+        <img src="{{ image.url }}" alt="{{ image.title }}">
+    {% endfor %}
+</div>
+/* craft-end */
+
+/* ghost-start */
+<div class="animated wipeout">
+    {{#if feature_image}}
+        <img class="post-card-image"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+        />
+    {{/if}}
+</div>
+/* ghost-end */
+
+<?php
+/* wordpress-start */
+/* Change to a block made in WordPress that can be loaded as a pattern. */
+/* Not a block, a pattern. */
+
+// WordPress CMS
+
+/**
+ * Brand Block
+ */
+return array(
+    'title'      => __( 'Block Animated Wipeout', 'blocksslim' ),
+    'categories' => array( 'slim' ),
+    'content'    => '<!-- wp:group {"layout":{"type":"constrained"}} -->
+                <div class="wp-block-group animated wipeout">
+                    <!-- wp:image -->
+                    <figure class="wp-block-image"><img alt=""/></figure>
+                    <!-- /wp:image -->
+                </div>
+        <!-- /wp:group -->',
+);
+/* wordpress-end */
