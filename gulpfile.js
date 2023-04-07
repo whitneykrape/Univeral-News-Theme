@@ -262,7 +262,6 @@ gulp.task('blocks-wordpress', () => {
     .pipe(rename({
       extname: '.php'
     }))
-    .pipe(gulp.dest('./dist/html/blocks'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/inc/patterns/'))
 });
 // Revist the kind of blocks needed (post) since WP has patterns that work well 
