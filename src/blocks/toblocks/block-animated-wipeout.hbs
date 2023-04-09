@@ -1,13 +1,13 @@
 /* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */
 
 /* html-start */
-<div class="article article-sm sm">
+<div class="element__animated-wipeleft">
     <img src="" alt=""/>
 </div>
 /* html-end */
 
 /* netlify-start */
-<div class="animated wipeout">
+<div class="element__animated-wipeleft">
     {% for image in images %}
         <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
@@ -15,7 +15,7 @@
 /* netlify-end */
 
 /* craft-start */
-<div class="animated wipeout">
+<div class="element__animated-wipeleft">
     {% for image in images %}
         <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
@@ -23,7 +23,7 @@
 /* craft-end */
 
 /* ghost-start */
-<div class="animated wipeout">
+<div class="element__animated-wipeleft">
     {{#if feature_image}}
         <img class="post-card-image"
             srcset="{{img_url feature_image size="s"}} 300w,
@@ -52,7 +52,7 @@ return array(
     'title'      => __( 'Block Animated Wipeout', 'blocksslim' ),
     'categories' => array( 'slim' ),
     'content'    => '<!-- wp:group {"layout":{"type":"constrained"}} -->
-                <div class="wp-block-group animated wipeout">
+                <div class="element__animated-wipeleft">
                     <!-- wp:image -->
                     <figure class="wp-block-image"><img alt=""/></figure>
                     <!-- /wp:image -->
