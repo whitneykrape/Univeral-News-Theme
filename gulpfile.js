@@ -73,7 +73,7 @@ gulp.task('wordpress', () => {
 });
 */
 
-gulp.task('html', () => {
+gulp.task('blocks-html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/blocks/toblocks/*.hbs')
