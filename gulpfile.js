@@ -73,6 +73,41 @@ gulp.task('wordpress', () => {
 });
 */
 
+gulp.task('pages-html', () => {
+  let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
+
+  return gulp.src('./src/blocks/topages/*.hbs')
+    /*
+    .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "netlify-start",
+      end_comment:    "netlify-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-start",
+      end_comment:    "wordpress-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "craft-start",
+      end_comment:    "craft-end"
+    }))
+    */
+    .pipe(handlebars(templateData, {
+      ignorePartials: true,
+      helpers: handlebars_helpers
+    }))
+    .pipe(uncomment({
+        removeEmptyLines: true
+    }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('./dist/html/blocks'))
+});
+
 gulp.task('blocks-html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
