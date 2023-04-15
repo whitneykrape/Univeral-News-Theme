@@ -105,7 +105,7 @@ gulp.task('pages-html', () => {
     .pipe(rename({
       extname: '.html'
     }))
-    .pipe(gulp.dest('./dist/html/blocks'))
+    .pipe(gulp.dest('./dist/html/pages'))
 });
 
 gulp.task('blocks-html', () => {
