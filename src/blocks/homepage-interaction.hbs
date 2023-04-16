@@ -1,0 +1,28 @@
+{{!-- homepage-interaction.hbs --}}
+
+{{#> headerfooter-common template="" }}
+
+{{#*inline "body"}}
+	{{#> block-entrance }}
+	{{/block-entrance}}
+
+	{{#> block-timeline name="tobt" }}
+	{{/block-timeline}}
+
+	<div class="main-content">
+	  <div class="container">
+	    <h2 class="">Latest stories</h2>
+
+	    <section class="latest-stories navigation-list row">
+			{{#each posts}}
+				{{>block-postpreview-simple columnwidth=6 post=.}}
+			{{/each}}
+	    </section>
+	  </div>
+	</div>
+
+	{{#> block-shortinfo }}
+	{{/block-shortinfo}}
+{{/inline}}
+
+{{/headerfooter-common}}
