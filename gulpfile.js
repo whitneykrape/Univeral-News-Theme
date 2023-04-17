@@ -76,10 +76,13 @@ gulp.task('wordpress', () => {
 gulp.task('pages-html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
-  return gulp.src('./src/blocks/*.hbs')
+  return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
-      batch: ['./src/blocks/includes','./src/blocks/toblocks'],
+      batch: [
+        './src/includes',
+        './src/blocks'
+      ],
       helpers: handlebars_helpers
     }))
     .pipe(uncomment({
@@ -94,7 +97,7 @@ gulp.task('pages-html', () => {
 gulp.task('blocks-html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
-  return gulp.src('./src/blocks/toblocks/*.hbs')
+  return gulp.src('./src/blocks/*.hbs')
     .pipe(stripCode({
       start_comment:  "ghost-start",
       end_comment:    "ghost-end"
