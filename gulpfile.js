@@ -76,7 +76,7 @@ gulp.task('wordpress', () => {
 gulp.task('pages-html', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
-  return gulp.src('./src/pages/*.hbs')
+  return gulp.src('./src/pages/homepage-text.hbs')
     .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: [

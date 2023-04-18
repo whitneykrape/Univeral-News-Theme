@@ -1,9 +1,9 @@
 {{!-- homepage-interaction.hbs --}}
 
-{{#> headerfooter-common template="" }}
+{{#> headerfooter-common }}
 
 {{#*inline "body"}}
-	{{#> block-entrance }}
+	{{#> block-entrance template="interation" }}
 	{{/block-entrance}}
 
 	{{#> block-timeline name="tobt" }}
@@ -21,7 +21,7 @@
 	  </div>
 	</div>
 
-	{{#> block-shortinfo }}
+	{{#> block-shortinfo template="interation" }}
 	{{/block-shortinfo}}
 {{/inline}}
 

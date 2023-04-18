@@ -20,6 +20,113 @@
   </head>
   <body class="">
   	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<!-- Top Bar -->
+	<header class="site-header">
+		<nav class="top-navbar row">
+		  <ul class="menu breakout column col-4 navigation-list row">
+		    <li><!-- Breakout --></li> 
+		  </ul>
+		  <div class="logo column col-4 align-center layout-background">
+		    <a class="" title="Main Link and Logo" href="../homepage-simple/"><strong>Text</strong>Text
+		      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
+		    </a>
+		  </div> 
+		  <ul class="menu individual column col-4 align-left navigation-list row">
+		    <li>
+     			<a href="../single-page-simple/">Example Link</a>
+		    </li>
+		  </ul>
+		  <br class="clear" />
+		</nav>
+	</header>
+    	<div class="entrance-image">
+    	  <div class="container">
+    	    <h1 class="">
+    	    	Large Media Introduction
+    	    </h1>
+    	    <p class="">
+    	    	More overview about how the media site and the point of it.
+    	    </p>
+    	  </div>
+    	</div>
+    <section id="tob3d__threedee__number" class="tob3d__main">
+    	<div id="tob3d__threedee__canvas" class="tob3d__canvas">
+    		<div id="tob3d__threedee__gizmo" class="tob3d__gizmo__orbit"></div>
+    	</div>
+    	<div class="tob3d__explaination">
+    		<h2>
+    			Block that features a large interactive 3D scene to the immediate left with a fairly long subtitle area allowance.
+    		</h2>
+    		<p>
+    			More space here for a further description that allows for 2-3 sentences, building on the 1 sentence subtitle above. In this way a full post is not needed for the user to see, and interact, and understand.
+    		</p>
+    	</div>
+    </section>
+    <script type="module">
+    	import * as THREE 			from './assets/js/tob3d-three-three.module.js';
+    	import { APP }				from './assets/js/tob3d-three-app.js';
+    	import { VRButton }			from './assets/js/tob3d-three-VRButton.js';
+    	window.THREE = THREE; 
+    	window.VRButton = VRButton; 
+    	const loader = new THREE.FileLoader();
+    	loader.load( './tob3d-three-app.json', function ( text ) {
+    		const $threedeeContainer = document.getElementById('tob3d__threedee__canvas')
+    		console.log($threedeeContainer.innerWidth)
+    		const player = new APP.Player();
+    		player.load( JSON.parse( text ) );
+    		player.setSize( $threedeeContainer.offsetWidth, $threedeeContainer.offsetHeight )
+    		player.play();
+    		document.getElementById('tob3d__threedee__number').appendChild( player.dom )
+    		window.addEventListener( 'resize', function () {
+    			player.setSize( $threedeeContainer.offsetWidth, $threedeeContainer.offsetHeight )
+    		} );
+    	} );
+    </script>
+    	<div class="main-content">
+    	  <div class="container">
+    	    <h2 class="">Latest stories</h2>
+    	    <section class="latest-stories navigation-list row">
+    				<div class="column col-6">
+    					<a href="single-post-simple/" class="">
+    						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+    					</a>
+    						<h2 class="">First Sample Post</h2>
+    						<p class="">Fri, July 10, 2021</p>
+    						<p class="formattingtextbody">
+    							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+    						</p>
+    						<p class="">
+    							<a href="single-post-simple/" class="">
+    								Read more &#8594;
+    							</a>
+    						</p>
+    				</div>				<div class="column col-6">
+    					<a href="single-post-simple/" class="">
+    						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+    					</a>
+    						<h2 class="">Second Sample Post</h2>
+    						<p class="">Fri, July 17, 2021</p>
+    						<p class="formattingtextbody">
+    							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+    						</p>
+    						<p class="">
+    							<a href="single-post-simple/" class="">
+    								Read more &#8594;
+    							</a>
+    						</p>
+    				</div>	    </section>
+    	  </div>
+    	</div>
+    	<div class="short-info">
+    	  <div class="container row">
+    	    <h4 class="column col-5">
+    	    	A declaration of what is being discussed here, punchy, immediate.
+    	    </h4>
+    	    <p class="column col-7">
+    	    	A more thorough breakdown of the left-hand declaration that may include links to categories, about, or contact pages, detail that focuses user attention.
+    	    </p>
+    	  </div>
+    	</div>
 	<footer class="site-footer align-center layout-background">
 	    <p class="logo">
 		    <a class="" title="Main Link and Logo" href="./"><strong>Text</strong>Text

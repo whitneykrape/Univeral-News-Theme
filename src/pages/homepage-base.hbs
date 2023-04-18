@@ -1,9 +1,9 @@
 {{!-- homepage-interaction.hbs --}}
 
-{{#> headerfooter-common template="" }}
+{{#> headerfooter-common }}
 
 {{#*inline "body"}}
-	{{#> block-entrance }}
+	{{#> block-entrance template="base" }}
 	{{/block-entrance}}
 
 	<div class="main-content">
@@ -18,7 +18,7 @@
 	  </div>
 	</div>
 
-	{{#> block-shortinfo }}
+	{{#> block-shortinfo template="base" }}
 	{{/block-shortinfo}}
 {{/inline}}
 

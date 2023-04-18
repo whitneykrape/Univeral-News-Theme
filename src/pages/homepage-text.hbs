@@ -1,9 +1,9 @@
 {{!-- homepage-interaction.hbs --}}
 
-{{#> headerfooter-common template="" }}
+{{#> headerfooter-common }}
 
 {{#*inline "body"}}
-	{{#> block-entrance }}
+	{{#> block-entrance template="text" }}
 	{{/block-entrance}}
 
 	{{#> block-threedeeobject name="tob3d" }}
@@ -21,7 +21,7 @@
 	  </div>
 	</div>
 
-	{{#> block-shortinfo }}
+	{{#> block-shortinfo template="text" }}
 	{{/block-shortinfo}}
 {{/inline}}
 

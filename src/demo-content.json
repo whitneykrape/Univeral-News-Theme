@@ -1,6 +1,6 @@
 {
   "templateTypes": {
-      "simple":       {
+      "base":       {
         "title":             "Large Simple Introduction", 
         "subtitle":          "More overview about how the simple site and the point of it.",
         "declaration":       "A declaration of what is being discussed here, punchy, immediate.",
