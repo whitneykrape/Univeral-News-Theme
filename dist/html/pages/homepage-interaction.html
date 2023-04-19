@@ -20,6 +20,157 @@
   </head>
   <body class="">
   	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<!-- Top Bar -->
+	<header class="site-header">
+		<nav class="top-navbar row">
+		  <ul class="menu breakout column col-4 navigation-list row">
+		    <li><!-- Breakout --></li> 
+		  </ul>
+		  <div class="logo column col-4 align-center layout-background">
+		    <a class="" title="Main Link and Logo" href="../homepage-simple/"><strong>Text</strong>Text
+		      <!-- <img src="assets/img/placeholder.jpg" alt="Site Logo"> -->
+		    </a>
+		  </div> 
+		  <ul class="menu individual column col-4 align-left navigation-list row">
+		    <li>
+     			<a href="../single-page-simple/">Example Link</a>
+		    </li>
+		  </ul>
+		  <br class="clear" />
+		</nav>
+	</header>
+    	<div class="entrance-image">
+    	  <div class="container">
+    	    <h1 class="">
+    	    	Large Interaction Introduction
+    	    </h1>
+    	    <p class="">
+    	    	More overview about the interaction site and the point of it.
+    	    </p>
+    	  </div>
+    	</div>
+    <section id="tobt__timeline_number" class="tobt__main">
+    	<div class="tobt__stage">
+    		<div class="tobt__arrow-left"></div>
+    		<div class="tobt__slide">
+    		</div>
+    		<div class="tobt__arrow-right"></div>
+    	</div>
+    	<ul class="tobt__events">
+    			<li class="tobt__event slideType--image" data-dateStart="3000 BC"  data-dateEnd="1700 CE">
+    				<figure class="tobt__event-media">
+    					<img src="assets/img/placeholder.jpg" alt="Early Mechanization"/>
+    					<figcaption></figcaption>
+    				</figure>
+    				<div class="tobt__event-content">
+    					<span class="tobt__event-content-title">
+    						Early Mechanization
+    					</span>
+    					<p class="tobt__event-content-body">
+    						Water wheels, along with wheels and early gears, assisted and replaced the labor of many humans and animals but didn&#x27;t completely revolutionize work.
+    					</p>
+    				</div>
+    			</li>
+    			<li class="tobt__event slideType--image" data-dateStart="1712 BC"  data-dateEnd="1950 CE">
+    				<figure class="tobt__event-media">
+    					<img src="assets/img/placeholder.jpg" alt="Steam Engine"/>
+    					<figcaption></figcaption>
+    				</figure>
+    				<div class="tobt__event-content">
+    					<span class="tobt__event-content-title">
+    						Steam Engine
+    					</span>
+    					<p class="tobt__event-content-body">
+    						The invention of the steam engine kickstarted the industrial revoltion greatly augmenting and expanding the potential of physical effort.
+    					</p>
+    				</div>
+    			</li>
+    			<li class="tobt__event slideType--image" data-dateStart="1950 CE"  data-dateEnd="2000 CE">
+    				<figure class="tobt__event-media">
+    					<img src="assets/img/placeholder.jpg" alt="Start of True Automation"/>
+    					<figcaption></figcaption>
+    				</figure>
+    				<div class="tobt__event-content">
+    					<span class="tobt__event-content-title">
+    						Start of True Automation
+    					</span>
+    					<p class="tobt__event-content-body">
+    						Ford Motors began fully automating tasks, with machines not only augmenting physical effort but also taking over tasks, taking in feedback, and self adjusting to feedback.
+    					</p>
+    				</div>
+    			</li>
+    			<li class="tobt__event slideType--image" data-dateStart="2000 CE"  data-dateEnd="2020 CE">
+    				<figure class="tobt__event-media">
+    					<img src="assets/img/placeholder.jpg" alt="Beginning of Information and Robotics "/>
+    					<figcaption></figcaption>
+    				</figure>
+    				<div class="tobt__event-content">
+    					<span class="tobt__event-content-title">
+    						Beginning of Information and Robotics 
+    					</span>
+    					<p class="tobt__event-content-body">
+    						With the foundations of machinery and large scale computing, entire systems c
+    					</p>
+    				</div>
+    			</li>
+    	</ul>
+    </section>
+    <script>
+    	$eventsDebug = {}
+    	$timeline = document.getElementById("tob-tobt__timeline_number")
+    	$timelineStage = $timeline.querySelector('.tobt__stage')
+    	$timelineEvents = $timeline.querySelector('.tobt__events')
+    	$timelineEventFirst = $timelineEvents.firstElementChild
+    	$timelineStage.querySelector('.tobt__slide').innerHTML = $timelineEvents.firstElementChild.innerHTML
+    	$eventsDebug.firstEvent = $timelineEventFirst
+    	console.log('EventsDebug')
+    	console.log($eventsDebug)
+    </script>
+    	<div class="main-content">
+    	  <div class="container">
+    	    <h2 class="">Latest stories</h2>
+    	    <section class="latest-stories navigation-list row">
+    				<div class="column col-6">
+    					<a href="single-post-simple/" class="">
+    						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+    					</a>
+    						<h2 class="">First Sample Post</h2>
+    						<p class="">Fri, July 10, 2021</p>
+    						<p class="formattingtextbody">
+    							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+    						</p>
+    						<p class="">
+    							<a href="single-post-simple/" class="">
+    								Read more &#8594;
+    							</a>
+    						</p>
+    				</div>				<div class="column col-6">
+    					<a href="single-post-simple/" class="">
+    						<img src="assets/img/placeholder.jpg" alt="Placeholder"/>
+    					</a>
+    						<h2 class="">Second Sample Post</h2>
+    						<p class="">Fri, July 17, 2021</p>
+    						<p class="formattingtextbody">
+    							Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
+    						</p>
+    						<p class="">
+    							<a href="single-post-simple/" class="">
+    								Read more &#8594;
+    							</a>
+    						</p>
+    				</div>	    </section>
+    	  </div>
+    	</div>
+    	<div class="short-info">
+    	  <div class="container row">
+    	    <h4 class="column col-5">
+    	    	A declaration of what is being discussed here, punchy, immediate.
+    	    </h4>
+    	    <p class="column col-7">
+    	    	A more thorough breakdown of the left-hand declaration that may include links to categories, about, or contact pages, detail that focuses user attention.
+    	    </p>
+    	  </div>
+    	</div>
 	<footer class="site-footer align-center layout-background">
 	    <p class="logo">
 		    <a class="" title="Main Link and Logo" href="./"><strong>Text</strong>Text
