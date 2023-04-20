@@ -345,22 +345,22 @@ gulp.task('useref', function() {
 });
 
 // Optimizing Images 
-/*
 gulp.task('images', function() {
-  return gulp.src('assets/images/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('src/assets/img/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true,
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/assets/img'))
 });
 
 // Copying fonts 
 gulp.task('fonts', function() {
   return gulp.src('assets/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('dist/assets/fonts'))
 })
 
+/*
 // Cleaning 
 gulp.task('clean', function() {
   return del.sync('dist').then(function(cb) {
