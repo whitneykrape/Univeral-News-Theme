@@ -1,0 +1,73 @@
+{{!--
+	Similar to the 3D block, have options where the JS is either a default load right in place, not ideal, or build some pieces to be used later, or don't load anything.
+--}}
+<div class="{{classConcat name classNames='main'}}">
+	{{!-- Add wrapper and title --}}
+	<canvas id="chartIdentifier"  class="{{classConcat name classNames='canvas'}}"></canvas>
+	<div  class="{{classConcat name classNames='description'}}">
+		<p>
+			Chart explanation, usually short, 2-ish sentences, that introduces the chart and points to the longer text. That said, could have more detail as there is a fair amount of space available here that is not definitely needed for links, or legends.
+		</p>
+	</div>
+	{{!-- Add link to post a the bottom. (Backend of this will take more time.) --}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module">
+	import * as Utils from './assets/js/utils.js';
+	const getJSON = async url => {
+	  const response = await fetch(url);
+	  return response.json(); // get JSON from the response 
+	}
+	var dataFrom
+	console.log("Fetching data...");
+	dataFrom = getJSON("./demo-content.json")
+	  .then(dataFrom => {
+			dataFrom = dataFrom
+			console.log(dataFrom)
+			return dataFrom
+	  });
+	const DATA_COUNT = 7;
+	const NUMBER_CFG = {count: DATA_COUNT, min: -10, max: 10};
+	const json = ""
+	console.log(await dataFrom)
+	const labels = Utils.months({count: 7});
+	const data = {
+	  labels: labels,
+	  datasets: [
+	    {
+	      label: 'Dataset 1',
+	      data: Utils.numbers(NUMBER_CFG),
+	      borderColor: "#f00000",
+	      backgroundColor: "#fafafa",
+	    },
+	    {
+	      label: 'Dataset 2',
+	      data: Utils.numbers(NUMBER_CFG),
+	      borderColor: "#f00000",
+	      backgroundColor: "#fafafa",
+	    }
+	  ]
+	};
+	const config = {
+	  type: 'bar',
+	  data: data,
+	  options: {
+	    responsive: true,
+	    plugins: {
+	      legend: {
+	        position: 'top',
+	      },
+	      title: {
+	        display: true,
+	        text: 'Chart.js Bar Chart'
+	      }
+	    }
+	  },
+	};
+	const ctx = document.getElementById("chartIdentifier").getContext('2d');
+	const myBarChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: data,
+	    options: config
+	})
+</script>

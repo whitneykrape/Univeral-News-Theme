@@ -164,7 +164,7 @@ gulp.task('ghost', () => {
 
 gulp.task('blocks-craft', () => {
   // This will change to a catch-all folder of craft blocks
-  return gulp.src('./src/blocks/toblocks/*.hbs')
+  return gulp.src('./src/blocks/*.hbs')
     // .pipe(handlebars(templateData, {
     //   ignorePartials: true,
     //   batch: ['./src/blocks'],
@@ -194,7 +194,7 @@ gulp.task('blocks-craft', () => {
 
 gulp.task('blocks-ghost', () => {
   // All the Ghost blocks... So on.
-  return gulp.src('./src/blocks/toblocks/*.hbs')
+  return gulp.src('./src/blocks/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks/ghost-block-article'],
@@ -223,7 +223,7 @@ gulp.task('blocks-ghost', () => {
 });
 
 gulp.task('blocks-netlify', () => {
-  return gulp.src('./src/blocks/toblocks/*.hbs')
+  return gulp.src('./src/blocks/*.hbs')
     /* .pipe(handlebars(templateData, {
       ignorePartials: true,
       batch: ['./src/blocks'],
@@ -255,7 +255,7 @@ gulp.task('blocks-netlify', () => {
 gulp.task('blocks-wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
-  return gulp.src('./src/blocks/toblocks/*.hbs')
+  return gulp.src('./src/blocks/*.hbs')
     // .pipe(handlebars(templateData, {
     //   ignorePartials: true,
     //   batch: ['./src/blocks/toblocks'],
@@ -283,7 +283,8 @@ gulp.task('blocks-wordpress', () => {
     .pipe(rename({
       extname: '.php'
     }))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/inc/patterns/'))
+    .pipe(gulp.dest('./dist/wordpress/blocks'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/patterns/'))
 });
 // Revist the kind of blocks needed (post) since WP has patterns that work well 
 
