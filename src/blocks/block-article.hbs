@@ -1,6 +1,6 @@
-/* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */
+/~ /* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */ ~/
 
-/* html-start */
+/~ /* html-start */ ~/
 <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
 <article class="article article-sm sm">
@@ -17,9 +17,9 @@
         <p class="">Read more →</p>
     </a>
 </article>
-/* html-end */
+/~ /* html-end */ ~/
 
-/* netlify-start */
+/~ /* netlify-start */ ~/
 <article class="article article-sm sm">
   <a href="{{ entry.url }}" class="">
     <h2 class="">{{ entry.blogTitle }}</h2>
@@ -34,9 +34,9 @@
     <p class="">Read more →</p>
   </a>
 </article>
-/* netlify-end */
+/~ /* netlify-end */ ~/
 
-/* craft-start */
+/~ /* craft-start */ ~/
 <article class="article article-sm sm">
   <a href="{{ entry.url }}" class="">
     <h2 class="">{{ entry.blogTitle }}</h2>
@@ -51,9 +51,9 @@
     <p class="">Read more →</p>
   </a>
 </article>
-/* craft-end */
+/~ /* craft-end */ ~/
 
-/* ghost-start */
+/~ /* ghost-start */ ~/
 <article class="article article-sm sm {{post_class}} {{#unless feature_image}}no-image{{else}}{{/unless}}">
 
     <h2 class="">{{title}}</h2>
@@ -84,39 +84,35 @@
 
     <p class="">Read more →</p>
 </article>
-/* ghost-end */
+/~ /* ghost-end */ ~/
 
+/~ /* wordpress-start */ ~/
 <?php
-/* wordpress-start */
-/* Change to a block made in WordPress that can be loaded as a pattern. */
-/* Not a block, a pattern. */
-
-// WordPress CMS
-
 /**
- * Brand Block
+ * Title: Block Article Slim
+ * Slug: blocksslim/block-article-slim
+ * Categories: slim
+ * Block Types: template/template-part/content
  */
-return array(
-    'title'      => __( 'Block Article', 'blocksslim' ),
-    'categories' => array( 'slim' ),
-    'content'    => '<!-- wp:group {"layout":{"type":"constrained"}} -->
-                <div class="wp-block-group">
-                    <!-- wp:image -->
-                    <figure class="wp-block-image"><img alt=""/></figure>
-                    <!-- /wp:image -->
+?>
+<!-- wp:query {"queryId":11,"query":{"perPage":"1","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list"}} -->
+<div class="wp-block-query">
+    <!-- wp:post-template {"className":"block\u002d\u002dfeatureposts"} -->
+        <!-- wp:group {"className":"block\u002d\u002darticle","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group block--article">
+            <!-- wp:post-featured-image {"isLink":true,"className":"block\u002d\u002darticle__image"} /-->
 
-                    <!-- wp:heading -->
-                    <h2>Heading</h2>
-                    <!-- /wp:heading -->
+            <!-- wp:group {"className":"block\u002d\u002darticle__text","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group block--article__text">
+                    <!-- wp:post-title {"isLink":true,"className":"block\u002d\u002darticle__text\u002d\u002dtitle"} /-->
 
-                    <!-- wp:paragraph -->
-                    <p>Paragraph</p>
-                    <!-- /wp:paragraph -->
+                    <!-- wp:post-date {"className":"block\u002d\u002darticle__date"} /-->
 
-                    <!-- wp:paragraph -->
-                    <p>Read More</p>
-                    <!-- /wp:paragraph -->
+                    <!-- wp:post-excerpt {"className":"article-description"} /-->
                 </div>
-        <!-- /wp:group -->',
-);
-/* wordpress-end */
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:group -->
+    <!-- /wp:post-template -->
+</div><!-- /wp:query -->
+/~ /* wordpress-end */ ~/

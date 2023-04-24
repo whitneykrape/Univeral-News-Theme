@@ -41,23 +41,18 @@
 
 /* wordpress-start */
 <?php
-/* Change to a block made in WordPress that can be loaded as a pattern. */
-/* Not a block, a pattern. */
-
-// WordPress CMS
-
 /**
- * Brand Block
+ * Title: Block Animated Logo Wipe Horizontal
+ * Slug: blocksslim/block-animated-logowipehorizontal
+ * Categories: slim
+ * Block Types: template/template-part/content
  */
-return array(
-    'title'      => __( 'Block Animated Wipeout', 'blocksslim' ),
-    'categories' => array( 'slim' ),
-    'content'    => '<!-- wp:group {"layout":{"type":"constrained"}} -->
-                <div class="element__animated-wipeleft">
-                    <!-- wp:image -->
-                    <figure class="wp-block-image"><img alt=""/></figure>
-                    <!-- /wp:image -->
-                </div>
-        <!-- /wp:group -->',
-);
+?>
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="element__animated-wipeleft">
+        <!-- wp:image -->
+        <figure class="wp-block-image"><img alt=""/></figure>
+        <!-- /wp:image -->
+    </div>
+<!-- /wp:group -->'
 /* wordpress-end */

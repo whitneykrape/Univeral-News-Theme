@@ -33,6 +33,7 @@
   "browserslist": "last 2 versions",
   "dependencies": {
     "gulp-remove-html-comments": "^1.0.1",
+    "gulp-replace": "^1.1.4",
     "gulp-strip-comments": "^2.5.2",
     "gulp-uncomment": "^0.3.0",
     "twig": "^1.15.4"

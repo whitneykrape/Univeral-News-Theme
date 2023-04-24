@@ -1,4 +1,13 @@
 
+/* wordpress-start */
+<?php
+/**
+ * Title: Block Footer Default
+ * Slug: blocksslim/block-footer-default
+ * Categories: slim
+ * Block Types: template/template-part/content
+ */
+?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 	<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","justifyContent":"space-between"}} -->
@@ -13,3 +22,4 @@
 	<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
+/* wordpress-end */

@@ -24,6 +24,7 @@ const rename = require('gulp-rename');
 const del = require('del');
 const runSequence = require('gulp4-run-sequence');
 const stripCode = require('gulp-strip-code');
+const replace = require('gulp-replace');
 const fs = require('fs')
 const handlebars_helpers = require('./src/js/handlebars.helpers.js');
 const twig = require('twig');
@@ -274,16 +275,14 @@ gulp.task('blocks-wordpress', () => {
       end_comment:    "craft-end"
     }))
     .pipe(stripCode({
-      start_comment:  "hyas-start",
-      end_comment:    "hyas-end"
+      start_comment:  "netlify-start",
+      end_comment:    "netlify-end"
     }))
-    .pipe(uncomment({
-        removeEmptyLines: true
-    }))
+    .pipe(replace( /\/~.*~\//g, '' ))
     .pipe(rename({
       extname: '.php'
     }))
-    .pipe(gulp.dest('./dist/wordpress/blocks'))
+    .pipe(gulp.dest('./dist/wordpress/patterns'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/patterns/'))
 });
 // Revist the kind of blocks needed (post) since WP has patterns that work well 

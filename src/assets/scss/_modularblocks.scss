@@ -61,11 +61,13 @@
 	    align-items: stretch;
         display: block;
         padding: 0px 0px 1%;
+
 	    @media (min-width: 768px) {
 	    	display: flex;
 	    	max-height: 340px;
 	    	padding: 20px 0 20px 0px;
 	    }
+
 	    background: #aaa;
 	    margin: 1% 0 5%;	    
 
@@ -106,14 +108,13 @@
 		    position: relative;
 		    z-index: 9000;
 		    border-radius: 4px;
-	        margin: 5% 5% 5% -5% !important;
+	        margin: 5% 5% 5% 20px !important;
 	        padding: 5%;
 	        width: 80%;
 
 		    @media (min-width: 768px) {
-		    	margin-right: 20px;
+		    	margin-left: -5% !important;
 		    	width: 100%;
-		    	margin-left: -64px;
 		    }
 
 			.block--article__text--title {
@@ -126,9 +127,9 @@
 			@media (min-width: 768px) {
 				flex: 0 1 70%;
 			}
-			margin: -6% 0 0 0;
+			margin: 0;
 			font-size: 1em;
-			padding: 1em 0% 0.5em 0px;
+			padding: 0;
 		}
 	}
 }
