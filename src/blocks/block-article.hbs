@@ -1,35 +1,42 @@
 /~ /* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */ ~/
 
 /~ /* html-start */ ~/
-<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
-
-<article class="article article-sm sm">
-    <a href="../single-post-simple/" class="">
-        <img src="../assets/img/placeholder.jpg" alt="Placeholder"/>
-
-        <h2 class="">New Post</h2>
-        <p class="">Fri, May 29, 2020</p>
-
-        <p class="formattingtextbody">
-            Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text. Would be good to figure out an average length of paragraphs for a good perspective on sizing.
-        </p>
-        
-        <p class="">Read more →</p>
+<article class="block--article">
+    <a class="block--article__image" href="../../single-post-simple/">
+        <img class="attachment-post-thumbnail" src="../../assets/img/placeholder.jpg" alt="Placeholder"/>
     </a>
+
+    <div class="block--article__text">
+        <h2 class="block--article__text--title">
+            <a href="../../single-post-simple/">
+                New Post
+            </a>
+        </h2>
+        
+        <p class="block--article__date">Fri, May 29, 2020</p>
+
+        <div class="block--article__description">
+            <p>Sample body text adding a bunch more text to work with so we can then add images left and right, insert quotes, bold, span, italise, and in general, work with the text.</p>
+
+            <p class="wp-block-post-excerpt__more-text">
+                <a class="" href="../../single-post-simple/">Link Out</a>
+            </p>
+        </div>
+    </div>
 </article>
 /~ /* html-end */ ~/
 
 /~ /* netlify-start */ ~/
 <article class="article article-sm sm">
-  <a href="{{ entry.url }}" class="">
-    <h2 class="">{{ entry.blogTitle }}</h2>
+  <a href="\{\{ entry.url \}\}" class="">
+    <h2 class="">\{\{ entry.blogTitle \}\}</h2>
     {% for image in images %}
-        <img src="{{ image.url }}" alt="{{ image.title }}">
+        <img src="\{\{ image.url \}\}" alt="\{\{ image.title \}\}">
     {% endfor %}
 
-    <p>{{ entry.excerpt }}</p>
+    <p>\{\{ entry.excerpt \}\}</p>
 
-    <p class="">{{!-- entry.postDate|datetime('D, M j, Y') --}}</p>
+    <p class="">\{\{!-- entry.postDate|datetime('D, M j, Y') --\}\}</p>
     
     <p class="">Read more →</p>
   </a>
@@ -38,15 +45,15 @@
 
 /~ /* craft-start */ ~/
 <article class="article article-sm sm">
-  <a href="{{ entry.url }}" class="">
-    <h2 class="">{{ entry.blogTitle }}</h2>
+  <a href="\{\{ entry.url \}\}" class="">
+    <h2 class="">\{\{ entry.blogTitle \}\}</h2>
     {% for image in images %}
-        <img src="{{ image.url }}" alt="{{ image.title }}">
+        <img src="\{\{ image.url \}\}" alt="\{\{ image.title \}\}">
     {% endfor %}
 
-    <p>{{ entry.excerpt }}</p>
+    <p>\{\{ entry.excerpt \}\}</p>
 
-    <p class="">{{!-- entry.postDate|datetime('D, M j, Y') --}}</p>
+    <p class="">\{\{!-- entry.postDate|datetime('D, M j, Y') --\}\}</p>
     
     <p class="">Read more →</p>
   </a>
@@ -54,33 +61,33 @@
 /~ /* craft-end */ ~/
 
 /~ /* ghost-start */ ~/
-<article class="article article-sm sm {{post_class}} {{#unless feature_image}}no-image{{else}}{{/unless}}">
+<article class="article article-sm sm \{\{post_class\}\} \{\{#unless feature_image\}\}no-image\{\{else\}\}\{\{/unless\}\}">
 
-    <h2 class="">{{title}}</h2>
+    <h2 class="">\{\{title\}\}</h2>
 
-    {{#if feature_image}}
-    <a class="post-card-image-link" href="{{url}}">
-        {{!-- This is a responsive image, it loads different sizes depending on device
-        https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+    \{\{#if feature_image\}\}
+    <a class="post-card-image-link" href="\{\{url\}\}">
+        \{\{!-- This is a responsive image, it loads different sizes depending on device
+        https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --\}\}
         <img class="post-card-image"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
+            srcset="\{\{img_url feature_image size="s"\}\} 300w,
+                    \{\{img_url feature_image size="m"\}\} 600w,
+                    \{\{img_url feature_image size="l"\}\} 1000w,
+                    \{\{img_url feature_image size="xl"\}\} 2000w"
             sizes="(max-width: 1000px) 400px, 700px"
-            src="{{img_url feature_image size="m"}}"
-            alt="{{title}}"
+            src="\{\{img_url feature_image size="m"\}\}"
+            alt="\{\{title\}\}"
         />
     </a>
-    {{/if}}
+    \{\{/if\}\}
 
-    {{#if feature_image}}
-        <p>{{excerpt words="30"}}</p>
-    {{else}}
-        <p>{{excerpt words="44"}}</p>
-    {{/if}}
+    \{\{#if feature_image\}\}
+        <p>\{\{excerpt words="30"\}\}</p>
+    \{\{else\}\}
+        <p>\{\{excerpt words="44"\}\}</p>
+    \{\{/if\}\}
 
-    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+    <time datetime="\{\{date format="YYYY-MM-DD"\}\}">\{\{date format="D MMM YYYY"\}\}</time>
 
     <p class="">Read more →</p>
 </article>
@@ -95,14 +102,14 @@
  * Block Types: template/template-part/content
  */
 ?>
-<!-- wp:query {"queryId":11,"query":{"perPage":"1","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list"}} -->
+<!-- wp:query {"queryId":11,"query":{"perPage":"1","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list"\}\} -->
 <div class="wp-block-query">
     <!-- wp:post-template {"className":"block\u002d\u002dfeatureposts"} -->
-        <!-- wp:group {"className":"block\u002d\u002darticle","layout":{"type":"constrained"}} -->
+        <!-- wp:group {"className":"block\u002d\u002darticle","layout":{"type":"constrained"\}\} -->
         <div class="wp-block-group block--article">
             <!-- wp:post-featured-image {"isLink":true,"className":"block\u002d\u002darticle__image"} /-->
 
-            <!-- wp:group {"className":"block\u002d\u002darticle__text","layout":{"type":"constrained"}} -->
+            <!-- wp:group {"className":"block\u002d\u002darticle__text","layout":{"type":"constrained"\}\} -->
                 <div class="wp-block-group block--article__text">
                     <!-- wp:post-title {"isLink":true,"className":"block\u002d\u002darticle__text\u002d\u002dtitle"} /-->
 

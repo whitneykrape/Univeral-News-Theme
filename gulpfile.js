@@ -86,6 +86,23 @@ gulp.task('pages-html', () => {
       ],
       helpers: handlebars_helpers
     }))
+    .pipe(stripCode({
+      start_comment:  "wordpress-start",
+      end_comment:    "wordpress-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "ghost-start",
+      end_comment:    "ghost-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "craft-start",
+      end_comment:    "craft-end"
+    }))
+    .pipe(stripCode({
+      start_comment:  "netlify-start",
+      end_comment:    "netlify-end"
+    }))
+    .pipe(replace( /\/~.*~\//g, '' ))
     .pipe(uncomment({
         removeEmptyLines: true
     }))
@@ -284,8 +301,8 @@ gulp.task('blocks-wordpress', () => {
     }))
     .pipe(gulp.dest('./dist/wordpress/patterns'))
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/patterns/'))
+    // Pull documentation into the WordPress folder 
 });
-// Revist the kind of blocks needed (post) since WP has patterns that work well 
 
 /* Patterns not fully custom blocks.
 gulp.task('wordpress-blocks-js', () => {

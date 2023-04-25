@@ -86,6 +86,12 @@
 		    	margin: -20px 0px -20px -20px;
 		    }
 
+		    // HTML specific
+		    img {
+		    	display: block;
+		    }
+
+		    // WordPress specific
 		    a {
 		    	display: initial;
 		    }
@@ -119,18 +125,24 @@
 
 			.block--article__text--title {
 				margin: 0;
+				padding: 0;
+			}
+
+			.block--article__date {
+				order: 1;
+				@media (min-width: 768px) {
+					flex: 0 1 70%;
+				}
+				margin: 0;
+				font-size: 1em;
+				padding: 0;
+			}
+
+			.block--article__description {
 			}
 		}
 
-		.block--article__date {
-			order: 1;
-			@media (min-width: 768px) {
-				flex: 0 1 70%;
-			}
-			margin: 0;
-			font-size: 1em;
-			padding: 0;
-		}
+
 	}
 }
 
