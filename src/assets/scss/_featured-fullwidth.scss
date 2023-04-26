@@ -1,0 +1,13 @@
+.block--featured__fullwidth {
+	.block--cover {
+		// Have some kind of grid maximum
+		max-height: 680px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+
+		.block--cover__image {
+			width: 100%;
+		}
+	}
+}

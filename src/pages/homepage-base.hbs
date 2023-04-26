@@ -6,6 +6,9 @@
 	{{#> block-entrance template="base" }}
 	{{/block-entrance}}
 
+	{{#> block-featured-fullwidth template="base" }}
+	{{/block-featured-fullwidth}} 
+
 	<div class="main-content">
 	  <div class="container">
 	    <h2 class="">Latest stories</h2>
@@ -15,15 +18,15 @@
 				{{>block-postpreview-simple columnwidth=6 post=.}}
 			{{/each}}
 	    </section>
-
-	    <section class="block--featureposts">
-			{{#each posts}}
-				{{>block-article columnwidth=6 post=.}}
-			{{/each}}
-	    </section>
 	  </div>
 	</div>
 
+
+	{{#> block-leftright-imagetext position="right" }}
+	{{/block-leftright-imagetext}} 
+
+	{{#> block-leftright-imagetext position="left" }}
+	{{/block-leftright-imagetext}} 
 
 
 	{{#> block-shortinfo template="base" }}

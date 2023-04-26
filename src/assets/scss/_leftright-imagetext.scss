@@ -1,0 +1,114 @@
+
+.block--leftright--imagetext {
+  padding: 20px;
+    align-items: center;
+      display: block;
+      padding: 0px 0px 1%;
+    background: #fff;
+    margin: 1% 0 5%;    
+
+    @media (min-width: 768px) {
+      display: flex;
+      padding: 0px;
+    }
+
+    // Add a variable color block
+    a {
+      color: #444;
+    }
+    .block--article__image {
+      // max-height: 340px;
+
+      order: 0;
+      box-shadow: none;
+      margin: 0px;
+      z-index: 2000;
+      position: relative;
+      height: auto;
+      width: 100%;
+      align-content: stretch;
+      border: 0px;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+
+      // HTML specific
+      img {
+        display: block;
+      }
+
+      // WordPress specific
+      a {
+        display: initial;
+      }
+
+      img,
+      .attachment-post-thumbnail {
+        height: auto;
+        box-shadow: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    // a,
+    .block--article__text {
+      background: #fff;
+        position: relative;
+        z-index: 9000;
+        border-radius: 15px;
+          margin: 3% !important;
+          padding: 2% 3%;
+
+        @media (min-width: 768px) {
+          width: 100%;
+        }
+
+      border: 1px solid #eee;
+
+      .block--article__text--title {
+        margin: 0;
+        padding: 0;
+      }
+
+      .block--article__date {
+        order: 1;
+        @media (min-width: 768px) {
+          flex: 0 1 70%;
+        }
+        margin: 0;
+        font-size: 1em;
+        padding: 0;
+      }
+
+      .block--article__description {
+      }
+    }
+
+
+    &.block--position--left {
+      .block--article__image {
+        order: 0;
+      }
+
+      .block--article__text {
+        @media (min-width: 768px) {
+          margin-left: -5% !important;
+        }
+      }
+    }
+
+    &.block--position--right {
+      .block--article__image {
+        order: 1;
+      }
+
+      .block--article__text {
+        @media (min-width: 768px) {
+          margin-right: -5% !important;
+        }
+      }
+    }
+
+}

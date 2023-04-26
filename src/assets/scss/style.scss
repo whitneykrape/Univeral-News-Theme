@@ -26,6 +26,9 @@ $eye-rest-color: #fefefe;
 
 /* Include blocks individually? YES */
 @import "article";
+@import "featured-fullwidth";
+@import "leftright-imagetext";
+
 @import "modularblocks";
 @import "tob-timeline";
 @import "tob-threedee";
