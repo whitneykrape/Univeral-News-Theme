@@ -9,18 +9,11 @@
 	{{#> block-featured-fullwidth template="base" }}
 	{{/block-featured-fullwidth}} 
 
-	<div class="main-content">
-	  <div class="container">
-	    <h2 class="">Latest stories</h2>
-
-	    <section class="navigation-list row">
-			{{#each posts}}
-				{{>block-postpreview-simple columnwidth=6 post=.}}
-			{{/each}}
-	    </section>
-	  </div>
-	</div>
-
+	<section class="block--featureposts">
+	{{#each posts}}
+		{{>block-postpreview-simple post=.}}
+	{{/each}}
+	</section>
 
 	{{#> block-leftright-imagetext position="right" }}
 	{{/block-leftright-imagetext}} 

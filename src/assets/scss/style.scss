@@ -1,5 +1,33 @@
 /* ALL THE STYLES */
 
+/* Breakpoints */
+/* Below this covers all candybar phones. */
+$screen-sm-min: 600px;
+$screen-sm-max: $screen-sm-min - 1px;
+
+/* Inbetween here covers large phones and smaller portrait tablets. */
+$screen-ms-min: 782px;
+$screen-ms-max: $screen-ms-min - 1px;
+
+/* Inbetween here covers large portrait tablets. */
+$screen-md-min: 992px;
+$screen-md-max: $screen-md-min - 1px;
+
+/* Inbetween here covers small landscape tablets and medium browser size windows. */
+$screen-ml-min: 1280px;
+$screen-ml-max: $screen-md-min - 1px;
+
+/* Inbetween here covers medium landscape tablets and medium-larger browser size windows. */
+$screen-ls-min: 1440px;
+$screen-ls-max: $screen-md-min - 1px;
+
+/* Content Width */
+$content-width-reading: 680px;
+$content-width-wide: 958px;
+$content-width-siteedge: 1160px;
+$content-width-extrawide: 1280px;
+$content-width-widest: 1440px;
+
 /* Variables Common */
 $eye-rest-color: #fefefe;
 
