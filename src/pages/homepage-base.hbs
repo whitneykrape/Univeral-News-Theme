@@ -9,18 +9,19 @@
 	{{#> block-featured-fullwidth template="base" }}
 	{{/block-featured-fullwidth}} 
 
-	<section class="block--featureposts">
+	<section class="eg__container eg__widthcontentwide eg__flex eg__gap-1 block--featureposts">
 	{{#each posts}}
 		{{>block-postpreview-simple post=.}}
 	{{/each}}
 	</section>
 
-	{{#> block-leftright-imagetext position="right" }}
-	{{/block-leftright-imagetext}} 
+	<section class="eg__container eg__widthcontentwide">
+		{{#> block-leftright-imagetext position="right" }}
+		{{/block-leftright-imagetext}} 
 
-	{{#> block-leftright-imagetext position="left" }}
-	{{/block-leftright-imagetext}} 
-
+		{{#> block-leftright-imagetext position="left" }}
+		{{/block-leftright-imagetext}} 
+	</section>
 
 	{{#> block-shortinfo template="base" }}
 	{{/block-shortinfo}}

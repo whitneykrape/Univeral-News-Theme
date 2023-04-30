@@ -18,3 +18,12 @@
   font-size:1.2rem
  }
 }
+
+/**** Conform all ****/
+.latest-stories li h2,
+h1, h2, h3, h4, h5, h6,
+body.media {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-weight: 100;
+    margin: 0;
+}

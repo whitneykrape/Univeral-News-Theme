@@ -12,11 +12,15 @@ $breakpoint-small: 33.75em; // 540px
 $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
 
-.eg__windowwidth {
 
+.eg__widthcontent {
+  max-width: $content-width-reading;
 }
-.eg__windowcontentwidth {
-  
+.eg__widthcontentwide {
+  max-width: $content-width-wide;
+}
+.eg__widthsiteedge {
+  max-width: $content-width-siteedge;
 }
 
 .eg__container {
@@ -30,7 +34,6 @@ $breakpoint-large: 60em; // 960px
 
   @media only screen and (min-width: $breakpoint-large) {
     width: 75%;
-    max-width: 60rem;
   }
 }
 
@@ -96,4 +99,36 @@ $breakpoint-large: 60em; // 960px
   .eg__hidden-sm {
     display: block;
   }
+}
+
+.eg__block {
+  display: block;
+}
+
+.eg__inline {
+  display: inline;
+}
+
+.eg__flex {
+  display: flex;
+}
+
+.eg__gap-1 {
+  gap: 1.25em;
+}
+
+.eg__gap-2 {
+  gap: 2.5em;
+}
+
+.eg__gap-3 {
+  gap: 3.75em;
+}
+
+.eg__gap-4 {
+  gap: 5em;
+}
+
+.eg__gap-5 {
+  gap: 6.25em;
 }

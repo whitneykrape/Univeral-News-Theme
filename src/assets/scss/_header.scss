@@ -2,8 +2,10 @@
 .top-navbar {
   /*background: green;*/
   /*box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);*/ 
-  background: #fff;
-  height: 55px;
+  /*background: #fff;*/ 
+  /*height: 55px;*/ 
+  display: flex;
+  justify-content: center;
 }
 
 .top-navbar .logo a {
