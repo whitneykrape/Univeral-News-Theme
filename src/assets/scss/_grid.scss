@@ -23,6 +23,11 @@ $breakpoint-large: 60em; // 960px
   max-width: $content-width-siteedge;
 }
 
+.eg__widthmobileedge {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .eg__container {
   width: 90%;
   margin-left: auto;

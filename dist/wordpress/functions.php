@@ -55,8 +55,4 @@ if ( ! function_exists( 'slim_styles' ) ) :
 	}
 
 endif;
-
 add_action( 'wp_enqueue_scripts', 'slim_styles' );
-
-?>
-
