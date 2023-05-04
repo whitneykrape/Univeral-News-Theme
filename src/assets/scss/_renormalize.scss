@@ -23,3 +23,7 @@ body .is-layout-flow > * + * {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+body .wp-site-blocks > * + * {
+  margin-block-start: 0;
+}

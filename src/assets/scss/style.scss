@@ -6,7 +6,7 @@ $screen-sm-min: 600px;
 $screen-sm-max: $screen-sm-min - 1px;
 
 /* Inbetween here covers large phones and smaller portrait tablets. */
-$screen-ms-min: 782px;
+$screen-ms-min: 768px;
 $screen-ms-max: $screen-ms-min - 1px;
 
 /* Inbetween here covers large portrait tablets. */
@@ -14,12 +14,12 @@ $screen-md-min: 992px;
 $screen-md-max: $screen-md-min - 1px;
 
 /* Inbetween here covers small landscape tablets and medium browser size windows. */
-$screen-ml-min: 1280px;
-$screen-ml-max: $screen-md-min - 1px;
+$screen-ml-min: 1160px;
+$screen-ml-max: $screen-ml-min - 1px;
 
 /* Inbetween here covers medium landscape tablets and medium-larger browser size windows. */
 $screen-ls-min: 1440px;
-$screen-ls-max: $screen-md-min - 1px;
+$screen-ls-max: $screen-ls-min - 1px;
 
 /* Content Width */
 $content-width-reading: 680px;

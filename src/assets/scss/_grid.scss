@@ -8,6 +8,7 @@
 // eg or essential grid for HTML or other not well blocked layout but available as a backup 
 $width: 96%;
 $gutter: 4%;
+// Replace these with the proper breakpoints
 $breakpoint-small: 33.75em; // 540px
 $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
@@ -24,8 +25,10 @@ $breakpoint-large: 60em; // 960px
 }
 
 .eg__widthmobileedge {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  @media only screen and (max-width: ($screen-ml-max + 40)) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .eg__container {
