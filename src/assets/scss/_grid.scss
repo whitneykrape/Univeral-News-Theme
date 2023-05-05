@@ -26,22 +26,22 @@ $breakpoint-large: 60em; // 960px
 
 .eg__widthmobileedge {
   @media only screen and (max-width: ($screen-ml-max + 40)) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 .eg__container {
-  width: 90%;
+  // width: 90%;
   margin-left: auto;
   margin-right: auto;
 
   @media only screen and (min-width: $breakpoint-small) {
-    width: 80%;
+    // width: 80%;
   }
 
   @media only screen and (min-width: $breakpoint-large) {
-    width: 75%;
+    // width: 75%;
   }
 }
 
