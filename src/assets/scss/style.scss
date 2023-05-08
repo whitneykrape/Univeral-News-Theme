@@ -68,5 +68,11 @@ $eye-rest-color: #fefefe;
 @import "media";
 @import "text"; 
 
-/* Individual site adjustments */
+/* Individual site frontend adjustments */
 @import "ghost"; 
+
+/* Individual site editor adjustments */
+.editor-styles-wrapper .wp-block-group.alignfull {
+	padding-left: 0;
+	padding-right: 0;
+}
