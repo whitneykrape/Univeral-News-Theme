@@ -345,7 +345,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
   gulp.watch('./src/assets/scss/**/*.scss', { usePolling: true }, gulp.series('sass'));
   gulp.watch('./src/assets/js/*.js', { usePolling: true }, gulp.series('js'));
-  gulp.watch(['./src/blocks/*.hbs'], { usePolling: true }, gulp.series.apply(gulp, ['sass','pages-html']));
+  gulp.watch(['./src/blocks/*.hbs'], { usePolling: true }, gulp.series.apply(gulp, ['sass','pages-html', 'blocks-wordpress']));
 })
 
 // Optimization Tasks 
