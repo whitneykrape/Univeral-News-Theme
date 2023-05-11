@@ -3,14 +3,13 @@
 
 
 
-/* wordpress-start */
+
+
+
+
+
 <?php
-/**
- * Title: Block Animated Logo Wipe Horizontal
- * Slug: blocksslim/block-animated-logowipehorizontal
- * Categories: slim
- * Block Types: template/template-part/content
- */
+
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="element__animated-wipeleft">
@@ -19,4 +18,3 @@
         <!-- /wp:image -->
     </div>
 <!-- /wp:group -->'
-/* wordpress-end */

@@ -18,7 +18,7 @@
  */
 ?>
 <!-- wp:query {"queryId":11,"query":{"perPage":"2","pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":2},"className":"eg__widthmobileedge eg__container"} -->
-    <div class="wp-block-query eg__widthmobileedge eg__container">
+    <div class="wp-block-query eg__widthmobileedge eg__container block--articles__twocolumn">
     <!-- wp:post-template -->
         <!-- wp:post-featured-image {"isLink":true,"className":"block\u002d\u002darticle__image"} /-->
 

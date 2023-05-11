@@ -1,5 +1,6 @@
 
-/* wordpress-start */
+
+
 <?php
 /**
  * Title: Block Footer Default
@@ -19,4 +20,3 @@
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
-/* wordpress-end */

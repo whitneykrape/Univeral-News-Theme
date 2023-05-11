@@ -3,17 +3,17 @@
 {{#> headerfooter-common }}
 
 {{#*inline "body"}}
-	{{#> block-entrance template="base" }}
-	{{/block-entrance}}
+	{{#> block-introduction-h2andp template="base" }}
+	{{/block-introduction-h2andp}}
 
-	{{#> block-featured-fullwidth template="base" }}
-	{{/block-featured-fullwidth}} 
+	{{#> block-featured-articlesinglewide template="base" }}
+	{{/block-featured-articlesinglewide}} 
 
-	<section class="eg__container eg__widthcontentwide eg__flex eg__gap-1 block--featureposts">
-	{{#each posts}}
-		{{>block-postpreview-simple post=.}}
-	{{/each}}
-	</section>
+	{{#> block-featured-fullwidthcover template="base" }}
+	{{/block-featured-fullwidthcover}} 
+
+	{{#> block-articles template="base" }}
+	{{/block-articles}}
 
 	<section class="eg__container eg__widthcontentwide">
 		{{#> block-leftright-imagetext position="right" }}

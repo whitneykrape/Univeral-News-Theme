@@ -25,6 +25,7 @@
                 <p class="has-text-align-center has-large-font-size"></p>
             <!-- /wp:paragraph -->
         </div>
-    </div><!-- /wp:cover -->
+    </div>
+    <!-- /wp:cover -->
 </div>
 <!-- /wp:group -->

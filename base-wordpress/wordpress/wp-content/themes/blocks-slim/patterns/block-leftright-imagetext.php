@@ -11,7 +11,7 @@
 
 <?php
 /**
- * Title: Block Left Right Slim
+ * Title: Block Left Image Right Text Slim
  * Slug: blocksslim/block-leftright-imagetext
  * Categories: slim
  * Block Types: template/template-part/content

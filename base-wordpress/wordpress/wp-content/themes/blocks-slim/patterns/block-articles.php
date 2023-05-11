@@ -11,8 +11,8 @@
 
 <?php
 /**
- * Title: Block Articles Slim
- * Slug: blocksslim/block-articles-slim
+ * Title: Block Articles Two Column
+ * Slug: blocksslim/block-articles-twocolumn
  * Categories: slim
  * Block Types: template/template-part/content
  */
@@ -28,7 +28,7 @@
 
             <!-- wp:post-date /-->
 
-            <!-- wp:post-excerpt {"moreText":"Link Out","className":"article-description"} /-->
+            <!-- wp:post-excerpt {"moreText":"Read more &#8594;","className":"article-description"} /-->
         </div>
         <!-- /wp:group -->
     <!-- /wp:post-template -->

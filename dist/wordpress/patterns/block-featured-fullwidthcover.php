@@ -9,8 +9,8 @@
 
 <?php
 /**
- * Title: Block Featured Area Full Width
- * Slug: blocksslim/block-featured-fullwidth
+ * Title: Block Featured Full Width Cover
+ * Slug: blocksslim/block-featured-fullwidthcover
  * Categories: slim
  * Block Types: template/template-part/content
  */
@@ -25,6 +25,7 @@
                 <p class="has-text-align-center has-large-font-size"></p>
             <!-- /wp:paragraph -->
         </div>
-    </div><!-- /wp:cover -->
+    </div>
+    <!-- /wp:cover -->
 </div>
 <!-- /wp:group -->

@@ -1,29 +1,29 @@
 /* Should just be article space, no wrapper. Not sure what the section content is for in Ghost. */
-/* html-start */
+/~ /* html-start */ ~/
 <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
 
 <div class="element__animated-wipeleft">
     <img src="" alt=""/>
 </div>
-/* html-end */
+/~ /* html-end */ ~/
 
-/* netlify-start */
+/~ /* netlify-start */ ~/
 <div class="element__animated-wipeleft">
     {% for image in images %}
         <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
 </div>
-/* netlify-end */
+/~ /* netlify-end */ ~/
 
-/* craft-start */
+/~ /* craft-start */ ~/
 <div class="element__animated-wipeleft">
     {% for image in images %}
         <img src="{{ image.url }}" alt="{{ image.title }}">
     {% endfor %}
 </div>
-/* craft-end */
+/~ /* craft-end */ ~/
 
-/* ghost-start */
+/~ /* ghost-start */ ~/
 <div class="element__animated-wipeleft">
     {{#if feature_image}}
         <img class="post-card-image"
@@ -37,16 +37,11 @@
         />
     {{/if}}
 </div>
-/* ghost-end */
+/~ /* ghost-end */ ~/
 
-/* wordpress-start */
+/~ /* wordpress-start */ ~/
 <?php
-/**
- * Title: Block Animated Logo Wipe Horizontal
- * Slug: blocksslim/block-animated-logowipehorizontal
- * Categories: slim
- * Block Types: template/template-part/content
- */
+
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="element__animated-wipeleft">
@@ -55,4 +50,4 @@
         <!-- /wp:image -->
     </div>
 <!-- /wp:group -->'
-/* wordpress-end */
+/~ /* wordpress-end */ ~/
