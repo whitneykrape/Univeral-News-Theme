@@ -394,7 +394,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('all', function(callback) {
-  runSequence(['sass','pages-html'], 'watch',
+  runSequence(['sass','pages-html','blocks-wordpress'], 'watch',
     callback
   )
 })
