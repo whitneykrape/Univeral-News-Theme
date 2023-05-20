@@ -208,6 +208,7 @@ gulp.task('blocks-craft', () => {
       extname: '.twig'
     }))
     .pipe(gulp.dest('./dist/craft/blocks'))
+    .pipe(gulp.dest('./base-craft/craft/templates/_components/'))
 });
 
 gulp.task('blocks-ghost', () => {
