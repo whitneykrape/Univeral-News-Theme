@@ -326,7 +326,7 @@ gulp.task('sass', function() {
     .pipe(gulpAutoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/assets/css')) // Outputs to the local "universal copy Dist"
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-only-theme')) // Outputs it to "local run WordPress"
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/assets/css')) // Outputs it to "local run WordPress"
     .pipe(gulp.dest('./base-hyas/public/css')) // Outputs it to "local run Netlify"
     .pipe(gulp.dest('./base_ghost/content/themes/casper/assets/css')) // Outputs it to "local run Ghost"
     .pipe(browserSync.reload({ // Reloading with Browser Sync
