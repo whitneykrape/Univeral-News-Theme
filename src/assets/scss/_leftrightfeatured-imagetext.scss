@@ -1,0 +1,24 @@
+body .block--leftrightfeatured--imagetext,
+body .block--leftrightfeatured--imagetext.block--leftright--imagetext {
+	li {
+		display: flex;
+		flex-wrap: nowrap;
+
+	    @media (max-width: $screen-md-max) {
+	      flex-wrap: wrap;
+	    }
+
+	    .block--article__image {
+			align-items: center;
+			display: flex;
+	    }
+
+	    .block--article__text,
+	    .block--article__text.block--position--left {
+		    @media (max-width: $screen-md-max) {
+		      margin: 0;
+		      border-radius: 0 0 15px 15px;
+		    }
+	    }
+    }
+}
