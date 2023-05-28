@@ -4,25 +4,22 @@
 	    <div class="container">
 	    <h1 class="">{{ entry.blogTitle }}</h1>
 
-	{% for asset in entry.blogFeaturedImage %}
-	    <img src="{{ asset.url }}" alt="{{ asset.title }}">                               
-	{% endfor %}
+			{% for asset in entry.blogFeaturedImage %}
+			    <img src="{{ asset.url }}" alt="{{ asset.title }}">                               
+			{% endfor %}
 
-		{{!-- Try including a module with content in admin. --}}
-{# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
-{% set myMatrixBlockQuery = craft.matrixBlocks()
-  .owner(myEntry)
-  .fieldId(10)
-  .type('text') %}
+			{{!-- Try including a module with content in admin. --}}
+			{# Create a Matrix block query with the 'owner', 'fieldId', and 'type' parameters #}
+			{% set myMatrixBlockQuery = craft.matrixBlocks()
+			  .type('blog_posts') %}
 
-{# Fetch the Matrix blocks #}
-{% set matrixBlocks = myMatrixBlockQuery.all() %}
+			{# Fetch the Matrix blocks #}
+			{% set matrixBlocks = myMatrixBlockQuery.all() %}
 
-{# Display their contents #}
-{% for block in matrixBlocks %}
-  <p>{{ block.text }}</p>
-{% endfor %}
-
+			{# Display their contents #}
+			{% for block in matrixBlocks %}
+			  <p>{{ block.text }}</p>
+			{% endfor %}
 
 	    <div class="">
 	      <p>{{ entry.postDate|datetime('D, M j, Y') }}</p>
