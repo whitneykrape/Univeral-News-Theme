@@ -329,6 +329,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/assets/css')) // Outputs it to "local run WordPress"
     .pipe(gulp.dest('./base-hyas/public/css')) // Outputs it to "local run Netlify"
     .pipe(gulp.dest('./base_ghost/content/themes/casper/assets/css')) // Outputs it to "local run Ghost"
+    .pipe(gulp.dest('./base-craft/craft/web/static/styles')) // Outputs it to "local run Craft"
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
