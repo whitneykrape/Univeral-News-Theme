@@ -19,6 +19,7 @@ base-wordpress/wordpress/wp-activate.php
 base-wordpress/wordpress/wp-blog-header.php
 base-wordpress/wordpress/wp-comments-post.php
 base-wordpress/wordpress/wp-config-sample.php
+base-wordpress/wordpress/wp-config.php
 base-wordpress/wordpress/wp-cron.php
 base-wordpress/wordpress/wp-links-opml.php
 base-wordpress/wordpress/wp-load.php
