@@ -134,6 +134,10 @@ gulp.task('blocks-html', () => {
     }))
     .pipe(handlebars(templateData, {
       ignorePartials: true,
+      batch: [
+        './src/includes',
+        './src/blocks'
+      ],
       helpers: handlebars_helpers
     }))
     .pipe(uncomment({
