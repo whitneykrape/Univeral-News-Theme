@@ -1,0 +1,26 @@
+{{#if post.video}}
+<li class="column col-{{columnwidth}}">
+	<div class="elementshowingmotion">
+		<video autoplay muted loop>
+
+		    <source src="assets/vid/placeholder.mp4"
+		            type="video/mp4">
+
+		    Sorry, your browser doesn't support embedded videos.
+		</video>
+	</div>
+	
+	<a href="../single-post-media/" class="showthrough">
+		<span class="window"></span>
+		
+		<h2 class="">{{post.title}}</h2>
+		<p class="">{{post.date}}</p>
+		
+		<p>
+			{{post.excerpt}}
+		</p>
+		
+		<p class="link">Read more →</p>
+	</a>
+</li>
+{{/if}}
