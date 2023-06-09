@@ -305,7 +305,7 @@ gulp.task('blocks-wordpress', () => {
       extname: '.php'
     }))
     .pipe(gulp.dest('./dist/wordpress/patterns'))
-    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/patterns/'))
+    .pipe(gulp.dest('./base-wordpress/wordpress/wp-content/themes/blocks-slim/patterns'))
     // Pull documentation into the WordPress folder 
 });
 
