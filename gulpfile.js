@@ -274,11 +274,11 @@ gulp.task('blocks-netlify', () => {
     .pipe(gulp.dest('./dist/netlify/blocks'))
 });
 
-// Mostly just moved this...
 gulp.task('blocks-wordpress', () => {
   let templateData = JSON.parse(fs.readFileSync('./src/demo-content.json'))
 
   return gulp.src('./src/blocks/*.hbs')
+    // Copy theme pieces first
     // .pipe(handlebars(templateData, {
     //   ignorePartials: true,
     //   batch: ['./src/blocks/toblocks'],
