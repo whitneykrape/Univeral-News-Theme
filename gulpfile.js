@@ -358,15 +358,15 @@ gulp.task('watch', function() {
 // Optimization Tasks 
 // ------------------
 
-// Optimizing CSS and JavaScript 
-gulp.task('useref', function() {
+// Optimizing CSS and JavaScript  
+// gulp.task('useref', function() {
 
-  return gulp.src('./base-html/homepage/*.html')
-    .pipe(useref())
-    // .pipe(gulpIf('*.js', terser()))
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'));
-});
+//   return gulp.src('./base-html/homepage/*.html')
+//     .pipe(useref())
+//    // .pipe(gulpIf('*.js', terser()))
+//    .pipe(gulpIf('*.css', cssnano()))
+//    .pipe(gulp.dest('dist'));
+// });
 
 // Optimizing Images 
 gulp.task('images', function() {
@@ -401,7 +401,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('all', function(callback) {
-  runSequence(['sass','pages-html','blocks-wordpress'], 'watch',
+  runSequence(['sass','pages-html','blocks-wordpress','blocks-craft'],
     callback
   )
 })
