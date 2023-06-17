@@ -1,5 +1,6 @@
 node_modules/
 *.scssc
+._*
 base-wordpress/vendor/
 base-wordpress/wordpress/wp-admin/
 base-wordpress/wordpress/wp-content/plugins/akismet
