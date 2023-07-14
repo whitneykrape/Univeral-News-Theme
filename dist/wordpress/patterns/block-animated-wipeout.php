@@ -2,6 +2,12 @@
 
 
 
+<div class="element__animated-wipeleft">
+    {% for image in images %}
+        <img src="{{ image.url }}" alt="{{ image.title }}">
+    {% endfor %}
+</div>
+
 
 
 

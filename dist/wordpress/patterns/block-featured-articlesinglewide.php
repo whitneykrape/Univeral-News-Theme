@@ -1,6 +1,10 @@
 
 
 
+<section class="block--featured__fullwidth">
+    <img class="attachment-post-thumbnail" src="../../assets/img/placeholder.jpg" alt="Placeholder"/>
+</section>
+
 
 
 

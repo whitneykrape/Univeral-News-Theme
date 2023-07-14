@@ -2,6 +2,9 @@
 
 
 
+ 
+<section class="block--leftright--imagetext block--position--{{position}}">
+</section>
 
  
 
