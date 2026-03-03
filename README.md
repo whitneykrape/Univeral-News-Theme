@@ -13,13 +13,6 @@ Buildable Header, Footer, Homepage for WordPress then the further CMSes.
 \
 \
 \
-\
-
-
-
-
-
-
 こんいちわ
 
 日本語指導
