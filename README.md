@@ -1,25 +1,23 @@
 # News Theme
-Starting from a simple HTML theme to be a universal theme for multiple platforms. Almost buildable. Removing all notes for the moment, soon to readd.
+Starting from a simple HTML theme to be a universal theme for multiple platforms. Almost buildable.
+
+## Immediate Goal
+Buildable Header, Footer, Homepage for WordPress then the further CMSes.
 
 
+\
+\
+\
+\
 
+\
+\
+\
 
+\
+\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\
 
 
 
